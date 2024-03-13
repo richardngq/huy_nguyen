@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
+import "@/assets/style/App.scss";
+import { Navbar } from "@/components/NavBar";
+import { Footer } from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Work_Sans({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,9 +19,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={inter.className}
+      <body className={font.className}
         suppressHydrationWarning={true}
-      >{children}</body>
+      >
+        <div className="text-white flex flex-col h-screen">
+          <Navbar />
+
+          <div className="flex-auto">
+            {children}
+          </div>
+
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

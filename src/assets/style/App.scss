@@ -1,13 +1,7 @@
 // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 100 to 900
 
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
-  @apply montserrat
+  background-color: #0E1116;
+  @apply transition-all leading-normal;
 }
