@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  #__next {
+    @apply h-full;
+
+    &>* {
+      @apply h-full
+    }
+  }
+
+  html,
+  body {
+    @apply h-full;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
