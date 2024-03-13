@@ -10,6 +10,6 @@ interface INav {
 
 export const NavItem: FC<INav> = ({ text, link, target, classNames = '' }) => {
   return (
-    <Link className={`text-white no-underline ${classNames}`} href={link} dangerouslySetInnerHTML={{ __html: text }} target={`${target ? '_blank' : ''}`} />
+    <Link className={`text-gray-50 hover:text-white ease-linear no-underline ${classNames}`} href={link} dangerouslySetInnerHTML={{ __html: text }} target={`${target ? '_blank' : ''}`} />
   )
 }

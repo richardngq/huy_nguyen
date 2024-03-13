@@ -2,8 +2,9 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: false,
+    unoptimized: true,
   },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
