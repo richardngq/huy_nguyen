@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
-import "./globals.css";
-import "@/assets/style/App.scss";
 import { Navbar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
+import { AOSInit } from "@/components/AnimateOnScroll";
+import "./globals.css";
+import "@/assets/style/App.scss";
 
 const font = Work_Sans({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={font.className}
@@ -32,6 +34,7 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
-    </html>
+      <AOSInit />
+    </html >
   );
 }

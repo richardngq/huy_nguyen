@@ -1,51 +1,20 @@
 import { FC } from "react";
 import Image from "next/image"
-import Image0 from "@/assets/img/img.png";
-import Image1 from "@/assets/img/img-1.png";
-import Image2 from "@/assets/img/img-2.png";
-import Image3 from "@/assets/img/img-3.png";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { dataWorks } from "@/resources/constants/dataDefine";
 
 interface IWork {
   classNames?: string
 }
 
 export const Work: FC<IWork> = ({ classNames = '' }) => {
-  const workLists = [
-    {
-      href: 'https://www.behance.net/gallery/168289687/Crabada-NFT-Marketplace-Game-Fi',
-      title: `Crabada`,
-      image: Image0,
-      description: `An Exciting Undersea Adventure Awaits GameFi`
-    },
-    {
-      href: 'https://www.behance.net/gallery/167050693/Canon-Gallery-S',
-      title: `Canon`,
-      image: Image1,
-      description: `Portable exhibition walls with stands for Canon photographers.`
-    },
-    {
-      href: 'https://www.behance.net/gallery/167051093/Shiseido',
-      title: `Shiseido`,
-      image: Image2,
-      description: `Shiseido offers the highest quality products make-up Japan with 145 years of technology`
-    },
-    {
-      href: 'https://www.behance.net/gallery/167049811/Legend-of-the-7-Kingdoms-Landing-Page',
-      title: `Legend 7`,
-      image: Image3,
-      description: `Blockchain - Crypto - GameFi`
-    },
-  ]
-
-
-  const RenderItem = ({ href, title, image, description, classNames }: { href: any, title?: string, image: any, description?: string, classNames?: string }) => {
+  const RenderItem = ({ index, href, title, image, description, classNames }: { index: any, href: any, title?: string, image: any, description?: string, classNames?: string }) => {
     return (
-      <Link href={href} target="_blank">
+      <Link href={href} target="_blank" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
         <Tilt className="group">
-          <div className={`relative flex w-80 h-80 flex-col items-start gap-6 border bg-gray-200 p-4 rounded-2xl border-solid border-gray-100 overflow-hidden group-hover:border-gray-50 transition-all after:absolute after:bg-[linear-gradient(0deg,#161B22_0%,rgba(22,27,34,0.00)_100%)] after:inset-[75%_0px_0px_0px] ${classNames}`}>
+          <div className={`relative flex w-full max-w-full lg:max-w-80 h-[240px] md:h-[320px] lg:h-80 flex-col items-start gap-6 border bg-gray-200 p-4 rounded-2xl border-solid border-gray-100 overflow-hidden group-hover:border-gray-50 transition-all after:absolute after:bg-[linear-gradient(0deg,#161B22_0%,rgba(22,27,34,0.00)_100%)] after:inset-[75%_0px_0px_0px] ${classNames}`}>
             <div className="relative z-20">
               <div className="text-white text-2xl font-bold">
                 {title}
@@ -54,7 +23,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                 {description}
               </div>
             </div>
-            <div className="absolute left-0 right-0 bottom-0">
+            <div className="absolute left-0 right-0 bottom-0 opacity-50 lg:opacity-100 translate-y-1/4 lg:translate-y-0">
               <Image src={image} alt="" priority sizes="100%" />
             </div>
 
@@ -66,12 +35,12 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
   }
 
   return (
-    <div className={`mt-20 ${classNames}`}>
-      <div className="inline-flex items-center gap-10">
+    <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-6 lg:gap-10">
         {
-          workLists.map((item, index) => {
+          dataWorks.map((item, index) => {
             return (
-              <RenderItem key={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />
+              <RenderItem key={index} index={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />
             )
           })
         }
