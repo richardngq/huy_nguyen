@@ -31,8 +31,8 @@ export const dataWorks: IData[] = [
   },
   {
     href: 'https://www.behance.net/gallery/167049811/Legend-of-the-7-Kingdoms-Landing-Page',
-    title: `Legend 7`,
+    title: `Legend Of 7 Kingdoms`,
     image: Image3,
-    description: `Blockchain - Crypto - GameFi`,
+    description: `An RPG GameFi about 7 Kingdoms with Blockchain and Crypto`,
   },
 ];
