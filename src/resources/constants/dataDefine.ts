@@ -12,12 +12,6 @@ export interface IData {
 
 export const dataWorks: IData[] = [
   {
-    href: 'https://www.behance.net/gallery/168289687/Crabada-NFT-Marketplace-Game-Fi',
-    title: `Crabada`,
-    image: Image0,
-    description: `An Exciting Undersea Adventure Awaits GameFi`,
-  },
-  {
     href: 'https://www.behance.net/gallery/167050693/Canon-Gallery-S',
     title: `Canon`,
     image: Image1,
@@ -28,6 +22,12 @@ export const dataWorks: IData[] = [
     title: `Shiseido`,
     image: Image2,
     description: `Shiseido offers the highest quality products make-up Japan with 145 years of technology`,
+  },
+  {
+    href: 'https://www.behance.net/gallery/168289687/Crabada-NFT-Marketplace-Game-Fi',
+    title: `Crabada`,
+    image: Image0,
+    description: `An Exciting Undersea Adventure Awaits GameFi`,
   },
   {
     href: 'https://www.behance.net/gallery/167049811/Legend-of-the-7-Kingdoms-Landing-Page',
