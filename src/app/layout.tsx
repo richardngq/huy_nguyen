@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 import { Navbar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { AOSInit } from "@/components/AnimateOnScroll";
@@ -35,6 +36,7 @@ export default function RootLayout({
         </div>
       </body>
       <AOSInit />
+      <Analytics />
     </html >
   );
 }
