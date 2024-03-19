@@ -21,7 +21,7 @@ export default function Home() {
         <Image src={Pattern} alt='' className="absolute right-0 top-0" data-aos="fade-in" />
         <About />
         <ShowCases />
-        {/* <Work /> */}
+        <Work />
       </div>
     </>
   );

@@ -27,7 +27,9 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
               <Image src={image} alt="" priority sizes="100%" />
             </div>
 
-            <p className="absolute left-0 right-0 bottom-0 inline-flex items-center p-4 z-10 translate-y-full group-hover:translate-y-0 transition-all">More at Behance&nbsp;<Icon icon={`ep:right`} /></p>
+            <p className="absolute left-0 right-0 bottom-0 inline-flex items-center p-4 z-10 translate-y-full group-hover:translate-y-0 transition-all hover:scale-105">
+              More at Behance&nbsp;<Icon icon={`ep:right`} />
+            </p>
           </div>
         </Tilt>
       </Link>
@@ -38,11 +40,10 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
     <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-6 lg:gap-10">
         {
-          dataWorks.map((item, index) => {
-            return (
-              <RenderItem key={index} index={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />
-            )
-          })
+          dataWorks.map((item, index) => (
+            <RenderItem key={index} index={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />
+          )
+          )
         }
       </div>
     </div>

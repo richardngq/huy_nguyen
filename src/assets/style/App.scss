@@ -3,7 +3,13 @@
 
 body {
   background-color: #0e1116;
+  scroll-behavior: smooth;
   @apply transition-all leading-normal;
+
+  * {
+    @apply transition-all;
+    scroll-behavior: smooth;
+  }
 }
 
 .slide {
@@ -34,6 +40,12 @@ body {
       opacity: 1;
       transform: translateY(0%);
     }
+  }
+}
+
+.container {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    max-width: none;
   }
 }
 

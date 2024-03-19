@@ -10,7 +10,7 @@ export default function About<IAbout>({ classNames = '' }) {
     {
       Username: `Huy Nguyen`,
       Label: `Product Designer`,
-      Description: `Hi, I am a Product Designer and UI/UX Designer from IPFS - Fx Dex in Vietnam.`,
+      Description: `Hi, I am a Product Designer and UI/UX Designer.`,
     }
   ]
   return (

@@ -1,113 +1,46 @@
-import { dataShows } from "@/resources/constants/dataDefine";
-import Image from "next/image";
 import { FC } from "react";
+import Image from "next/image";
+import ImageSM from "@/assets/img/img-grid-sm.png";
+import { dataGrid } from "@/resources/constants/dataDefine";
+import Link from "next/link";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import Tilt from "react-parallax-tilt";
 
 interface IShowCases {
   classNames?: string
 }
 
 export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
-  const ItemCase = ({ classNames, index, reverse, imageLogo, imageOne, imageTwo, subtitle, biz, checkpoints, showLinearTop, showLinearBot }: { classNames?: any, index?: any, reverse?: boolean, imageLogo?: any, imageOne?: any, imageTwo?: any, subtitle?: string, biz?: string, checkpoints?: any, showLinearTop?: boolean, showLinearBot?: boolean }) => {
-    switch (reverse) {
-      case true:
-        return (
-          <div className={`card bg-gray-200 flex flex-col gap-6 lg:gap-8 p-8 border border-gray-100 rounded-3xl ${classNames}`} data-aos="slide-up" data-aos-duration={1000} data-aos-delay={1200 + (200 * index)}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-              {/* Header-Img */}
-              <div className="flex-1 w-full h-full flex justify-center" data-aos="fade-right">
-                <Image src={imageOne} alt="" className="object-contain" />
-              </div>
-              {/* Header-Content */}
-              <div className="flex flex-col gap-6 flex-1" data-aos="fade-left">
-                <div className="flex flex-col gap-3">
-                  <div className="">
-                    <Image src={imageLogo} alt="" className="w-fit h-20 object-contain" />
-                  </div>
-                  <div className="text-gray-50" dangerouslySetInnerHTML={{ __html: `${subtitle}` }} />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <div className="text-white text-2xl font-semibold" dangerouslySetInnerHTML={{ __html: `Business keys` }} />
-                  <div className="text-gray-50" dangerouslySetInnerHTML={{ __html: `${biz}` }} />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 lg:gap-8">
-              {/* Bottom-Content */}
-              <div className="flex gap-6 flex-1" data-aos="fade-right">
-                <div className="text-gray-50" dangerouslySetInnerHTML={{ __html: `${checkpoints}` }} />
-              </div>
-              {/* Bottom-Img */}
-              <div className="relative h-full flex-1" data-aos="fade-left">
-                {
-                  !showLinearTop && <div className="absolute top-0 w-full h-[15%] bg-[linear-gradient(180deg,#161B22_50%,transparent_100%)]" />
-                }
-                <Image src={imageTwo} alt="" className="w-full h-full object-contain" />
-                {
-                  !showLinearBot && <div className="absolute bottom-0 w-full h-[15%] bg-[linear-gradient(0deg,#161B22_50%,transparent_100%)]" />
-                }
-              </div>
-            </div>
-          </div>
-        )
-        break;
-
-      default:
-        return (
-          <div className={`card bg-gray-200 flex flex-col gap-6 lg:gap-8 p-8 border border-gray-100 rounded-3xl ${classNames}`} data-aos="slide-up" data-aos-duration={1000} data-aos-delay={1200 + (200 * index)}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-              {/* Header-Content */}
-              <div className="flex flex-col gap-6 flex-1" data-aos="fade-right">
-                <div className="flex flex-col gap-3">
-                  <div className="">
-                    <Image src={imageLogo} alt="" className="w-fit h-20 object-contain" />
-                  </div>
-                  <div className="text-gray-50" dangerouslySetInnerHTML={{ __html: `${subtitle}` }} />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <div className="text-white text-2xl font-semibold" dangerouslySetInnerHTML={{ __html: `Business keys` }} />
-                  <div className="text-gray-50" dangerouslySetInnerHTML={{ __html: `${biz}` }} />
-                </div>
-              </div>
-              {/* Header-Img */}
-              <div className="flex-1 w-full h-full flex justify-center" data-aos="fade-left">
-                <Image src={imageOne} alt="" className="object-contain" />
-              </div>
-            </div>
-
-            <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-0 lg:gap-8">
-              {/* Bottom-Img */}
-              <div className="relative h-full flex-1" data-aos="fade-right">
-                {
-                  !showLinearTop && <div className="absolute top-0 w-full h-[15%] bg-[linear-gradient(180deg,#161B22_50%,transparent_100%)]" />
-                }
-                <Image src={imageTwo} alt="" className="w-full h-full object-contain" />
-                {
-                  !showLinearBot && <div className="absolute bottom-0 w-full h-[15%] bg-[linear-gradient(0deg,#161B22_50%,transparent_100%)]" />
-                }
-              </div>
-
-              {/* Bottom-Content */}
-              <div className="flex gap-6 flex-1" data-aos="fade-left">
-                <div className="text-gray-50" dangerouslySetInnerHTML={{ __html: `${checkpoints}` }} />
-              </div>
-            </div>
-          </div>
-        )
-        break;
-    }
+  const handleClick = (url?: any) => {
+    window.location.replace(`./${url}`)
   }
 
   return (
     <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
-      <div className="text-2xl text-white mb-6">My Work</div>
-      <div className="flex flex-col items-start gap-6 lg:gap-12" data-aos="fade-up" data-aos-delay={1000}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
-          dataShows.map((item, index) => {
-            return (
-              <ItemCase key={index} reverse={index % 2 !== 0 && true} imageLogo={item.imageLogo} imageOne={item.imageOne} imageTwo={item.imageTwo} subtitle={item.subtitle} biz={item.biz} checkpoints={item.checkpoints} showLinearTop={index === 1 && true} />
-            )
-          })
+          dataGrid.map((item, index) => (
+            <div key={index} onClick={() => handleClick(`${item.url}`)} className={`card cursor-pointer relative bg-gray-200 overflow-hidden border border-gray-100 rounded-3xl hover:border-white group ${index === 2 && 'col-start-1 col-end-2 md:col-end-3'}`} data-aos="fade-up" data-aos-delay={250 * index * 2}>
+              {item?.image1 &&
+                <Image src={item.image1} alt="" className="relative w-full h-full object-contain z-10 group-hover:scale-105" data-aos={`${index === 2 ? 'slide-right' : 'fade'}`} data-aos-delay={index === 2 ? 500 : 0} />
+              }
+              {item?.image2 &&
+                <Image src={item.image2} alt="" className="hidden md:flex absolute top-0 right-[-20%] w-full h-full object-contain" data-aos="fade-left" />
+              }
+              <div className="absolute bottom-0 w-full flex flex-col-reverse sm:flex-row items-start md:items-center justify-start sm:justify-between gap-3 p-3 sm:p-4 z-20">
+                <div className="inline-flex items-center gap-3" data-aos="fade-up">
+                  {item?.tags?.map((i, j) => <div key={j} className="bg-[rgba(54,57,61,0.75)] text-white text-sm rounded-full py-0.5 px-3" >{i}</div>)}
+                </div>
+                <div className="inline-flex items-center" data-aos="fade-left">
+                  <Link href={`${item.href}`} target="_blank" className="bg-[#435D7C] text-base inline-flex items-center gap-1 py-0.5 ps-1.5 pe-2 rounded-full group-hover:scale-110 hover:bg-slate-500">
+                    <Icon icon={`ph:globe`} />
+                    <span>Website</span>
+                    <Icon icon={`ep:right`} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))
         }
       </div>
     </div>

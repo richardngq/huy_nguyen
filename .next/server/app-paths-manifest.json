@@ -1,3 +1,7 @@
 {
-  "/page": "app/page.js"
+  "/sm/page": "app/sm/page.js",
+  "/page": "app/page.js",
+  "/gs/page": "app/gs/page.js",
+  "/cn/page": "app/cn/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

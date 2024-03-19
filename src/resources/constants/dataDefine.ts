@@ -1,7 +1,8 @@
-import Image0 from '@/assets/img/img.png';
 import Image1 from '@/assets/img/img-1.png';
 import Image2 from '@/assets/img/img-2.png';
 import Image3 from '@/assets/img/img-3.png';
+import Image4 from '@/assets/img/img-4.png';
+
 import LogoSM from '@/assets/img/logo-sm.png';
 import ImageSM1 from '@/assets/img/img-01-sm.png';
 import ImageSM2 from '@/assets/img/img-02-sm.png';
@@ -12,6 +13,11 @@ import LogoCN from '@/assets/img/logo-cn.png';
 import ImageCN1 from '@/assets/img/img-01-cn.png';
 import ImageCN2 from '@/assets/img/img-02-cn.png';
 
+import ImageGridSM from '@/assets/img/img-grid-sm.png';
+import ImageGridGS from '@/assets/img/img-grid-gs.png';
+import ImageGridCN1 from '@/assets/img/img-grid-cn-01.png';
+import ImageGridCN2 from '@/assets/img/img-grid-cn-02.png';
+
 export interface IData {
   href?: string;
   title?: string;
@@ -21,27 +27,27 @@ export interface IData {
 
 export const dataWorks: IData[] = [
   {
-    href: 'https://www.behance.net/gallery/167050693/Canon-Gallery-S',
-    title: `Canon`,
-    image: Image1,
-    description: `Portable exhibition walls with stands for Canon photographers.`,
-  },
-  {
     href: 'https://www.behance.net/gallery/167051093/Shiseido',
     title: `Shiseido`,
-    image: Image2,
+    image: Image1,
     description: `Shiseido offers the highest quality products make-up Japan with 145 years of technology`,
   },
   {
     href: 'https://www.behance.net/gallery/168289687/Crabada-NFT-Marketplace-Game-Fi',
     title: `Crabada`,
-    image: Image0,
+    image: Image2,
     description: `An Exciting Undersea Adventure Awaits GameFi`,
+  },
+  {
+    href: 'https://www.behance.net/gallery/167131231/F2NFT-Marketplace-v20',
+    title: `F2FNT`,
+    image: Image3,
+    description: `The player can play solo, duos or a squad of 4 and fight on various planets GameFi.`,
   },
   {
     href: 'https://www.behance.net/gallery/167049811/Legend-of-the-7-Kingdoms-Landing-Page',
     title: `Legend Of 7 Kingdoms`,
-    image: Image3,
+    image: Image4,
     description: `An RPG GameFi about 7 Kingdoms with Blockchain and Crypto`,
   },
 ];
@@ -115,5 +121,35 @@ export const dataShows: IDataShow[] = [
     <br/><br/>
     <b class="text-white">Analytics:</b> The online photo gallery should have robust analytics capabilities, allowing you to track user behavior, understand how users interact with the gallery, and make data-driven decisions about how to improve the gallery over time.
     `,
+  },
+];
+
+export interface IDataGrid {
+  image1?: any;
+  image2?: any;
+  url?: string;
+  href?: string;
+  tags?: string[];
+}
+
+export const dataGrid: IDataGrid[] = [
+  {
+    image1: ImageGridSM,
+    url: '/sm',
+    href: 'https://scatter.roninchain.com/',
+    tags: ['Mobile app', 'Fintech', 'Crypto'],
+  },
+  {
+    image1: ImageGridGS,
+    url: '/gs',
+    href: 'https://thegestreon.com/',
+    tags: ['Website', 'E-commerce', 'SaaS'],
+  },
+  {
+    image1: ImageGridCN1,
+    image2: ImageGridCN2,
+    url: '/cn',
+    href: 'https://cweb.canon.jp/gallery/s/',
+    tags: ['Website', 'SaaS', 'CMS', 'Gallery'],
   },
 ];

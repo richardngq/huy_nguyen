@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={font.className}
         suppressHydrationWarning={true}
       >
-        <div className="text-white flex flex-col h-screen">
+        <div className="container mx-auto text-white flex flex-col h-screen">
           <Navbar />
 
           <div className="flex-auto">
