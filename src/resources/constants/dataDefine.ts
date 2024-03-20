@@ -18,6 +18,10 @@ import ImageGridGS from '@/assets/img/img-grid-gs.png';
 import ImageGridCN1 from '@/assets/img/img-grid-cn-01.png';
 import ImageGridCN2 from '@/assets/img/img-grid-cn-02.png';
 
+import ImageGridLogoSM from '@/assets/img/img-logo-gridSM.png';
+import ImageGridLogoGS from '@/assets/img/img-logo-gridGS.png';
+import ImageGridLogoCN from '@/assets/img/img-logo-gridCN.png';
+
 export interface IData {
   href?: string;
   title?: string;
@@ -127,6 +131,7 @@ export const dataShows: IDataShow[] = [
 export interface IDataGrid {
   image1?: any;
   image2?: any;
+  imageLogo?: any;
   url?: string;
   href?: string;
   tags?: string[];
