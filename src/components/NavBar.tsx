@@ -13,6 +13,7 @@ export const Navbar: FC = () => {
   const Links = [
     { href: '/', target: false, label: 'Home' },
     // { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Resume' },
+    { href: '/about', target: false, label: 'About' },
     { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Document' },
   ]
   return (

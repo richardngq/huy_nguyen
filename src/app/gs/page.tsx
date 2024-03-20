@@ -3,7 +3,7 @@ import { dataShows } from "@/resources/constants/dataDefine"
 
 export default function Gestreon() {
   return (
-    <div className="mt-10">
+    <div className="mt-20">
       {
         dataShows.map((item, index) => {
           if (index == 1) {

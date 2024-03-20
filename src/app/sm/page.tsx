@@ -3,7 +3,7 @@ import { dataShows } from "@/resources/constants/dataDefine"
 
 export default function SkyMavis() {
   return (
-    <div className="mt-10">
+    <div className="mt-20">
       {
         dataShows.map((item, index) => {
           if (index == 0) {

@@ -21,6 +21,7 @@ import ImageGridCN2 from '@/assets/img/img-grid-cn-02.png';
 import ImageGridLogoSM from '@/assets/img/img-logo-gridSM.png';
 import ImageGridLogoGS from '@/assets/img/img-logo-gridGS.png';
 import ImageGridLogoCN from '@/assets/img/img-logo-gridCN.png';
+import { EDomain, EStackType } from './type.enum';
 
 export interface IData {
   href?: string;
@@ -139,22 +140,52 @@ export interface IDataGrid {
 
 export const dataGrid: IDataGrid[] = [
   {
+    imageLogo: ImageGridLogoSM,
     image1: ImageGridSM,
     url: '/sm',
     href: 'https://scatter.roninchain.com/',
     tags: ['Mobile app', 'Fintech', 'Crypto'],
   },
   {
+    imageLogo: ImageGridLogoGS,
     image1: ImageGridGS,
     url: '/gs',
     href: 'https://thegestreon.com/',
     tags: ['Website', 'E-commerce', 'SaaS'],
   },
   {
+    imageLogo: ImageGridLogoCN,
     image1: ImageGridCN1,
     image2: ImageGridCN2,
     url: '/cn',
     href: 'https://cweb.canon.jp/gallery/s/',
     tags: ['Website', 'SaaS', 'CMS', 'Gallery'],
   },
+];
+
+export interface IStack {
+  stack?: EStackType;
+}
+
+export const dataStacks: IStack[] = [
+  { stack: EStackType.FIGMA },
+  { stack: EStackType.FIGJAM },
+  { stack: EStackType.ADOBEXD },
+  { stack: EStackType.ADOBESUITE },
+  { stack: EStackType.ZEPLIN },
+  { stack: EStackType.INVISION },
+  { stack: EStackType.FRAMER },
+];
+
+export interface IDomain {
+  domain?: EDomain;
+}
+
+export const dataDomains: IDomain[] = [
+  { domain: EDomain.FINTECH },
+  { domain: EDomain.WEB3 },
+  { domain: EDomain.SAAS },
+  { domain: EDomain.CRYPTO },
+  { domain: EDomain.BLOCKCHAIN },
+  { domain: EDomain.ECOMMERCE },
 ];
