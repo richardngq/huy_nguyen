@@ -20,9 +20,9 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
           dataGrid.map((item, index) => (
-            <div key={index} onClick={() => handleClick(`${item.url}`)} className={`card cursor-pointer relative bg-gray-200 overflow-hidden border border-gray-100 rounded-3xl hover:border-white group ${index === 2 && 'col-start-1 col-end-2 md:col-end-3'}`} data-aos="fade-up" data-aos-delay={250 * index * 2}>
+            <div key={index} onClick={() => handleClick(`${item.url}`)} className={`card cursor-pointer relative bg-gray-200 overflow-hidden border border-gray-100 rounded-3xl hover:border-white hover:scale-125 group ${index === 2 && 'col-start-1 col-end-2 md:col-end-3'}`} data-aos="fade-up" data-aos-delay={250 * index * 2}>
               {item?.image1 &&
-                <Image src={item.image1} alt="" className="relative w-full h-full object-contain z-10 group-hover:scale-105" data-aos={`${index === 2 ? 'slide-right' : 'fade'}`} data-aos-delay={index === 2 ? 500 : 0} />
+                <Image src={item.image1} alt="" className="relative max-w-none w-full h-full object-contain z-10 group-hover:scale-150" data-aos={`${index === 2 ? 'slide-right' : 'fade'}`} data-aos-delay={index === 2 ? 500 : 0} />
               }
               {item?.image2 &&
                 <Image src={item.image2} alt="" className="hidden md:flex absolute top-0 right-[-20%] w-full h-full object-contain" data-aos="fade-left" />

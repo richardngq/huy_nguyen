@@ -25,10 +25,10 @@ export default function RootLayout({
       <body className={font.className}
         suppressHydrationWarning={true}
       >
-        <div className="container mx-auto text-white flex flex-col h-screen">
+        <div className="text-white flex flex-col h-screen">
           <Navbar />
 
-          <div className="flex-auto">
+          <div className="container mx-auto flex-auto">
             {children}
           </div>
 
@@ -37,6 +37,6 @@ export default function RootLayout({
       </body>
       <AOSInit />
       <Analytics />
-    </html >
+    </html>
   );
 }

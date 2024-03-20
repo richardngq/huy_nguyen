@@ -16,7 +16,7 @@ export default function Home() {
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
-      <div className="relative p-3 lg:p-6 overflow-hidden h-full flex flex-col justify-center">
+      <div className="p-3 lg:p-6 overflow-hidden h-full flex flex-col justify-center">
         <GlowFloating />
         <Image src={Pattern} alt='' className="absolute right-0 top-0" data-aos="fade-in" />
         <About />
