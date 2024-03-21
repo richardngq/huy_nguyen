@@ -98,7 +98,7 @@ export default function About() {
   }
 
   return (
-    <section className="mt-20">
+    <section className="container mt-20 mx-auto">
       <div className="text-white" data-aos="fade-up">
         <p className="text-4xl md:text-7xl font-bold">Huy Nguyen</p>
         <p className="text-base leading-8 mt-4">

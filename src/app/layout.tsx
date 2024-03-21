@@ -28,7 +28,7 @@ export default function RootLayout({
         <div className="text-white flex flex-col h-screen">
           <Navbar />
 
-          <div className="container mx-auto flex-auto">
+          <div className="flex-auto">
             {children}
           </div>
 
