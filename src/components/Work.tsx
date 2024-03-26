@@ -37,7 +37,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
   }
 
   return (
-    <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
+    <div className={`relative z-20 mt-10 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-6">
         {
           dataWorks.map((item, index) => (
