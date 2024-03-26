@@ -102,13 +102,13 @@ export default function About() {
   return (
     <section className="container mt-20 mx-auto">
       <div className="text-white" data-aos="fade-up">
-        <div className="avatar inline-flex gap-6">
+        <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
           <div className="w-24 h-24 rounded-3xl border border-gray-50 overflow-hidden">
             <Image src={Avatar} alt='' className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col gap-1">
             <p className="text-xl font-bold">Huy Nguyen</p>
-            <p className="text-base leading-8">
+            <p className="text-base font-thin">
               Hi, I am a Product Designer and UI/UX Designer with 5 years of experience.<br />
               Specialized working with domains about Web3, Fintech, Blockchain, Crypto, E-Commerce and SaaS.
             </p>
