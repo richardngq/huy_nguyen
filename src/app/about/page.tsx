@@ -1,5 +1,7 @@
 import { dataDomains, dataStacks } from "@/resources/constants/dataDefine";
+import Avatar from "@/assets/img/avatar.png";
 import { FC } from "react";
+import Image from "next/image";
 
 export default function About() {
 
@@ -100,14 +102,21 @@ export default function About() {
   return (
     <section className="container mt-20 mx-auto">
       <div className="text-white" data-aos="fade-up">
-        <p className="text-4xl md:text-7xl font-bold">Huy Nguyen</p>
-        <p className="text-base leading-8 mt-4">
-          Hi, I am a Product Designer and UI/UX Designer with 5 years of experience.<br />
-          Specialized working with domains about Web3, Fintech, Blockchain, Crypto, E-Commerce and SaaS.
-        </p>
+        <div className="avatar inline-flex gap-6">
+          <div className="w-24 h-24 rounded-3xl border border-gray-50 overflow-hidden">
+            <Image src={Avatar} alt='' className="w-full h-full object-contain" />
+          </div>
+          <div className="flex flex-col gap-1">
+            <p className="text-xl font-bold">Huy Nguyen</p>
+            <p className="text-base leading-8">
+              Hi, I am a Product Designer and UI/UX Designer with 5 years of experience.<br />
+              Specialized working with domains about Web3, Fintech, Blockchain, Crypto, E-Commerce and SaaS.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <Parts classNames="mt-20" title="My Experience"
+      <Parts classNames="mt-10" title="My Experience"
       >
         <div className="flex flex-col gap-10">
           {
