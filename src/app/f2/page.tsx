@@ -74,7 +74,7 @@ export default function F2NFT() {
 
         <div data-aos="fade-up" className="flex flex-col gap-6">
           <Paragraph
-            title="Happy case~"
+            title="Happy case"
             content="
             In an ideal scenario on a game-fi marketplace, users would experience a seamless and joyful buying and selling process. They would discover a unique and valuable NFT, execute the transaction swiftly and effortlessly. The success of this transaction would leave them feeling proud and excited to engage further in the game-fi community, creating a positive experience and memorable moments.
             "
