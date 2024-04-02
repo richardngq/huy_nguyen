@@ -86,8 +86,8 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               </div>
               <div className="flex-1 self-stretch flex flex-col justify-between">
                 <div>
-                  <Image src={item.logo} alt="" className="w-auto h-12 lg:h-20" />
-                  <div className="hidden lg:block font-bold text-2xl text-gray-950 mt-3">{item.title}</div>
+                  <Image src={item.logo} alt="" className="w-auto h-12 lg:h-16" />
+                  <div className="hidden lg:block font-bold text-xl text-gray-950 mt-3">{item.title}</div>
                   <div className="text-base opacity-50 mt-3">{item.description}</div>
                   <div className="flex flex-row gap-3 mt-4 lg:mt-6">
                     {
