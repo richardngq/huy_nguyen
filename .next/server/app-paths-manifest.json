@@ -1,7 +1,5 @@
 {
-  "/sm/page": "app/sm/page.js",
-  "/gs/page": "app/gs/page.js",
   "/page": "app/page.js",
-  "/f2/page": "app/f2/page.js",
-  "/cra/page": "app/cra/page.js"
+  "/sm/page": "app/sm/page.js",
+  "/gs/page": "app/gs/page.js"
 }

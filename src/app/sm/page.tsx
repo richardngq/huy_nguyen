@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image"
 import { Paragraph } from "@/components/Paragraph"
-import Logo from "@/assets/img/img-logo-SM.png"
+import Logo from "@/assets/image/img-logo-SM.png"
 import Image00 from "@/assets/img/image-detail-SM00.png"
 import Image01 from "@/assets/img/image-detail-SM01.png"
 import Image02 from "@/assets/img/image-detail-SM02.png"
@@ -83,37 +83,6 @@ export default function SkyMavis() {
           />
           <div className="relative">
             <Image alt="" src={Image04} className="w-full h-full object-contain" />
-          </div>
-        </div>
-
-        <div data-aos="fade-up" className="flex flex-col gap-6">
-          <Paragraph
-            title="Special thanks to"
-          />
-
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="inline-flex gap-3 py-3 ps-3 pe-4 bg-gray-200 border border-gray-100 rounded-xl w-fit">
-              <div className="avatar relative w-16 h-16 overflow-hidden rounded-full">
-                <Image src={`https://media.licdn.com/dms/image/C5603AQFAKHRTIWCqCg/profile-displayphoto-shrink_400_400/0/1565670656772?e=1717027200&v=beta&t=_rPeVkPQZn4dUJ92lopicJqoFesYQQXxBGefJBPqRMo`} alt="" className="w-full h-full object-contain" fill />
-              </div>
-              <div className="flex flex-col">
-                <p className="font-bold">Cong Nguyen</p>
-                <p className="font-thin text-sm">Senior Front End</p>
-                <p className="text-xs leading-5 opacity-50">at Sky Mavis</p>
-              </div>
-            </div>
-
-            <div className="inline-flex gap-3 py-3 ps-3 pe-4 bg-gray-200 border border-gray-100 rounded-xl w-fit">
-              <div className="avatar relative w-16 h-16 flex items-center justify-center overflow-hidden bg-black rounded-full">
-                <Icon icon="solar:user-bold" fontSize={48} />
-              </div>
-              <div className="flex flex-col">
-                <p className="font-bold">Leoh Hiep</p>
-                <p className="font-thin text-sm">Designer Lead</p>
-                <p className="text-xs leading-5 opacity-50">at Sky Mavis</p>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>

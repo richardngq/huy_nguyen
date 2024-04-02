@@ -35,9 +35,9 @@ export const Backers: FC = () => {
   return (
     <section className="relative flex flex-col gap-6 mt-20 z-10">
       <div className="container mx-auto">
-        <p className="text-gray-50 text-base text-center" data-aos='fade-up'>Special thanks for trusting and growing up together</p>
+        <p className="text-base text-center" data-aos='fade-up'>Special thanks for trusting and growing up together</p>
       </div>
-      <Marquee>
+      <Marquee className="bg-[rgba(0,0,0,0.75)] py-3 backdrop-blur-[2px]">
         {listImage.map((item, i) => (
           <Card
             key={i}

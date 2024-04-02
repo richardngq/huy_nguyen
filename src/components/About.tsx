@@ -8,9 +8,10 @@ interface IAbout {
 export default function About<IAbout>({ classNames = '' }) {
   const bio = [
     {
-      Username: `Huy Nguyen`,
-      Label: `Product Designer`,
-      Description: `Hi, I am a Product Designer and UI/UX Designer.`,
+      Username: `Hi, I'm Huy Nguyen`,
+      Description: `I'm a product designer based in Vietnam with experience in delivering end-to-end UX/UI design for software products. 
+      I'm passionate about improving the lives of others through design and am constantly looking to learn new things everyday.
+      `,
     }
   ]
   return (
@@ -19,17 +20,10 @@ export default function About<IAbout>({ classNames = '' }) {
         bio.map((item, index) => {
           return (
             <div key={index} className="w-full flex-1">
-              <p className="text-4xl md:text-7xl font-bold">{item.Username}</p>
-              <p className="text-xl md:text-2xl font-light text-gray-50 mt-4 max-w-full">{item.Label}</p>
-              <TypeAnimation
-                sequence={[
-                  1000,
-                  item.Description
-                ]}
-                wrapper="p"
-                speed={50}
-                className="text-base leading-8 text-white mt-4 max-w-full"
-              />
+              <p className="text-4xl md:text-6xl font-bold">{item.Username}</p>
+              <p className="text-lg leading-8 mt-4 max-w-full opacity-50">
+                {item.Description}
+              </p>
             </div>
           )
         })

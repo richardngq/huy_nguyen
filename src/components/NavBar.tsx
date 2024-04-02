@@ -21,7 +21,7 @@ export const Navbar: FC = () => {
       {
         Links.map((item, index) => {
           return (
-            <NavItem key={index} text={item.label} link={item.href} classNames={`${pathname === item.href && '!text-white'}`} target={item.target} />
+            <NavItem key={index} text={item.label} link={item.href} classNames={`${pathname === item.href && '!opacity-100'}`} target={item.target} />
           )
         })
       }

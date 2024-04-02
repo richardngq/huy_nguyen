@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image"
 import { Paragraph } from "@/components/Paragraph"
-import Logo from "@/assets/img/img-logo-GS.png"
+import Logo from "@/assets/image/img-logo-GS.png"
 import Image00 from "@/assets/img/image-detail-GS00.png"
 import Image01 from "@/assets/img/image-detail-GS01.png"
 import Image02 from "@/assets/img/image-detail-GS02.png"
