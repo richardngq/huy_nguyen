@@ -8,6 +8,9 @@ import Image2 from '@/assets/img/logo-canon.png';
 import Image3 from '@/assets/img/logo-F2NFT.png';
 import Image4 from '@/assets/img/img-logo-L7.png';
 
+import App1 from '@/assets/app/fxce.webp';
+import App2 from '@/assets/app/xfun.webp';
+
 interface IWork {
   classNames?: string
 }
@@ -41,6 +44,21 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
     },
   ];
 
+  const dataApps = [
+    {
+      image: App1,
+      urlApp: `https://apps.apple.com/vn/app/fxce/id1602621908`,
+      urlPlay: `https://play.google.com/store/apps/details?id=com.fxce.app`,
+      title: `FXCE`
+    },
+    {
+      image: App2,
+      urlApp: `https://apps.apple.com/by/app/xfun-wallet/id1612225910`,
+      urlPlay: `https://play.google.com/store/apps/details?id=com.xfun.wallet&hl=en_US`,
+      title: `XFUN`
+    }
+  ]
+
   const RenderItem = ({ index, href, title, image, description, classNames }: { index: any, href: any, title?: string, image: any, description?: string, classNames?: string }) => {
     return (
       <Link href={href} target="_blank" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
@@ -65,16 +83,33 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
   }
 
   return (
-    <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
-      <div className="font-semibold opacity-75">MY SHOWCASES</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-6 mt-6">
-        {
-          dataWorks.map((item, index) => (
-            <RenderItem key={index} index={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />
-          )
-          )
-        }
+    <>
+      <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
+        <div className="font-semibold opacity-75">MY SHOWCASES</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-6 mt-6">
+          {
+            dataWorks.map((item, index) => (
+              <RenderItem key={index} index={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />
+            )
+            )
+          }
+        </div>
       </div>
-    </div>
+      <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
+        <div className="font-semibold opacity-75">LAUNCHING APPS</div>
+        <div className="flex flex-row items-center gap-4 md:gap-6 mt-6">
+          {
+            dataApps.map((item, index) => (
+              <Tilt key={index} className="w-28 h-28 rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm hover:scale-125">
+                <Link href={item.urlPlay} target="_blank">
+                  <Image src={item.image} alt={item.title} />
+                </Link>
+              </Tilt>
+            )
+            )
+          }
+        </div>
+      </div>
+    </>
   )
 }
