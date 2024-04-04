@@ -50,6 +50,16 @@ body {
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     max-width: none;
   }
+
+  @media screen and (max-width: 1024px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media screen and (max-width: 425px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .progress-bar {

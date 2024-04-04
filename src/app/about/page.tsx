@@ -14,7 +14,7 @@ export default function About() {
     }) => {
     return (
       <div className={`text-sm flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
-        <div className="uppercase font-semibold text-base text-gray-50">{title}</div>
+        <div className="uppercase font-semibold text-base opacity-75">{title}</div>
         {children}
       </div>
     )
@@ -87,7 +87,7 @@ export default function About() {
     return (
       <div className={`${classNames}`} data-aos="fade-up">
         <div className="flex flex-col">
-          <p><span className="text-white text-xl font-medium">{CompanyName}</span><span className="text-[#95AABF] text-base font-thin">&nbsp;{`-`}&nbsp;{Role}</span></p>
+          <p><span className=" text-xl font-medium">{CompanyName}</span><span className="opacity-75 text-base font-thin">&nbsp;{`-`}&nbsp;{Role}</span></p>
           <p className="text-[#4b525d] text-base">{Dates}</p>
         </div>
         <ul className="text-[#7d868f] text-sm mt-2">
@@ -101,7 +101,7 @@ export default function About() {
 
   return (
     <section className="container mt-20 mx-auto">
-      <div className="text-white" data-aos="fade-up">
+      <div className="" data-aos="fade-up">
         <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
           <div className="w-24 h-24 rounded-3xl border border-gray-50 overflow-hidden">
             <Image src={Avatar} alt='' className="w-full h-full object-contain" />
@@ -134,7 +134,7 @@ export default function About() {
             dataStacks.map((item, index) => (
               <div
                 key={index}
-                className="bg-[rgba(255,255,255,0.25)] text-[#A2A4A6] text-sm px-3 py-0.5 rounded-full hover:bg-white hover:text-gray-100 cursor-pointer"
+                className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                 data-aos="fade-left"
                 data-aos-delay={100 + index * 100}
                 dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
@@ -150,7 +150,7 @@ export default function About() {
             dataDomains.map((item, index) => (
               <div
                 key={index}
-                className="bg-[rgba(255,255,255,0.25)] text-[#A2A4A6] text-sm px-3 py-0.5 rounded-full hover:bg-white hover:text-gray-100 cursor-pointer"
+                className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                 data-aos="fade-left"
                 data-aos-delay={100 + index * 100}
                 dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />

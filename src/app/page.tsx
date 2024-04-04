@@ -17,7 +17,7 @@ export default function Home() {
         style={{ scaleX: scrollYProgress }}
       />
       <div className="container mx-auto p-3 lg:p-6 overflow-hidden h-full flex flex-col justify-center">
-        <GlowFloating />
+        {/* <GlowFloating /> */}
         <About />
         <ShowCases />
         <Work />

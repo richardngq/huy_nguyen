@@ -17,7 +17,7 @@ export const Navbar: FC = () => {
     { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Document' },
   ]
   return (
-    <nav className='relative w-auto inline-flex items-center justify-end gap-6 p-3 lg:p-6 pb-0 lg:pb-0 z-10' data-aos="fade-in">
+    <nav className='relative w-full inline-flex items-center justify-end gap-6 p-3 lg:p-6 z-10 top-0' data-aos="fade-in">
       {
         Links.map((item, index) => {
           return (

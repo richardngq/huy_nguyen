@@ -1,9 +1,8 @@
 import { FC, useRef } from "react";
 import Image from "next/image";
 import ImageGridSM from '@/assets/img/img-grid-sm.png';
-import ImageGridGS from '@/assets/image/image-detail-GS-00a.png';
-import ImageGridIPFS from '@/assets/image/image-detail-IPFS-00a.png';
-import ImageGridIPFS2 from '@/assets/image/image-detail-IPFS-00b.png';
+import ImageGridGS from '@/assets/image/image-mockup-gs.png';
+import ImageGridIPFS from '@/assets/image/image-mockup-fxce.png';
 
 import ImageGridLogoSM from '@/assets/image/img-logo-SM.png';
 import ImageGridLogoGS from '@/assets/image/img-logo-GS.png';
@@ -29,15 +28,6 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       description: `Main responsibility and designing to enhance UI/UX Product`,
       url: '/ipfs1',
       href: 'https://www.fxce.com/',
-      tags: ['Fintech', 'CEX'],
-    },
-    {
-      logo: ImageGridLogoIPFS,
-      image: ImageGridIPFS2,
-      title: `IPFS - SUPPORT CENTER`,
-      description: `Design the support center`,
-      url: '/ipfs2',
-      href: 'https://support.fxce.com/',
       tags: ['Fintech', 'CEX'],
     },
     {
@@ -72,8 +62,8 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
         {
           dataGrid.map((item, index) => (
             <div key={index} className={`card relative flex flex-col-reverse ${index % 2 !== 0 ? `lg:flex-row` : `lg:flex-row`} gap-4 lg:gap-8`} data-aos="fade-up">
-              <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full lg:max-w-[50%] shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl p-1 overflow-hidden bg-white flex-1">
-                <Image src={item.image} alt="" className="relative w-full h-full object-contain z-10" />
+              <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full lg:max-w-[50%] w-[375px] h-[320px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-4 border-white flex-1">
+                <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
                 <div className="absolute bottom-0 w-full flex flex-col-reverse sm:flex-row items-start md:items-center justify-start sm:justify-between gap-3 p-3 sm:p-4 z-30">
                   <motion.div
                     className="inline-flex items-center gap-3"
@@ -90,13 +80,9 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                   <div className="hidden lg:block font-bold text-xl text-gray-950 mt-3">{item.title}</div>
                   <div className="text-base opacity-50 mt-3">{item.description}</div>
                   <div className="flex flex-row gap-3 mt-4 lg:mt-6">
-                    {
-                      (index === 2 || index === 3) && (
-                        <Link href={`${item.url}`} target="_blank" className="cursor-pointer bg-gray-800 text-white hover:opacity-50 py-1.5 px-4 rounded-full">
-                          <span>View detail</span>
-                        </Link>
-                      )
-                    }
+                    <Link href={`${item.url}`} target="_blank" className="cursor-pointer bg-gray-800 text-white hover:opacity-50 py-1.5 px-4 rounded-full">
+                      <span>View detail</span>
+                    </Link>
                     <Link href={`${item.href}`} target="_blank" className="cursor-pointer inline-flex items-center gap-1 group bg-white text-gray-800 py-1.5 px-4 rounded-full border border-gray-800 hover:opacity-50">
                       <span>Visit on Website</span>
                       <Icon icon={`fluent:window-new-24-regular`} className="group-hover:scale-125" />
