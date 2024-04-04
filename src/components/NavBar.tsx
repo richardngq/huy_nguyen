@@ -2,6 +2,9 @@
 import { FC, useEffect } from 'react'
 import { NavItem } from './NavItem'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image'
+import Logo from '@/assets/logo.svg'
 
 export const Navbar: FC = () => {
   const pathname = usePathname()
@@ -17,14 +20,19 @@ export const Navbar: FC = () => {
     { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Document' },
   ]
   return (
-    <nav className='relative w-full inline-flex items-center justify-end gap-6 p-3 lg:p-6 z-10 top-0' data-aos="fade-in">
-      {
-        Links.map((item, index) => {
-          return (
-            <NavItem key={index} text={item.label} link={item.href} classNames={`${pathname === item.href && '!opacity-100'}`} target={item.target} />
-          )
-        })
-      }
-    </nav>
+    <div className='relative inline-flex p-3 lg:p-6 z-10' data-aos="fade-in">
+      <Link href={'/'}>
+        <Image src={Logo} alt="" />
+      </Link>
+      <nav className='w-full inline-flex items-center justify-end gap-6'>
+        {
+          Links.map((item, index) => {
+            return (
+              <NavItem key={index} text={item.label} link={item.href} classNames={`${pathname === item.href && '!opacity-100'}`} target={item.target} />
+            )
+          })
+        }
+      </nav>
+    </div>
   )
 }

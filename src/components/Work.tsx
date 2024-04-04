@@ -62,7 +62,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
   const RenderItem = ({ index, href, title, image, description, classNames }: { index: any, href: any, title?: string, image: any, description?: string, classNames?: string }) => {
     return (
       <Link href={href} target="_blank" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
-        <Tilt className="group bg-[rgba(255,255,255,0.5)] rounded-2xl border-4 border-white overflow-hidden backdrop-blur-[2px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)]">
+        <Tilt className="group bg-[rgba(255,255,255,0.5)] rounded-2xl border-4 border-white hover:border-slate-200 overflow-hidden backdrop-blur-[2px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)]">
           <div className={`relative flex w-full max-w-full lg:w-80 h-[240px] md:h-[240px] lg:h-64 flex-col items-start gap-6 borderoverflow-hidden transition-all ${classNames}`}>
             <div className="relative z-20 p-3">
 
@@ -73,7 +73,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
               </div>
             </div>
 
-            <p className="absolute left-0 right-0 bottom-0 inline-flex items-center p-4 z-10 transition-all">
+            <p className="absolute left-0 right-0 bottom-0 inline-flex items-center p-4 z-10 group-hover:scale-105 transition-all">
               More at Behance&nbsp;<Icon icon={`ep:right`} />
             </p>
           </div>

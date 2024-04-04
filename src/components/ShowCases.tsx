@@ -80,7 +80,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                   <div className="hidden lg:block font-bold text-xl text-gray-950 mt-3">{item.title}</div>
                   <div className="text-base opacity-50 mt-3">{item.description}</div>
                   <div className="flex flex-row gap-3 mt-4 lg:mt-6">
-                    <Link href={`${item.url}`} target="_blank" className="cursor-pointer bg-gray-800 text-white hover:opacity-50 py-1.5 px-4 rounded-full">
+                    <Link href={`${item.url}`} className="cursor-pointer bg-gray-800 text-white hover:opacity-50 py-1.5 px-4 rounded-full">
                       <span>View detail</span>
                     </Link>
                     <Link href={`${item.href}`} target="_blank" className="cursor-pointer inline-flex items-center gap-1 group bg-white text-gray-800 py-1.5 px-4 rounded-full border border-gray-800 hover:opacity-50">
