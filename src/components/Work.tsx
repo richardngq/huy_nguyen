@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Image from "next/image"
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
@@ -7,9 +7,11 @@ import Image1 from '@/assets/img/logo-shiseido.png';
 import Image2 from '@/assets/img/logo-canon.png';
 import Image3 from '@/assets/img/logo-F2NFT.png';
 import Image4 from '@/assets/img/img-logo-L7.png';
+import Image5 from '@/assets/img/logo-mooncat.png';
 
 import App1 from '@/assets/app/fxce.webp';
 import App2 from '@/assets/app/xfun.webp';
+import App3 from '@/assets/app/f2nft.webp';
 
 interface IWork {
   classNames?: string
@@ -42,6 +44,12 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
       image: Image3,
       description: `The player can play solo, duos or a squad of 4 and fight on various planets GameFi.`,
     },
+    {
+      href: 'https://www.behance.net/gallery/195569283/Mooncat-NFT-GameFi',
+      title: `Mooncat`,
+      image: Image5,
+      description: `MoonCats is a non-fungible token (NFT) collection of 25,440 generative pixel art-style cats. It is considered to be one of the earliest NFT projects`,
+    },
   ];
 
   const dataApps = [
@@ -56,15 +64,21 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
       urlApp: `https://apps.apple.com/by/app/xfun-wallet/id1612225910`,
       urlPlay: `https://play.google.com/store/apps/details?id=com.xfun.wallet&hl=en_US`,
       title: `XFUN`
+    },
+    {
+      image: App3,
+      urlApp: `https://apps.apple.com/us/app/ftribe-fighters/id1603199423`,
+      urlPlay: `https://play.google.com/store/apps/details?id=com.aftribefighters.games`,
+      title: `F2NFT`
     }
   ]
 
   const RenderItem = ({ index, href, title, image, description, classNames }: { index: any, href: any, title?: string, image: any, description?: string, classNames?: string }) => {
     return (
-      <Link href={href} target="_blank" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
-        <Tilt className="group bg-[rgba(255,255,255,0.5)] rounded-2xl border-4 border-white hover:border-slate-200 overflow-hidden backdrop-blur-[2px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)]">
-          <div className={`relative flex w-full max-w-full lg:w-80 h-[240px] md:h-[240px] lg:h-64 flex-col items-start gap-6 borderoverflow-hidden transition-all ${classNames}`}>
-            <div className="relative z-20 p-3">
+      <Link href={href} target="_blank" className="h-full" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
+        <Tilt className="group bg-[rgba(255,255,255,0.5)] h-full rounded-2xl border-4 border-white hover:border-slate-200 overflow-hidden backdrop-blur-[2px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)]">
+          <div className={`relative flex w-full max-w-full h-[240px] md:h-[240px] lg:h-full lg:min-h-[240px] flex-col items-start gap-6 borderoverflow-hidden transition-all ${classNames}`}>
+            <div className="relative z-20 p-6">
 
               <Image src={image} alt="" className="w-auto h-10 object-contain" />
 
@@ -86,7 +100,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
     <>
       <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
         <div className="font-semibold opacity-75">MY SHOWCASES</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4 md:gap-6 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 md:gap-6 mt-6">
           {
             dataWorks.map((item, index) => (
               <RenderItem key={index} index={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />

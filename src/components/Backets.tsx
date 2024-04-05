@@ -10,6 +10,7 @@ import Image06 from '@/assets/img/img-slide-06.png'
 import Image07 from '@/assets/img/img-slide-07.png'
 import Image08 from '@/assets/img/img-slide-08.png'
 import Image09 from '@/assets/img/img-slide-09.png'
+import Image10 from '@/assets/img/logo-mooncat.png'
 
 export const Backers: FC = () => {
   const listImage = [
@@ -21,7 +22,8 @@ export const Backers: FC = () => {
     Image06,
     Image07,
     Image08,
-    Image09
+    Image09,
+    Image10
   ]
 
   const Card = ({ index, src, classNames }: { index?: any, src: string, classNames?: any }) => {
