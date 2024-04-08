@@ -1,19 +1,40 @@
 'use client';
 import Image from "next/image"
-import { Paragraph } from "@/components/Paragraph"
-import Logo from "@/assets/image/img-logo-SM.png"
 import imageURL0 from "@/assets/image/image-detail-sm-0.png"
 import imageURL1 from "@/assets/image/image-detail-sm-1.png"
 import imageURL2 from "@/assets/image/image-detail-sm-2.png"
 import imageURL3 from "@/assets/image/image-detail-sm-3.png"
 import imageURL4 from "@/assets/image/image-detail-sm-4.png"
-import { Icon } from "@iconify/react/dist/iconify.js"
+
+import ImageGridGS from '@/assets/image/image-mockup-gs.png';
+import ImageGridIPFS from '@/assets/image/image-mockup-fxce.png';
+import ImageGridLogoGS from '@/assets/image/img-logo-GSb.png';
+import ImageGridLogoIPFS from '@/assets/image/img-logo-IPFS.png';
+
 import Link from "next/link";
 
 export default function SkyMavis() {
+
+  const dataGrid = [
+    {
+      logo: ImageGridLogoIPFS,
+      image: ImageGridIPFS,
+      url: '/ipfs1',
+    },
+    {
+      logo: ImageGridLogoGS,
+      image: ImageGridGS,
+      url: '/gs',
+    }
+  ]
+
+  const handleClick = (url?: any) => {
+    window.location.replace(`./${url}`)
+  }
+
   return (
-    <section data-aos="fade">
-      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-sm-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `contain`, backgroundPosition: `center` }}>
+    <section>
+      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-sm-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `80% auto`, backgroundPosition: `center` }}>
         {/* <Image src={imageURL0} alt='' /> */}
       </div>
 
@@ -24,7 +45,7 @@ export default function SkyMavis() {
           <p className='text-base opacity-75 mt-4'>
             The objective is to establish an internal application for employee compensation and facilitate the transfer of multiple assets between entities based on assets. As a busy user with external commitments, a mobile phone is considered a closely-held item, allowing users to diversify asset conversions within their community anytime, anywhere on their phones. The application is developed based on blockchain and cryptocurrency platforms.
           </p>
-          <Link className='bg-blue-600 text-white w-fit block py-2 px-4 mt-6 rounded cursor-pointer hover:opacity-80 hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
+          <Link className='bg-gray-800 text-white hover:opacity-50 w-fit block py-2 px-4 mt-6 rounded cursor-pointer hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
             Explore Now
           </Link>
         </div>
@@ -44,8 +65,6 @@ export default function SkyMavis() {
             This document outlines the single-flow processing for admins when sending multiple assets tokens to users in a happy case scenario.
           </p>
         </div>
-
-
       </div>
 
       <div className="scope py-10" data-aos="fade-up">
@@ -114,6 +133,26 @@ export default function SkyMavis() {
           </p>
           <div className='flex-1 w-full h-fit mt-4'>
             <Image src={imageURL4} alt="" className='w-full' />
+          </div>
+        </div>
+      </div>
+
+      <div className="result py-10" data-aos="fade-up">
+        <div className="container mx-auto">
+          <div className='uppercase opacity-80 font-semibold mx-auto'>More Project</div>
+          <div className='text-base mt-4 group flex flex-col lg:flex-row gap-4'>
+            {
+              dataGrid.map((item, index) => (
+                <div key={index} className={`flex-1 card relative flex flex-col ${index % 2 !== 0 ? `lg:flex-row` : `lg:flex-row`} gap-2 shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-8 border-white`}>
+                  <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full w-full h-[240px] overflow-hidden rounded-2x">
+                    <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
+                    <div className="absolute inset-0 bg-[rgba(235,235,235,0.75)] backdrop-blur-sm z-10 flex flex-col justify-center items-center hover:opacity-0">
+                      <Image src={item.logo} alt="" className="w-auto h-8 lg:h-12" />
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>

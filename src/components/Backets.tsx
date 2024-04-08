@@ -11,6 +11,7 @@ import Image07 from '@/assets/img/img-slide-07.png'
 import Image08 from '@/assets/img/img-slide-08.png'
 import Image09 from '@/assets/img/img-slide-09.png'
 import Image10 from '@/assets/img/logo-mooncat.png'
+import Tilt from "react-parallax-tilt";
 
 export const Backers: FC = () => {
   const listImage = [
@@ -28,7 +29,7 @@ export const Backers: FC = () => {
 
   const Card = ({ index, src, classNames }: { index?: any, src: string, classNames?: any }) => {
     return (
-      <div className="w-fit h-14 mx-4" data-aos='fade-left' data-aos-delay={100 + 10 * index}>
+      <div className="w-fit h-14 mx-4" data-aos='fade-up' data-aos-delay={50 + 10 * index}>
         <Image src={src} alt="" className={`!relative block !w-fit h-full object-contain ${classNames}`} fill />
       </div>
     )
@@ -39,20 +40,14 @@ export const Backers: FC = () => {
       <div className="container mx-auto">
         <p className="text-base text-center" data-aos='fade-up'>Special thanks for trusting and growing up together</p>
       </div>
-      <Marquee className="bg-[rgba(0,0,0,0.75)] py-3 backdrop-blur-[2px]">
+      <Marquee className="bg-[#c8c8c8] py-3 backdrop-blur-[2px] grayscale-0" style={{ boxShadow: `inset -1px -4px 20px rgba(255,255,255,1)` }}>
         {listImage.map((item, i) => (
-          <Card
-            key={i}
-            src={item?.src}
-            index={i}
-          />
-        ))}
-        {listImage.map((item, i) => (
-          <Card
-            key={i}
-            src={item?.src}
-            index={i}
-          />
+          <div key={i} className="hover:scale-105">
+            <Card
+              src={item?.src}
+              index={i}
+            />
+          </div>
         ))}
       </Marquee>
     </section>

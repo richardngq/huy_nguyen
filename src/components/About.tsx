@@ -15,7 +15,7 @@ export default function About<IAbout>({ classNames = '' }) {
     }
   ]
   return (
-    <div className={`relative w-full flex flex-col md:flex-row items-start md:items-center gap-6 z-20 mt-20 ${classNames}`} data-aos="fade-up">
+    <div className={`relative w-full flex flex-col md:flex-row items-start md:items-center gap-6 z-20 mt-20 pt-10 ${classNames}`} data-aos="fade-up">
       {
         bio.map((item, index) => {
           return (

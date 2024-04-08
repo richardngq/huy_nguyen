@@ -87,10 +87,10 @@ export default function About() {
     return (
       <div className={`${classNames}`} data-aos="fade-up">
         <div className="flex flex-col">
-          <p><span className=" text-xl font-medium">{CompanyName}</span><span className="opacity-75 text-base font-thin">&nbsp;{`-`}&nbsp;{Role}</span></p>
-          <p className="text-[#4b525d] text-base">{Dates}</p>
+          <p><span className="text-xl font-semibold">{CompanyName}</span><span className="opacity-75 text-lg">&nbsp;{`-`}&nbsp;{Role}</span></p>
+          <p className="text-slate-500 text-base mt-1 opacity-75">{Dates}</p>
         </div>
-        <ul className="text-[#7d868f] text-sm mt-2">
+        <ul className="text-slate-700 text-sm mt-2">
           {Descriptions?.map((i, j) => (
             <li key={j} dangerouslySetInnerHTML={{ __html: i }} className="mt-2" />
           ))}
@@ -100,18 +100,18 @@ export default function About() {
   }
 
   return (
-    <section className="container mt-20 mx-auto">
-      <div className="" data-aos="fade-up">
+    <section className="container mt-20 mx-auto pt-10">
+      <div className=" group" data-aos="fade-up">
         <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
-          <div className="w-24 h-24 rounded-3xl border border-gray-50 overflow-hidden">
+          <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-4 border-[#efefef]">
             <Image src={Avatar} alt='' className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col gap-1">
-            <p className="text-xl font-bold">Huy Nguyen</p>
-            <p className="text-base font-thin">
-              Hi, I am a Product Designer and UI/UX Designer with 5 years of experience.<br />
+            <div className="text-xl font-bold">Huy Nguyen</div>
+            <div className="text-base font-thin">
+              Hi, I am a <span className='group-hover:bg-lime-200 group-hover:px-1'>Product Designer</span> and <span className='group-hover:bg-lime-200 group-hover:px-1'>UI/UX Designer</span> with 5 years of experience.<br />
               Specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce and SaaS.
-            </p>
+            </div>
           </div>
         </div>
       </div>

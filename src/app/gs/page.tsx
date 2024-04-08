@@ -8,12 +8,36 @@ import imageURL3 from "@/assets/image/image-detail-gs-3.png"
 import imageURL3b from "@/assets/image/image-detail-gs-3b.png"
 import imageURL3c from "@/assets/image/image-detail-gs-3c.png"
 import imageURL3d from "@/assets/image/image-detail-gs-3d.png"
+
+import ImageGridSM from '@/assets/img/img-grid-sm.png';
+import ImageGridIPFS from '@/assets/image/image-mockup-fxce.png';
+import ImageGridLogoSM from '@/assets/image/img-logo-SM.png';
+import ImageGridLogoIPFS from '@/assets/image/img-logo-IPFS.png';
+
 import Link from "next/link"
 import { Icon } from "@iconify/react/dist/iconify.js"
 
 export default function Gestreon() {
+  const dataGrid = [
+    {
+      logo: ImageGridLogoIPFS,
+      image: ImageGridIPFS,
+      url: '/ipfs1',
+    },
+    {
+      logo: ImageGridLogoSM,
+      image: ImageGridSM,
+      title: `Sky Mavis`,
+      url: '/sm',
+    },
+  ]
+
+  const handleClick = (url?: any) => {
+    window.location.replace(`./${url}`)
+  }
+
   return (
-    <section data-aos="fade">
+    <section>
       <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-gs-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `contain` }}>
         {/* <Image src={imageURL0} alt='' /> */}
       </div>
@@ -25,7 +49,7 @@ export default function Gestreon() {
           <p className='text-base opacity-75 mt-4'>
             As an e-commerce website, it serves as a third-party platform for collectors of luxury items. Here, they are provided with buying and selling services for the items they own without concerns about authenticity, damage, or credibility issues. The transactions take place entirely visually between both the buyer and seller on the website
           </p>
-          <Link className='bg-blue-600 text-white w-fit block py-2 px-4 mt-6 rounded cursor-pointer hover:opacity-80 hover:scale-105' href={`https://thegestreon.com/`} target="_blank">
+          <Link className='bg-gray-800 text-white hover:opacity-50 w-fit block py-2 px-4 mt-6 rounded cursor-pointer hover:scale-105' href={`https://thegestreon.com/`} target="_blank">
             Explore Now
           </Link>
         </div>
@@ -203,6 +227,26 @@ export default function Gestreon() {
               <li className=''><b className='group-hover:bg-lime-400'>User testing doesn&rsquo;t end post-development.</b><br /> Design is an ongoing iterative process aimed at continually improving the user experience. Always seek ways to gather and listen to user feedback.</li>
               <li className='mt-2'><b className='group-hover:bg-lime-400'>Regarding pre-technical knowledge.</b><br /> This helps minimize any rework later because foreknowledge of technical limitations informs your design strategy</li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="result py-10" data-aos="fade-up">
+        <div className="container mx-auto">
+          <div className='uppercase opacity-80 font-semibold mx-auto'>More Project</div>
+          <div className='text-base mt-4 group flex flex-col lg:flex-row gap-4'>
+            {
+              dataGrid.map((item, index) => (
+                <div key={index} className={`flex-1 card relative flex flex-col ${index % 2 !== 0 ? `lg:flex-row` : `lg:flex-row`} gap-2 shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-8 border-white`}>
+                  <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full w-full h-[240px] overflow-hidden rounded-2x">
+                    <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
+                    <div className="absolute inset-0 bg-[rgba(235,235,235,0.75)] backdrop-blur-sm z-10 flex flex-col justify-center items-center hover:opacity-0">
+                      <Image src={item.logo} alt="" className="w-auto h-8 lg:h-12" />
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>

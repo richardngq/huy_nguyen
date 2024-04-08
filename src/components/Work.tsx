@@ -115,7 +115,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
           {
             dataApps.map((item, index) => (
               <Tilt key={index} className="w-28 h-28 rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm hover:scale-125">
-                <Link href={item.urlPlay} target="_blank">
+                <Link href={item.urlPlay} target="_blank" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
                   <Image src={item.image} alt={item.title} />
                 </Link>
               </Tilt>

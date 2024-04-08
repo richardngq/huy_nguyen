@@ -7,6 +7,7 @@ import ImageGridIPFS from '@/assets/image/image-mockup-fxce.png';
 import ImageGridLogoSM from '@/assets/image/img-logo-SM.png';
 import ImageGridLogoGS from '@/assets/image/img-logo-GS.png';
 import ImageGridLogoIPFS from '@/assets/image/img-logo-IPFS.png';
+
 import Link from "next/link";
 import { motion } from 'framer-motion'
 import { useFollowPointer } from "@/resources/use-follow-poiner";
@@ -58,11 +59,11 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
   return (
     <div className={`relative z-20 mt-20 ${classNames}`}>
       <div className="font-semibold opacity-75" data-aos="fade-up">MY RECENT WORK & CASE STUDIES</div>
-      <div className="flex flex-col gap-20 mt-6">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-6">
         {
           dataGrid.map((item, index) => (
-            <div key={index} className={`card relative flex flex-col-reverse ${index % 2 !== 0 ? `lg:flex-row` : `lg:flex-row`} gap-4 lg:gap-8`} data-aos="fade-up">
-              <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full lg:max-w-[50%] w-[375px] h-[320px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-4 border-white flex-1">
+            <div key={index} className={`card relative flex flex-col ${index % 2 !== 0 ? `` : ``} gap-2 shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-8 border-white`} data-aos="fade-up">
+              <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full w-full h-[320px] overflow-hidden rounded-2xl">
                 <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
                 <div className="absolute bottom-0 w-full flex flex-col-reverse sm:flex-row items-start md:items-center justify-start sm:justify-between gap-3 p-3 sm:p-4 z-30">
                   <motion.div
@@ -74,16 +75,16 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                   </motion.div>
                 </div>
               </div>
-              <div className="flex-1 self-stretch flex flex-col justify-between">
+              <div className="self-stretch flex flex-col justify-between p-4">
                 <div>
-                  <Image src={item.logo} alt="" className="w-auto h-12 lg:h-16" />
+                  <Image src={item.logo} alt="" className="w-auto h-8 lg:h-12" />
                   <div className="hidden lg:block font-bold text-xl text-gray-950 mt-3">{item.title}</div>
                   <div className="text-base opacity-50 mt-3">{item.description}</div>
                   <div className="flex flex-row gap-3 mt-4 lg:mt-6">
-                    <Link href={`${item.url}`} className="cursor-pointer bg-gray-800 text-white hover:opacity-50 py-1.5 px-4 rounded-full">
+                    <Link href={`${item.url}`} className="cursor-pointer bg-gray-800 text-white hover:opacity-50 py-1.5 px-4 rounded-lg">
                       <span>View detail</span>
                     </Link>
-                    <Link href={`${item.href}`} target="_blank" className="cursor-pointer inline-flex items-center gap-1 group bg-white text-gray-800 py-1.5 px-4 rounded-full border border-gray-800 hover:opacity-50">
+                    <Link href={`${item.href}`} target="_blank" className="cursor-pointer inline-flex items-center gap-1 group bg-white text-gray-800 py-1.5 px-4 rounded-lg border border-gray-800 hover:opacity-50">
                       <span>Visit on Website</span>
                       <Icon icon={`fluent:window-new-24-regular`} className="group-hover:scale-125" />
                     </Link>

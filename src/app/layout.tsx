@@ -11,8 +11,26 @@ import "@/assets/style/App.scss";
 const font = Work_Sans({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://huy-nguyen.vercel.app/`),
   title: "Huy Nguyen - Product Designer",
   description: "Portfolio created by Huy Nguyen - Product Designer",
+  icons: {
+    icon: ["/favicon.ico?v=1"],
+    apple: ["/apple-touch-icon.png?v=1"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
+  openGraph: {
+    title: 'Huy Nguyen - Product Designer',
+    description: 'Portfolio created by Huy Nguyen - Product Designer',
+    images: '/opengraph-image.png'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: `${process.env.NEXT_PUBLIC_VITE_METADATA}`,
+    title: 'Huy Nguyen - Product Designer',
+    description: 'Portfolio created by Huy Nguyen - Product Designer',
+    images: 'twitter-image.png'
+  }
 };
 
 export default function RootLayout({
