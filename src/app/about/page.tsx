@@ -110,7 +110,7 @@ export default function About() {
             <p className="text-xl font-bold">Huy Nguyen</p>
             <p className="text-base font-thin">
               Hi, I am a Product Designer and UI/UX Designer with 5 years of experience.<br />
-              Specialized working with domains about Web3, Fintech, Blockchain, Crypto, E-Commerce and SaaS.
+              Specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce and SaaS.
             </p>
           </div>
         </div>
