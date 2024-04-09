@@ -23,10 +23,10 @@ export default function About() {
   const dataExp = [
     {
       CompanyName: `IPFS Inc`,
-      Role: `Product Designer Lead`,
+      Role: `Product Designer`,
       Dates: `Mar 2023 - Present`,
       Descriptions: [
-        `Senior designer lead with <b>IPFS Services</b>`,
+        `Senior designer at <b>IPFS Services</b>`,
         `Design DRI for all PWA Projects and Solution Resolving for <b>Mobile Application</b>`,
         `Successful upgrade and take care User Experience and Accessibility for thousands Clients with <b>Retail Product</b>`
       ],
@@ -61,7 +61,7 @@ export default function About() {
     },
     {
       CompanyName: `BBMedia`,
-      Role: `Software Engineer Lead - Website Designer`,
+      Role: `Software Engineer - Website Designer`,
       Dates: `Apr 2017 - Sep 2019`,
       Descriptions: [
         `Software team leader with <b>Toray’s Inc</b> and <b>BBMedia Vietnam</b>`,
