@@ -186,11 +186,11 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
         <div className="inline-flex justify-center items-center gap-1.5 text-[#515b87] font-semibold text-4xl uppercase">
           Launching<span className="text-bg px-2">Apps</span>
         </div>
-        <div className="flex flex-row flex-wrap gap-6 overflow-hidden mt-6">
+        <div className="grid grid-cols-3 lg:flex lg:flex-row flex-wrap gap-6 overflow-hidden mt-6">
           {
             dataApps.map((item, index) => (
               <div key={index} data-aos="slide-left" data-aos-delay={200 + 200 * index}>
-                <Tilt className="w-[120px] aspect-square rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm">
+                <Tilt className="w-full lg:w-[120px] aspect-square rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm">
                   <Link href={item.urlPlay} target="_blank" className="w-full h-full">
                     <Image src={item.image} alt={item.title} className="w-full h-full" />
                   </Link>

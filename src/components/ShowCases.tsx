@@ -90,11 +90,11 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                     <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
                   </div>
                 </div>
-                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-4 ml-2">
-                  <div className="hidden lg:block font-bold text-xl">{item.title}</div>
+                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 lg:mt-4 ml-2">
+                  <div className="font-bold text-xl">{item.title}</div>
                   <div className="text-base opacity-75 mt-2">{item.description}</div>
                 </div>
-                <div className="w-10 h-10 bg-white text-black absolute right-6 top-6 flex flex-col justify-center items-center rounded-full">
+                <div className="w-10 h-10 bg-white text-black absolute right-2 top-2 lg:right-6 lg:top-6 flex flex-col justify-center items-center rounded-full">
                   <Icon icon={'mingcute:arrow-right-fill'} className="text-xl -rotate-45" />
                 </div>
               </div>
