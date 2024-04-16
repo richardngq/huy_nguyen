@@ -109,8 +109,8 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
 
   return (
     <div className="container w-full mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
-      <div className={`col-span-1 md:col-span-2`} data-aos="slide-right">
-        <div className="w-full text-[#515b87] flex flex-row justify-between items-end" data-aos="slide-up">
+      <div className={`col-span-1 md:col-span-2`} data-aos="fade">
+        <div className="w-full text-[#515b87] flex flex-row justify-between items-end" data-aos="fade">
           <div className="inline-flex justify-end items-end gap-1.5 font-semibold text-4xl uppercase">
             Go<span className="text-bg px-2">Live</span>
           </div>
@@ -151,7 +151,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
             )}
           </div>
         </div>
-        <div className="relative flex flex-col justify-center navigation-wrapper mt-6" data-aos="slide-up">
+        <div className="relative flex flex-col justify-center navigation-wrapper mt-6" data-aos="fade">
           <div ref={sliderRef} className="keen-slider !overflow-y-auto">
             {
               dataWorks.map((item, index) => {
@@ -182,14 +182,14 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
         </div>
       </div>
 
-      <div className={``} data-aos="slide-left">
+      <div className={``} data-aos="fade">
         <div className="inline-flex justify-center items-center gap-1.5 text-[#515b87] font-semibold text-4xl uppercase">
           Launching<span className="text-bg px-2">Apps</span>
         </div>
         <div className="grid grid-cols-3 lg:flex lg:flex-row flex-wrap gap-6 overflow-hidden mt-6">
           {
             dataApps.map((item, index) => (
-              <div key={index} data-aos="slide-left" data-aos-delay={200 + 200 * index}>
+              <div key={index} data-aos="fade" data-aos-delay={200 + 200 * index}>
                 <Tilt className="w-full lg:w-[120px] aspect-square rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm">
                   <Link href={item.urlPlay} target="_blank" className="w-full h-full">
                     <Image src={item.image} alt={item.title} className="w-full h-full" />
