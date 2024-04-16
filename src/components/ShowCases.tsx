@@ -1,15 +1,11 @@
-import { FC, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import Image from "next/image";
-import ImageGridSM from '@/assets/img/img-grid-sm.png';
-import ImageGridGS from '@/assets/image/image-mockup-gs.png';
-import ImageGridIPFS from '@/assets/image/image-mockup-fxce.png';
+import ImageGridGS from '@/assets/image/image-thumbnail--gs.png';
+import ImageGridIPFS from '@/assets/image/image-thumbnail--ipfs.png';
+import ImageGridCRAB from '@/assets/image/image-thumbnail--crab.png';
 
-import ImageGridLogoSM from '@/assets/image/img-logo-SM.png';
-import ImageGridLogoGS from '@/assets/image/img-logo-GS.png';
-import ImageGridLogoIPFS from '@/assets/image/img-logo-IPFS.png';
+import ImageIso from '@/assets/image/image-iso--01.png';
 
-import Link from "next/link";
-import { motion } from 'framer-motion'
 import { useFollowPointer } from "@/resources/use-follow-poiner";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
@@ -23,85 +19,90 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
 
   const dataGrid = [
     {
-      logo: ImageGridLogoIPFS,
+      key: `IPFS`,
       image: ImageGridIPFS,
       title: `IPFS - FXCE`,
       description: `Main responsibility and designing to enhance UI/UX Product`,
       url: '/ipfs1',
       href: 'https://www.fxce.com/',
-      tags: ['Fintech', 'CEX'],
     },
     {
-      logo: ImageGridLogoGS,
+      key: `GS`,
       image: ImageGridGS,
       title: `Gesteron`,
       description: `Re-Design UX for payment system`,
       url: '/gs',
       href: 'https://thegestreon.com/',
-      tags: ['Website', 'E-commerce', 'SaaS'],
     },
+    // {
+    //   key: `SM`,
+    //   image: ImageGridSM,
+    //   title: `Sky Mavis`,
+    //   description: `Design Mobile App for sending multiple assets`,
+    //   url: '/sm',
+    //   href: 'https://scatter.roninchain.com/',
+    // },
     {
-      logo: ImageGridLogoSM,
-      image: ImageGridSM,
-      title: `Sky Mavis`,
-      description: `Design UI/UX for sending multiple assets`,
-      disclaimer: `The product has been required from the past, all analysis and design will not be consistent with the production.`,
-      url: '/sm',
-      href: 'https://scatter.roninchain.com/',
-      tags: ['Mobile app', 'Web3', 'Fintech', 'Crypto'],
-    },
+      key: `CRAB`,
+      image: ImageGridCRAB,
+      title: `Crabada`,
+      description: `Design feature miragation on Web3 to Application Game`,
+      url: '/crab',
+      href: 'https://crabada.com/',
+    }
   ]
 
   const handleClick = (url?: any) => {
     window.location.replace(`./${url}`)
   }
 
+
   return (
-    <div className={`relative z-20 mt-20 ${classNames}`}>
-      <div className="font-semibold opacity-75" data-aos="fade-up">MY RECENT WORK & CASE STUDIES</div>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-6">
+    <div className={`container mx-auto relative z-20 mt-20 ${classNames}`}>
+      <div className="absolute -z-10 top-0" data-aos="zoom-in">
+        <Image src={ImageIso} alt='' className="-translate-x-2/4 -translate-y-2/4 w-1/3 scale-x-[-1]" />
+      </div>
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 overflow-hidden">
+        <div
+          className="font-semibold text-6xl p-10 uppercase rounded-3xl text-[#515b87] card-box-anim"
+        >
+          <div
+            className="flex flex-col justify-center items-center h-full w-full"
+            data-aos="zoom-in"
+            data-aos-delay={400}>
+            Check out<br />
+            <span className="text-bg pt-0.5 pb-2 px-2 mt-1">My Works</span>
+          </div>
+        </div>
         {
           dataGrid.map((item, index) => (
-            <div key={index} className={`card relative flex flex-col ${index % 2 !== 0 ? `` : ``} gap-2 shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-8 border-white`} data-aos="fade-up">
-              <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full w-full h-[320px] overflow-hidden rounded-2xl">
-                <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
-                <div className="absolute bottom-0 w-full flex flex-col-reverse sm:flex-row items-start md:items-center justify-start sm:justify-between gap-3 p-3 sm:p-4 z-30">
-                  <motion.div
-                    className="inline-flex items-center gap-3"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                  >
-                    {item?.tags?.map((i, j) => <div key={j} className="bg-[rgba(54,57,61,0.5)] backdrop-blur-sm text-white text-sm rounded-full py-0.5 px-3" >{i}</div>)}
-                  </motion.div>
-                </div>
-              </div>
-              <div className="self-stretch flex flex-col justify-between p-4">
-                <div>
-                  <Image src={item.logo} alt="" className="w-auto h-8 lg:h-12" />
-                  <div className="hidden lg:block font-bold text-xl text-gray-950 mt-3">{item.title}</div>
-                  <div className="text-base opacity-50 mt-3">{item.description}</div>
-                  <div className="flex flex-row gap-3 mt-4 lg:mt-6">
-                    <Link href={`${item.url}`} className="cursor-pointer bg-gray-800 text-white hover:opacity-50 py-1.5 px-4 rounded-lg">
-                      <span>View detail</span>
-                    </Link>
-                    <Link href={`${item.href}`} target="_blank" className="cursor-pointer inline-flex items-center gap-1 group bg-white text-gray-800 py-1.5 px-4 rounded-lg border border-gray-800 hover:opacity-50">
-                      <span>Visit on Website</span>
-                      <Icon icon={`fluent:window-new-24-regular`} className="group-hover:scale-125" />
-                    </Link>
+            <div
+              key={index}
+              ref={ref}
+              className={`card group ${item.key} ${index % 2 !== 0 ? `` : ``} rounded-[24px]`}
+              onClick={() => handleClick(`${item.url}`)}
+              data-aos="slide-up"
+              data-aos-delay={400 + 400 * index}
+            >
+              <div className="relative hover:shadow-[0px_8px_12px_rgba(0,0,0,0.5)] rounded-3xl overflow-hidden" style={{ transition: `box-shadow 0.2s ease-in-out` }}>
+                <div className="cursor-pointer relative max-w-full w-full flex flex-col justify-end items-end overflow-hidden aspect-[4/3]">
+                  <div className="w-full h-5/6 group-hover:scale-105">
+                    <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
                   </div>
                 </div>
-                {
-                  item.disclaimer &&
-                  <div className="text-sm italic opacity-45 mt-3">
-                    <span className="font-semibold">Disclaimer:&nbsp;</span>
-                    {item.disclaimer}
-                  </div>
-                }
+                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-4 ml-2">
+                  <div className="hidden lg:block font-bold text-xl">{item.title}</div>
+                  <div className="text-base opacity-75 mt-2">{item.description}</div>
+                </div>
+                <div className="w-10 h-10 bg-white text-black absolute right-6 top-6 flex flex-col justify-center items-center rounded-full">
+                  <Icon icon={'mingcute:arrow-right-fill'} className="text-xl -rotate-45" />
+                </div>
               </div>
             </div>
           ))
         }
       </div>
+
     </div>
   )
 }

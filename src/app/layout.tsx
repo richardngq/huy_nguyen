@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
+import { Oswald } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Navbar } from "@/components/NavBar";
@@ -8,7 +9,7 @@ import { AOSInit } from "@/components/AnimateOnScroll";
 import "./globals.css";
 import "@/assets/style/App.scss";
 
-const font = Work_Sans({ subsets: ["latin"], weight: ["300", "400", "600"] });
+const font = Oswald({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://huy-nguyen.vercel.app/`),
@@ -44,7 +45,7 @@ export default function RootLayout({
       <body className={font.className}
         suppressHydrationWarning={true}
       >
-        <div className="text-gray-800 flex flex-col h-screen">
+        <div className="text-[#515b87] flex flex-col h-screen">
           <Navbar />
 
           <div className="flex-auto">

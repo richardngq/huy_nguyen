@@ -45,7 +45,7 @@ export default function SkyMavis() {
           <p className='text-base opacity-75 mt-4'>
             The objective is to establish an internal application for employee compensation and facilitate the transfer of multiple assets between entities based on assets. As a busy user with external commitments, a mobile phone is considered a closely-held item, allowing users to diversify asset conversions within their community anytime, anywhere on their phones. The application is developed based on blockchain and cryptocurrency platforms.
           </p>
-          <Link className='bg-gray-800 text-white hover:opacity-50 w-fit block py-2 px-4 mt-6 rounded cursor-pointer hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
+          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
             Explore Now
           </Link>
         </div>
@@ -133,26 +133,6 @@ export default function SkyMavis() {
           </p>
           <div className='flex-1 w-full h-fit mt-4'>
             <Image src={imageURL4} alt="" className='w-full' />
-          </div>
-        </div>
-      </div>
-
-      <div className="result py-10" data-aos="fade-up">
-        <div className="container mx-auto">
-          <div className='uppercase opacity-80 font-semibold mx-auto'>More Project</div>
-          <div className='text-base mt-4 group flex flex-col lg:flex-row gap-4'>
-            {
-              dataGrid.map((item, index) => (
-                <div key={index} className={`flex-1 card relative flex flex-col ${index % 2 !== 0 ? `lg:flex-row` : `lg:flex-row`} gap-2 shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-8 border-white`}>
-                  <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full w-full h-[240px] overflow-hidden rounded-2x">
-                    <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
-                    <div className="absolute inset-0 bg-[rgba(235,235,235,0.75)] backdrop-blur-sm z-10 flex flex-col justify-center items-center hover:opacity-0">
-                      <Image src={item.logo} alt="" className="w-auto h-8 lg:h-12" />
-                    </div>
-                  </div>
-                </div>
-              ))
-            }
           </div>
         </div>
       </div>

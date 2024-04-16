@@ -50,7 +50,7 @@ export default function IPFS() {
           <p className='text-base opacity-75 mt-4'>
             An FX Social Trading Platform is considered to have the most optimized technology features related to FX. Here, users are known as Traders will have the opportunity to use and optimize the tools in FX. In addition, this is also an FX community sharing trading strategies and profiting from user&rsquo;s own FX strategies.
           </p>
-          <Link className='bg-gray-800 text-white hover:opacity-50 w-fit block py-2 px-4 mt-6 rounded cursor-pointer hover:scale-105' href={`https://fxce.com/`} target="_blank">
+          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://fxce.com/`} target="_blank">
             Explore Now
           </Link>
         </div>
@@ -219,26 +219,6 @@ export default function IPFS() {
               <b>Disclaimer:</b> Out of respect for the team members and individuals who contributed to this achievement, I will only share a portion of the system design.
             </i>
           </p>
-        </div>
-      </div>
-
-      <div className="result py-10" data-aos="fade-up">
-        <div className="container mx-auto">
-          <div className='uppercase opacity-80 font-semibold mx-auto'>More Project</div>
-          <div className='text-base mt-4 group flex flex-col lg:flex-row gap-4'>
-            {
-              dataGrid.map((item, index) => (
-                <div key={index} className={`flex-1 card relative flex flex-col ${index % 2 !== 0 ? `lg:flex-row` : `lg:flex-row`} gap-2 shadow-[0px_8px_16px_rgba(0,0,0,0.05)] rounded-3xl overflow-hidden border-8 border-white`}>
-                  <div onClick={() => handleClick(`${item.url}`)} className="cursor-pointer relative max-w-full w-full h-[240px] overflow-hidden rounded-2x">
-                    <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
-                    <div className="absolute inset-0 bg-[rgba(235,235,235,0.75)] backdrop-blur-sm z-10 flex flex-col justify-center items-center hover:opacity-0">
-                      <Image src={item.logo} alt="" className="w-auto h-8 lg:h-12" />
-                    </div>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
         </div>
       </div>
     </section>

@@ -1,9 +1,15 @@
 {
-  "/not-found": "app/not-found.js",
-  "/page": "app/page.js",
-  "/ipfs1/page": "app/ipfs1/page.js",
-  "/gs/page": "app/gs/page.js",
-  "/sm/page": "app/sm/page.js",
+  "/_not-found": "app/_not-found.js",
   "/about/page": "app/about/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/crab/page": "app/crab/page.js",
+  "/cra/page": "app/cra/page.js",
+  "/f2/page": "app/f2/page.js",
+  "/ipfs1/page": "app/ipfs1/page.js",
+  "/page": "app/page.js",
+  "/gs/page": "app/gs/page.js",
+  "/resume/page": "app/resume/page.js",
+  "/sm/page": "app/sm/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/twitter-image.png/route": "app/twitter-image.png/route.js",
+  "/opengraph-image.png/route": "app/opengraph-image.png/route.js"
 }

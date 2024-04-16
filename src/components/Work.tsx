@@ -3,52 +3,82 @@ import Image from "next/image"
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import Image1 from '@/assets/img/logo-shiseido.png';
-import Image2 from '@/assets/img/logo-canon.png';
-import Image3 from '@/assets/img/logo-F2NFT.png';
-import Image4 from '@/assets/img/img-logo-L7.png';
-import Image5 from '@/assets/img/logo-mooncat.png';
-
 import App1 from '@/assets/app/fxce.webp';
 import App2 from '@/assets/app/xfun.webp';
 import App3 from '@/assets/app/f2nft.webp';
+
+import { useKeenSlider } from 'keen-slider/react'
+import "keen-slider/keen-slider.min.css"
+
 
 interface IWork {
   classNames?: string
 }
 
 export const Work: FC<IWork> = ({ classNames = '' }) => {
+  const [loaded, setLoaded] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel)
+      },
+      created() {
+        setLoaded(true)
+      },
+      loop: true,
+      breakpoints: {
+        "(min-width: 325px)": {
+          slides: { perView: 1, spacing: 16 },
+        },
+        "(min-width: 1080px)": {
+          slides: { perView: 3, spacing: 24 },
+        },
+      },
+      slides: {
+        perView: 3,
+        spacing: 24,
+      },
+    },
+    [
+      // add plugins here
+    ]
+  )
 
   const dataWorks = [
     {
-      href: 'https://www.behance.net/gallery/167050693/Canon-Gallery-S',
-      title: `Canon`,
-      image: Image2,
-      description: `Gallery in Tennozu, Shinagawa. The movable walls allow for layouts matched to the exhibition. In addition to exhibiting the work of.`,
-    },
-    {
-      href: 'https://www.behance.net/gallery/167051093/Shiseido',
-      title: `Shiseido`,
-      image: Image1,
-      description: `Shiseido offers the highest quality products make-up Japan with 145 years of technology`,
-    },
-    {
-      href: 'https://www.behance.net/gallery/167049811/Legend-of-the-7-Kingdoms-Landing-Page',
-      title: `Legend Of 7 Kingdoms`,
-      image: Image4,
-      description: `An RPG GameFi about 7 Kingdoms with Blockchain and Crypto`,
-    },
-    {
-      href: 'https://www.behance.net/gallery/167131231/F2NFT-Marketplace-v20',
-      title: `F2FNT`,
-      image: Image3,
-      description: `The player can play solo, duos or a squad of 4 and fight on various planets GameFi.`,
-    },
-    {
-      href: 'https://www.behance.net/gallery/195569283/Mooncat-NFT-GameFi',
+      href: `https://mooncat.metahaki.com/`,
+      behance: 'https://www.behance.net/gallery/195569283/Mooncat-NFT-GameFi',
       title: `Mooncat`,
-      image: Image5,
-      description: `MoonCats is a non-fungible token (NFT) collection of 25,440 generative pixel art-style cats. It is considered to be one of the earliest NFT projects`,
+      image: `https://mir-s3-cdn-cf.behance.net/projects/808/ff9e9f195569283.Y3JvcCwxMDI0LDgwMCwwLDI.png`,
+    },
+    {
+      behance: 'https://www.behance.net/gallery/195838445/Crabada-Game-Fi-Web3-Landing-Page',
+      title: `Crabada`,
+      image: `https://mir-s3-cdn-cf.behance.net/projects/808/4d6e91195838445.Y3JvcCwxMDI0LDgwMCwwLDI.png`,
+    },
+    {
+      href: `https://personal.canon.jp/showroom/gallery`,
+      behance: 'https://www.behance.net/gallery/167050693/Canon-Gallery-S',
+      title: `Canon`,
+      image: `https://mir-s3-cdn-cf.behance.net/projects/808/abd414167050693.Y3JvcCwxNTEyLDExODIsMCww.png`,
+    },
+    {
+      href: `http://shiseido.co.jp/`,
+      behance: 'https://www.behance.net/gallery/167051093/Shiseido',
+      title: `Shiseido`,
+      image: `https://mir-s3-cdn-cf.behance.net/projects/808/48da7f167051093.Y3JvcCwxMDEyLDc5MiwzODAsNzA.png`,
+    },
+    {
+      behance: 'https://www.behance.net/gallery/167049811/Legend-of-the-7-Kingdoms-Landing-Page',
+      title: `Legend Of 7 Kingdoms`,
+      image: `https://mir-s3-cdn-cf.behance.net/projects/808/942c66167049811.Y3JvcCwxMDI0LDgwMCwwLDI.png`,
+    },
+    {
+      href: `https://f2nft.games/`,
+      behance: 'https://www.behance.net/gallery/167131231/F2NFT-Marketplace-v20',
+      title: `F2FNT`,
+      image: `https://mir-s3-cdn-cf.behance.net/projects/808/4c3ca0167131231.Y3JvcCwxMDI0LDgwMCwwLDI.png`,
     },
   ];
 
@@ -73,57 +103,104 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
     }
   ]
 
-  const RenderItem = ({ index, href, title, image, description, classNames }: { index: any, href: any, title?: string, image: any, description?: string, classNames?: string }) => {
-    return (
-      <Link href={href} target="_blank" className="h-full" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
-        <Tilt className="group bg-[rgba(255,255,255,0.5)] h-full rounded-2xl border-4 border-white hover:border-slate-200 overflow-hidden backdrop-blur-[2px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)]">
-          <div className={`relative flex w-full max-w-full h-[240px] md:h-[240px] lg:h-full lg:min-h-[240px] flex-col items-start gap-6 borderoverflow-hidden transition-all ${classNames}`}>
-            <div className="relative z-20 p-6">
-
-              <Image src={image} alt="" className="w-auto h-10 object-contain" />
-
-              <div className="text-sm font-normal opacity-50 mt-2">
-                {description}
-              </div>
-            </div>
-
-            <p className="absolute left-0 right-0 bottom-0 inline-flex items-center p-4 z-10 group-hover:scale-105 transition-all">
-              More at Behance&nbsp;<Icon icon={`ep:right`} />
-            </p>
-          </div>
-        </Tilt>
-      </Link>
-    )
+  const handleClick = (url?: any) => {
+    window.open(`./${url}`)
   }
 
   return (
-    <>
-      <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
-        <div className="font-semibold opacity-75">MY SHOWCASES</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-4 md:gap-6 mt-6">
-          {
-            dataWorks.map((item, index) => (
-              <RenderItem key={index} index={index} href={item.href} image={item.image} title={item.title} description={item.description} classNames={``} />
-            )
-            )
-          }
+    <div className="container w-full mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
+      <div className={`col-span-1 md:col-span-2`} data-aos="slide-right">
+        <div className="w-full text-[#515b87] flex flex-row justify-between items-end" data-aos="slide-up">
+          <div className="inline-flex justify-end items-end gap-1.5 font-semibold text-4xl uppercase">
+            Go<span className="text-bg px-2">Live</span>
+          </div>
+          <div>
+            {loaded && instanceRef.current && (
+              <div className="inline-flex justify-between gap-4">
+                <div
+                  onClick={(e: any) =>
+                    e.stopPropagation() || instanceRef.current?.prev()
+                  }
+                  className={`
+                  text-[#515b87] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
+                  ${currentSlide === 0 && `opacity-50`}
+                  `}
+                >
+                  <Icon
+                    icon={`ep:arrow-left-bold`}
+                  />
+                  Prev
+                </div>
+
+                <div
+                  onClick={(e: any) =>
+                    e.stopPropagation() || instanceRef.current?.next()
+                  }
+                  className={`
+                  text-[#515b87] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
+                  ${currentSlide ===
+                    instanceRef.current.track.details.slides.length - 1 && `opacity-50`}
+                    `}
+                >
+                  Next
+                  <Icon
+                    icon={`ep:arrow-right-bold`}
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="relative flex flex-col justify-center navigation-wrapper mt-6" data-aos="slide-up">
+          <div ref={sliderRef} className="keen-slider !overflow-y-auto">
+            {
+              dataWorks.map((item, index) => {
+                return <div key={index} className="keen-slider__slide group" style={{ transition: `box-shadow 0.2s ease-in-out` }}>
+                  <div className="h-full rounded-2xl group !overflow-y-auto hover:shadow-[0px_8px_12px_rgba(0,0,0,0.5)]">
+                    <div className="group bg-[rgba(255,255,255,0.5)] bg-slate-50 h-full rounded-2xl overflow-hidden">
+                      <div className={`relative flex w-full h-60 md:h-full aspect-square flex-col items-start gap-6 overflow-hidden transition-all ${classNames}`}>
+                        <Image src={item.image} alt="" className="w-full object-cover group-hover:scale-110" fill />
+                      </div>
+                    </div>
+                    <div className="bg-white text-black group-hover:text-blue-500 absolute right-0 top-0 flex flex-col justify-center items-center gap- box-right">
+                      <Link href={item.behance} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'fa6-brands:behance'} className="text-lg" /></Link>
+                      {item.href &&
+                        <Link href={item.href} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'mingcute:arrow-right-fill'} className="text-lg -rotate-45" /></Link>}
+                    </div>
+                    <div className="inline-flex items-center absolute top-4 left-4 gap-2 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm py-1 px-2 rounded-md">
+                      <div className={`w-2 h-2 rounded-full ${item.href ? `bg-green-400` : `bg-red-500`}`} />
+                      <div className={`text-white text-xs hidden ${item.href ? `!flex` : ''}`} dangerouslySetInnerHTML={{ __html: `Online` }} />
+                      <div className={`text-white text-xs hidden ${item.href ? `` : '!flex'}`} dangerouslySetInnerHTML={{ __html: `Offline` }} />
+                    </div>
+                  </div>
+                  <Link href={item.behance} target="_blank" className="absolute inset-0" />
+                </div>
+              }
+              )
+            }
+          </div>
         </div>
       </div>
-      <div className={`relative z-20 mt-20 ${classNames}`} data-aos="fade-up" data-aos-delay={500}>
-        <div className="font-semibold opacity-75">LAUNCHING APPS</div>
-        <div className="flex flex-row items-center gap-4 md:gap-6 mt-6">
+
+      <div className={``} data-aos="slide-left">
+        <div className="inline-flex justify-center items-center gap-1.5 text-[#515b87] font-semibold text-4xl uppercase">
+          Launching<span className="text-bg px-2">Apps</span>
+        </div>
+        <div className="flex flex-row flex-wrap gap-6 overflow-hidden mt-6">
           {
             dataApps.map((item, index) => (
-              <Tilt key={index} className="w-28 h-28 rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm hover:scale-125">
-                <Link href={item.urlPlay} target="_blank" data-aos="slide-up" data-aos-delay={500 + (200 * index)}>
-                  <Image src={item.image} alt={item.title} />
-                </Link>
-              </Tilt>
+              <div key={index} data-aos="slide-left" data-aos-delay={200 + 200 * index}>
+                <Tilt className="w-[120px] aspect-square rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm">
+                  <Link href={item.urlPlay} target="_blank" className="w-full h-full">
+                    <Image src={item.image} alt={item.title} className="w-full h-full" />
+                  </Link>
+                </Tilt>
+              </div>
             )
             )
           }
         </div>
       </div>
-    </>
+    </div>
   )
 }
