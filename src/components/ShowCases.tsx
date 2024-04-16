@@ -62,7 +62,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       <div className="absolute -z-10 top-0" data-aos="zoom-in">
         <Image src={ImageIso} alt='' className="-translate-x-2/4 -translate-y-2/4 w-1/3 scale-x-[-1]" />
       </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 overflow-hidden">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6">
         <div
           className="font-semibold text-6xl p-10 uppercase rounded-3xl text-[#515b87] card-box-anim"
         >
