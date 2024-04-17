@@ -108,11 +108,11 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
   }
 
   return (
-    <div className="container w-full mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
+    <div className="container w-full mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
       <div className={`col-span-1 md:col-span-2`} data-aos="fade">
         <div className="w-full text-[#515b87] flex flex-row justify-between items-end" data-aos="fade">
-          <div className="inline-flex justify-end items-end gap-1.5 font-semibold text-4xl uppercase">
-            Go<span className="text-bg px-2">Live</span>
+          <div className="inline-flex justify-end items-end gap-1.5 font-semibold text-xl uppercase">
+            Go Live
           </div>
           <div>
             {loaded && instanceRef.current && (
@@ -183,8 +183,8 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
       </div>
 
       <div className={``} data-aos="fade">
-        <div className="inline-flex justify-center items-center gap-1.5 text-[#515b87] font-semibold text-4xl uppercase">
-          Launching<span className="text-bg px-2">Apps</span>
+        <div className="inline-flex justify-center items-center gap-1.5 text-[#515b87] font-semibold text-xl uppercase">
+          Launching Apps
         </div>
         <div className="grid grid-cols-3 lg:flex lg:flex-row flex-wrap gap-6 overflow-hidden mt-6">
           {

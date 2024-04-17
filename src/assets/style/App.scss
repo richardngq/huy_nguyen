@@ -109,10 +109,37 @@ $shadowW: 8px;
 
 .text-bg {
   // animation: anim .8s linear;
-  border-radius: 4px;
-  background-color: #6470a7;
-  transition: background-color .8s linear;
-  @apply text-white;
+  // border-radius: 4px;
+  // background-color: #6470a7;
+  transition: all .8s linear;
+  position: relative;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  line-height: 1 !important;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 16px;
+    background: rgba(194, 201, 237, 0.75);
+    transition: all .8s linear;
+
+    animation: leftToRight .8s linear;
+  }
+
+  @keyframes leftToRight {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
 }
 
 .box {
