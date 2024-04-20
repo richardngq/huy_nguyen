@@ -1,10 +1,11 @@
 // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 100 to 900
 
+@import 'Carousel';
 @import 'Anim';
 
 body {
-  background-color: #FFFFFF;
+  background-color: #F5F5F7;
   scroll-behavior: auto !important;
   line-height: 150% !important;
   @apply transition-all;
@@ -82,29 +83,34 @@ $shadowW: 8px;
     (-$shadowW) $shadowW 0px #FFFFFF;
 }
 
+.box-shadow {
+  position: relative;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.14
+  );
+}
+
 .card {
   &.IPFS {
-    background: linear-gradient(45deg, #3C80D7 0%, #3C80D7 100%
-    );
-}
+    background: linear-gradient(45deg, #3C80D7 0%, #3C80D7 100%);
+  }
 
-&.GS {
-  background: linear-gradient(45deg, #AA9385 0%, #AA9385 100%);
-}
+  &.GS {
+    background: linear-gradient(45deg, #AA9385 0%, #AA9385 100%);
+  }
 
-&.SM {
-  background: linear-gradient(45deg, #1a62c5 0%, #7fa4d7 75%);
-}
+  &.SM {
+    background: linear-gradient(45deg, #1a62c5 0%, #7fa4d7 75%);
+  }
 
-&.CRAB {
-  background: linear-gradient(45deg, #FC712C 0%, #FFB490 100%);
-}
+  &.CRAB {
+    background: linear-gradient(45deg, #FC712C 0%, #FFB490 100%);
+  }
 
 
-&-box-anim {
-  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 4s ease;
-}
+  &-box-anim {
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 4s ease;
+  }
 }
 
 .text-bg {
@@ -144,8 +150,12 @@ $shadowW: 8px;
 
 .box {
   &-right {
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    &>* {
+      z-index: 2;
+    }
 
     &::before,
     &::after {
@@ -154,7 +164,7 @@ $shadowW: 8px;
       height: 100%;
       position: absolute;
       background: rgba(255, 255, 255, 0);
-      box-shadow: 8px -8px 0px #FFF;
+      box-shadow: 12px -12px 0px #FFF;
       border-top-right-radius: 12px;
     }
 

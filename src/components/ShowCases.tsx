@@ -64,7 +64,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       </div>
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6">
         <div
-          className="font-semibold text-6xl p-10 uppercase rounded-3xl text-[#515b87] card-box-anim"
+          className="font-semibold text-6xl p-10 uppercase rounded-3xl text-[#6E6E73] card-box-anim"
         >
           <div
             className="flex flex-col justify-center items-center h-full w-full"

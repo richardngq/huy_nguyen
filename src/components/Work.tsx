@@ -110,7 +110,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
   return (
     <div className="container w-full mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
       <div className={`col-span-1 md:col-span-2`} data-aos="fade">
-        <div className="w-full text-[#515b87] flex flex-row justify-between items-end" data-aos="fade">
+        <div className="w-full text-[#6E6E73] flex flex-row justify-between items-end" data-aos="fade">
           <div className="inline-flex justify-end items-end gap-1.5 font-semibold text-xl uppercase">
             Go Live
           </div>
@@ -122,7 +122,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                     e.stopPropagation() || instanceRef.current?.prev()
                   }
                   className={`
-                  text-[#515b87] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
+                  text-[#6E6E73] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
                   ${currentSlide === 0 && `opacity-50`}
                   `}
                 >
@@ -137,7 +137,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                     e.stopPropagation() || instanceRef.current?.next()
                   }
                   className={`
-                  text-[#515b87] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
+                  text-[#6E6E73] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
                   ${currentSlide ===
                     instanceRef.current.track.details.slides.length - 1 && `opacity-50`}
                     `}
@@ -183,7 +183,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
       </div>
 
       <div className={``} data-aos="fade">
-        <div className="inline-flex justify-center items-center gap-1.5 text-[#515b87] font-semibold text-xl uppercase">
+        <div className="inline-flex justify-center items-center gap-1.5 text-[#6E6E73] font-semibold text-xl uppercase">
           Launching Apps
         </div>
         <div className="grid grid-cols-3 lg:flex lg:flex-row flex-wrap gap-6 overflow-hidden mt-6">

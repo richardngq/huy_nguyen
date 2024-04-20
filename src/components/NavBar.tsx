@@ -5,30 +5,23 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '@/assets/logo.svg'
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 export const Navbar: FC = () => {
   const pathname = usePathname()
 
   const Links = [
-    { href: '/', target: false, label: 'Home' },
-    { target: false, label: 'Projects' },
-    { href: '/about', target: false, label: 'About' },
-    { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Document' },
+    { href: '/', target: false, label: 'Home', icon: `solar:home-bold-duotone` },
+    { href: '/about', target: false, label: 'About', icon: `solar:user-bold-duotone` },
+    { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Present', icon: `solar:document-bold-duotone` },
   ]
   return (
-    <div className='fixed top-0 left-0 right-0 bg-[rgba(255,255,255,0.95)] backdrop-blur-lg text-[#515b87] inline-flex p-3 lg:p-6 z-[999]' data-aos="fade-in" style={{ boxShadow: `0px -1px 8px rgba(0,0,0,0.05)` }}>
-      <Link href={'/'}>
-        <Image src={Logo} alt="" />
-      </Link>
-      <nav className='w-full inline-flex items-center justify-end gap-6'>
+    <div id='nav' className='fixed left-[calc(100vw/6)] right-[calc(100vw/6)] top-2 mx-2 lg:left-auto lg:right-4 lg:top-8 z-20' data-aos='zoom-in'>
+      <div className="flex flex-row lg:flex-col p-2 gap-2 justify-between bg-white box-shadow rounded-2xl">
         {
-          Links.map((item, index) => {
-            return (
-              <NavItem key={index} text={item.label} link={item.href} classNames={`${pathname === item.href && '!opacity-100'}`} target={item.target} />
-            )
-          })
+          Links.map((o, i) => <Link key={i} href={o.href} target={o.target ? `_blank` : `_self`} className={`text-2xl p-2 text-[#6E6E73] opacity-75 hover:!text-[#6E6E73] hover:opacity-100 hover:scale-110 ${pathname === o.href && '!text-[#6E6E73] opacity-100 scale-125'}`}><Icon icon={o.icon} /></Link>)
         }
-      </nav>
+      </div>
     </div>
   )
 }

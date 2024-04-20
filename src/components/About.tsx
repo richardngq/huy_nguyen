@@ -16,7 +16,7 @@ export default function About<IAbout>({ classNames = '' }) {
   ]
 
   return (
-    <div className={`relative bg-[#F5F5F5] w-full h-auto lg:h-svh flex flex-col md:flex-row items-start md:items-center gap-6 z-20 pt-40 pb-20 ${classNames}`}>
+    <div className={`relative w-full h-auto lg:h-svh flex flex-col md:flex-row items-start md:items-center gap-6 z-20 pt-40 pb-20 ${classNames}`}>
 
       <div className="container w-full mx-auto group flex flex-col md:flex-row items-center gap-16 relative z-10">
         <div className="relative mix-blend-multiply w-80 aspect-square" data-aos="zoom-in">
@@ -24,7 +24,7 @@ export default function About<IAbout>({ classNames = '' }) {
         </div>
 
         <div>
-          <div className="text-4xl md:text-6xl text-[#515b87] font-bold" data-aos="fade-up">
+          <div className="text-4xl md:text-6xl text-[#6E6E73] font-bold" data-aos="fade-up">
             Hi, I&rsquo;m <span className="text-bg px-2 pb-1.5">Huy Nguyen</span>
           </div>
           <div className="text-xl space-x-1 leading-8 mt-10 max-w-full" data-aos="fade-up" data-aos-delay={200}>
