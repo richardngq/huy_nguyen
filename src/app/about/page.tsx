@@ -113,9 +113,9 @@ export default function About() {
           {/* </div> */}
           <div className="flex flex-col gap-1">
             <div className="text-xl font-bold">Huy Nguyen</div>
-            <div className="text-base font-thin">
-              Hi, I am a <span className='font-bold'>Product Designer</span> and <span className='font-bold'>UI/UX Designer</span> with 5 years of experience.<br />
-              Specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce and SaaS.
+            <div className="text-base leading-6 font-thin">
+              I am a <b>Product Designer</b>, <b>UI/UX Designer</b>, <b>UI Developer</b> with 5 years of experience.<br />
+              Specialized working with domains about <b>Web3 (2+ Years)</b>, <b> Fintech(3+ Years)</b>, <b>Blockchain (6+ Years)</b>, <b>Crypto</b>, <b>Healthcare</b>, <b>E-Commerce</b> and <b>SaaS</b>.
             </div>
           </div>
         </div>

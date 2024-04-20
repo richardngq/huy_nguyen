@@ -254,7 +254,7 @@ export default function Home() {
                           Hi, I&rsquo;m <span className="text-[#6E6E73] pb-1.5">Huy Nguyen</span>
                         </div>
                         <div className="text-base text-[#6E6E73] mt-2">
-                          <p className="opacity-75">I&rsquo;m a <b>Product Designer</b> based in <i>Vietnam</i> with experience in delivering end-to-end UX/UI design for software products.
+                          <p className="opacity-75">I&rsquo;m a <b>Product Designer</b> and a <b>UI Developer</b> based in <i>Vietnam</i> with experience in delivering end-to-end UX/UI design for software products.
                             <br />
                             I&rsquo;m passionate about improving the lives of others through design and am constantly looking to learn new things everyday.</p>
                         </div>
