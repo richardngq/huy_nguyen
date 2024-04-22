@@ -29,7 +29,7 @@
 
 .swiper-cards {
   .swiper-slide {
-    filter: grayscale(0.5);
+    filter: grayscale(1);
     transition: all .4s linear;
 
     &-active {
