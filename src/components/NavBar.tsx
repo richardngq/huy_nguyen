@@ -16,7 +16,7 @@ export const Navbar: FC = () => {
     { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Present', icon: `solar:document-bold-duotone` },
   ]
   return (
-    <div id='nav' className='fixed left-[calc(100vw/6)] right-[calc(100vw/6)] top-2 mx-2 lg:left-auto lg:right-4 lg:top-8 z-20' data-aos='zoom-in'>
+    <div id='nav' className='fixed left-[calc(100vw/6)] right-[calc(100vw/6)] top-2 mx-2 lg:left-auto lg:right-4 lg:top-8 z-10' data-aos='zoom-in' data-aos-delay={2000}>
       <div className="flex flex-row lg:flex-col p-2 gap-2 justify-between bg-white box-shadow rounded-2xl">
         {
           Links.map((o, i) =>

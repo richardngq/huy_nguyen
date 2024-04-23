@@ -192,215 +192,215 @@ export default function Home() {
 
   return (
     <div>
-      <Suspense fallback={<Loading />}>
-        {!loading ?
-          <>
-            <motion.div
-              className="progress-bar"
-              style={{ scaleX: scrollYProgress }}
-            />
-            <div className="w-full h-auto lg:h-screen flex flex-col justify-center items-center py-10 overflow-hidden">
+      {/* <Suspense fallback={<Loading />}> */}
+      {!loading ?
+        <>
+          <motion.div
+            className="progress-bar"
+            style={{ scaleX: scrollYProgress }}
+          />
+          <div className="w-full h-auto lg:h-screen flex flex-col justify-center items-center py-10 overflow-hidden">
 
-              <div className="container flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="container flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-                <div className="lg:col-span-8 flex flex-col gap-6">
-                  <div className="relative bg-white box-shadow p-6 rounded-3xl h-fit overflow-hidden" data-aos='zoom-in' data-aos-delay={0}>
-                    <div className="flex flex-col lg:flex-row gap-5">
-                      <div className="flex flex-row lg:flex-col gap-3">
-                        <div className="relative mix-blend-multiply w-[120px] aspect-square">
-                          <Image src={Avatar} alt="" className="w-full h-full rounded-2xl" />
-                        </div>
-                        <div className="flex flex-col lg:flex-row gap-2 text-[#6E6E73]">
-                          {Contacts.map((item, index) => {
-                            return (
-                              <Link key={index} href={item.href} target="_blank" className="opacity-75 hover:opacity-100 hover:scale-125 transition-all">
-                                <Icon icon={item?.Icon} fontSize={24} />
-                              </Link>
-                            )
-                          })}
-                        </div>
+              <div className="lg:col-span-8 flex flex-col gap-6">
+                <div className="relative bg-white box-shadow p-6 rounded-3xl h-fit overflow-hidden" data-aos='zoom-in' data-aos-delay={0}>
+                  <div className="flex flex-col lg:flex-row gap-5">
+                    <div className="flex flex-row lg:flex-col gap-3">
+                      <div className="relative mix-blend-multiply w-[120px] aspect-square">
+                        <Image src={Avatar} alt="" className="w-full h-full rounded-2xl" />
                       </div>
-
-                      <div>
-                        <div className="text-3xl text-black font-bold">
-                          Hi, I&rsquo;m <span className="text-[#6E6E73] pb-1.5">Huy Nguyen</span>
-                        </div>
-                        <div className="text-base text-[#6E6E73] mt-2">
-                          <p className="opacity-75">I&rsquo;m a <b>Product Designer</b> and a <b>UI Developer</b> based in <i>Vietnam</i> with experience in delivering end-to-end UX/UI design for software products.
-                            <br />
-                            I&rsquo;m passionate about improving the lives of others through design and am constantly looking to learn new things everyday.</p>
-                        </div>
+                      <div className="flex flex-col lg:flex-row gap-2 text-[#6E6E73]">
+                        {Contacts.map((item, index) => {
+                          return (
+                            <Link key={index} href={item.href} target="_blank" className="opacity-75 hover:opacity-100 hover:scale-125 transition-all">
+                              <Icon icon={item?.Icon} fontSize={24} />
+                            </Link>
+                          )
+                        })}
                       </div>
                     </div>
-                    <div id="bg" className='z-10'>
-                      <ul id="shape">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                      </ul>
+
+                    <div>
+                      <div className="text-3xl text-black font-bold">
+                        Hi, I&rsquo;m <span className="text-[#6E6E73] pb-1.5">Huy Nguyen</span>
+                      </div>
+                      <div className="text-base text-[#6E6E73] mt-2">
+                        <p className="opacity-75">I&rsquo;m a <b>Product Designer</b> and a <b>UI Developer</b> based in <i>Vietnam</i> with experience in delivering end-to-end UX/UI design for software products.
+                          <br />
+                          I&rsquo;m passionate about improving the lives of others through design and am constantly looking to learn new things everyday.</p>
+                      </div>
                     </div>
                   </div>
+                  <div id="bg" className='z-10'>
+                    <ul id="shape">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
 
-                  <div className="relative bg-white box-shadow p-6 rounded-3xl h-fit flex flex-col gap-3 flex-1" data-aos='zoom-in' data-aos-delay={800}>
+                <div className="relative bg-white box-shadow p-6 rounded-3xl h-fit flex flex-col gap-3 flex-1" data-aos='zoom-in' data-aos-delay={800}>
 
-                    <div className="inline-flex items-center justify-between">
-                      <div className="text-lg text-black font-bold">
-                        <span className="text-black px-2 pb-1.5">Case Studies</span>
-                      </div>
-                      <div>
-                        {loaded && instanceRef.current && (
-                          <div className="inline-flex justify-between gap-4">
-                            <div
-                              onClick={(e: any) =>
-                                e.stopPropagation() || instanceRef.current?.prev()
-                              }
-                              className={`
+                  <div className="inline-flex items-center justify-between">
+                    <div className="text-lg text-black font-bold">
+                      <span className="text-black px-2 pb-1.5">Case Studies</span>
+                    </div>
+                    <div>
+                      {loaded && instanceRef.current && (
+                        <div className="inline-flex justify-between gap-4">
+                          <div
+                            onClick={(e: any) =>
+                              e.stopPropagation() || instanceRef.current?.prev()
+                            }
+                            className={`
                   text-[#6E6E73] w-10 h-10 shadow-[2px_4px_12px_rgba(0,0,0,.05)] cursor-pointer rounded-full flex flex-row justify-center items-center
                   ${currentSlide === 0 && `opacity-25 !shadow-[inset_2px_4px_12px_rgba(0,0,0,.14)]`}
                   `}
-                            >
-                              <Icon
-                                icon={`ep:arrow-left-bold`}
-                              />
-                            </div>
+                          >
+                            <Icon
+                              icon={`ep:arrow-left-bold`}
+                            />
+                          </div>
 
-                            <div
-                              onClick={(e: any) =>
-                                e.stopPropagation() || instanceRef.current?.next()
-                              }
-                              className={`
+                          <div
+                            onClick={(e: any) =>
+                              e.stopPropagation() || instanceRef.current?.next()
+                            }
+                            className={`
                   text-[#6E6E73] w-10 h-10 shadow-[2px_4px_12px_rgba(0,0,0,.05)] cursor-pointer rounded-full flex flex-row justify-center items-center
                   ${currentSlide ===
-                                instanceRef.current.track.details.slides.length - 3 && `opacity-25 !shadow-[inset_2px_4px_12px_rgba(0,0,0,.14)]`}
+                              instanceRef.current.track.details.slides.length - 3 && `opacity-25 !shadow-[inset_2px_4px_12px_rgba(0,0,0,.14)]`}
                     `}
-                            >
-                              <Icon
-                                icon={`ep:arrow-right-bold`}
-                              />
+                          >
+                            <Icon
+                              icon={`ep:arrow-right-bold`}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div ref={sliderRef} className="keen-slider flex-1">
+
+                    {
+                      dataGrid.map((item, index) => (
+                        <div
+                          key={index}
+                          ref={ref}
+                          className={`keen-slider__slide card group cursor-pointer flex-1 overflow-hidden ${item.key} ${index % 2 !== 0 ? `` : ``} rounded-2xl`}
+                          onClick={() => handleClick(`${item.url}`)}
+                        >
+                          <div className="relative h-full">
+                            <div className="cursor-pointer relative max-w-full w-full h-full flex flex-col justify-end items-end overflow-hidden aspect-[4/3] group-hover:scale-105">
+                              <div className="w-full">
+                                <Image src={item.image} alt="" className="relative w-full h-full object-contain z-10" />
+                              </div>
+                            </div>
+                            <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20" style={{ textShadow: `0px 2px 4px rgba(0,0,0,.25)` }}>
+                              <div className="font-bold text-xl">{item.title}</div>
+                              <div className="text-base mt-1">{item.description}</div>
+                            </div>
+                            <div className="w-10 h-10 bg-white text-[#6E6E73] absolute right-2 top-2 flex flex-col justify-center items-center rounded-full group-hover:top-1 group-hover:right-1 group-hover:shadow-[2px_4px_12px_rgba(0,0,0,0.14)]">
+                              <Icon icon={'solar:arrow-right-line-duotone'} className="text-xl -rotate-45" />
                             </div>
                           </div>
-                        )}
+                        </div>
+                      ))
+                    }
+                  </div>
+
+
+                </div>
+
+                <div className="relative bg-black box-shadow p-4 px-0 rounded-3xl h-fit flex flex-col gap-3" data-aos='zoom-in' data-aos-delay={1200}>
+                  <Marquee className="py-3">
+                    {listImage.map((item, i) => (
+                      <div key={i} className="w-fit h-10 mx-4 hover:scale-105 marque-item">
+                        <Image src={item.src} alt="" className={`!relative block !w-fit h-full object-contain`} fill />
                       </div>
+                    ))}
+                  </Marquee>
+                </div>
+              </div>
+
+              <div className="lg:col-span-4 flex flex-col gap-6">
+
+                <div className="relative bg-white box-shadow p-6 pb-0 rounded-3xl flex-1" data-aos='zoom-in' data-aos-delay={400}>
+
+                  <div className='flex flex-col gap-4'>
+                    <div className="text-lg text-black font-bold">
+                      <span className="text-black">My Works</span>
                     </div>
 
-                    <div ref={sliderRef} className="keen-slider flex-1">
+                    <div className="relative">
 
-                      {
-                        dataGrid.map((item, index) => (
-                          <div
-                            key={index}
-                            ref={ref}
-                            className={`keen-slider__slide card group cursor-pointer flex-1 overflow-hidden ${item.key} ${index % 2 !== 0 ? `` : ``} rounded-2xl`}
-                            onClick={() => handleClick(`${item.url}`)}
-                          >
-                            <div className="relative h-full">
-                              <div className="cursor-pointer relative max-w-full w-full h-full flex flex-col justify-end items-end overflow-hidden aspect-[4/3] group-hover:scale-105">
-                                <div className="w-full">
-                                  <Image src={item.image} alt="" className="relative w-full h-full object-contain z-10" />
-                                </div>
-                              </div>
-                              <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20" style={{ textShadow: `0px 2px 4px rgba(0,0,0,.25)` }}>
-                                <div className="font-bold text-xl">{item.title}</div>
-                                <div className="text-base mt-1">{item.description}</div>
-                              </div>
-                              <div className="w-10 h-10 bg-white text-[#6E6E73] absolute right-2 top-2 flex flex-col justify-center items-center rounded-full group-hover:top-1 group-hover:right-1 group-hover:shadow-[2px_4px_12px_rgba(0,0,0,0.14)]">
-                                <Icon icon={'solar:arrow-right-line-duotone'} className="text-xl -rotate-45" />
-                              </div>
+                      <Swiper
+                        effect={'cards'}
+                        loop={true}
+                        autoplay={{
+                          delay: 2000
+                        }
+                        }
+                        navigation={true}
+                        modules={[Autoplay, EffectCards, Navigation]}
+                      >
+                        {dataWorks.map((o, i) => (
+                          <SwiperSlide key={i} className={`relative rounded-2xl overflow-hidden shadow-[2px_4px_12px_rgba(0,0,0,0.14)] border border-white`}>
+                            <img src={o.image} alt='' className='w-full aspect-square object-cover' />
+                            <div className="bg-white text-black group-hover:text-blue-500 absolute right-0 top-0 flex flex-col justify-center items-center box-right">
+                              <Link href={o.behance} className="w-10 h-10 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'fa6-brands:behance'} className="text-lg" /></Link>
+                              {o.href &&
+                                <Link href={o.href} className="w-10 h-10 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'mingcute:arrow-right-fill'} className="text-lg -rotate-45" /></Link>}
                             </div>
+                            <div className="inline-flex items-center absolute top-2 left-2 gap-2 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm py-1 px-2 rounded-md">
+                              <div className={`w-2 h-2 rounded-full ${o.href ? `bg-green-400` : `bg-red-500`}`} />
+                              <div className={`text-white text-xs hidden ${o.href ? `!flex` : ''}`} dangerouslySetInnerHTML={{ __html: `Online` }} />
+                              <div className={`text-white text-xs hidden ${o.href ? `` : '!flex'}`} dangerouslySetInnerHTML={{ __html: `Offline` }} />
+                            </div>
+                            <Link href={o.behance} target="_blank" className="absolute inset-0" />
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative bg-white box-shadow p-6 rounded-3xl flex-1" data-aos='zoom-in' data-aos-delay={1000}>
+
+                  <div className='flex flex-col gap-3'>
+                    <div className="text-lg text-black font-bold">
+                      <span className="text-black px-2 pb-1.5">Apps</span>
+                    </div>
+                    <div className='grid grid-cols-3 gap-6'>
+                      {
+                        dataApps.map((item, index) => (
+                          <div key={index} className="w-full aspect-square rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm hover:scale-105">
+                            <Link href={item.urlPlay} target="_blank" className="w-full h-full">
+                              <Image src={item.image} alt={item.title} className="w-full h-full" />
+                            </Link>
                           </div>
-                        ))
+                        )
+                        )
                       }
                     </div>
-
-
-                  </div>
-
-                  <div className="relative bg-black box-shadow p-4 px-0 rounded-3xl h-fit flex flex-col gap-3" data-aos='zoom-in' data-aos-delay={1200}>
-                    <Marquee className="py-3">
-                      {listImage.map((item, i) => (
-                        <div key={i} className="w-fit h-10 mx-4 hover:scale-105 marque-item">
-                          <Image src={item.src} alt="" className={`!relative block !w-fit h-full object-contain`} fill />
-                        </div>
-                      ))}
-                    </Marquee>
                   </div>
                 </div>
-
-                <div className="lg:col-span-4 flex flex-col gap-6">
-
-                  <div className="relative bg-white box-shadow p-6 pb-0 rounded-3xl flex-1" data-aos='zoom-in' data-aos-delay={400}>
-
-                    <div className='flex flex-col gap-4'>
-                      <div className="text-lg text-black font-bold">
-                        <span className="text-black">My Works</span>
-                      </div>
-
-                      <div className="relative">
-
-                        <Swiper
-                          effect={'cards'}
-                          loop={true}
-                          autoplay={{
-                            delay: 2000
-                          }
-                          }
-                          navigation={true}
-                          modules={[Autoplay, EffectCards, Navigation]}
-                        >
-                          {dataWorks.map((o, i) => (
-                            <SwiperSlide key={i} className={`relative rounded-2xl overflow-hidden shadow-[2px_4px_12px_rgba(0,0,0,0.14)] border border-white`}>
-                              <img src={o.image} alt='' className='w-full aspect-square object-cover' />
-                              <div className="bg-white text-black group-hover:text-blue-500 absolute right-0 top-0 flex flex-col justify-center items-center box-right">
-                                <Link href={o.behance} className="w-10 h-10 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'fa6-brands:behance'} className="text-lg" /></Link>
-                                {o.href &&
-                                  <Link href={o.href} className="w-10 h-10 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'mingcute:arrow-right-fill'} className="text-lg -rotate-45" /></Link>}
-                              </div>
-                              <div className="inline-flex items-center absolute top-2 left-2 gap-2 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm py-1 px-2 rounded-md">
-                                <div className={`w-2 h-2 rounded-full ${o.href ? `bg-green-400` : `bg-red-500`}`} />
-                                <div className={`text-white text-xs hidden ${o.href ? `!flex` : ''}`} dangerouslySetInnerHTML={{ __html: `Online` }} />
-                                <div className={`text-white text-xs hidden ${o.href ? `` : '!flex'}`} dangerouslySetInnerHTML={{ __html: `Offline` }} />
-                              </div>
-                              <Link href={o.behance} target="_blank" className="absolute inset-0" />
-                            </SwiperSlide>
-                          ))}
-                        </Swiper>
-
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="relative bg-white box-shadow p-6 rounded-3xl flex-1" data-aos='zoom-in' data-aos-delay={1000}>
-
-                    <div className='flex flex-col gap-3'>
-                      <div className="text-lg text-black font-bold">
-                        <span className="text-black px-2 pb-1.5">Apps</span>
-                      </div>
-                      <div className='grid grid-cols-3 gap-6'>
-                        {
-                          dataApps.map((item, index) => (
-                            <div key={index} className="w-full aspect-square rounded-xl overflow-hidden border border-gray-400 bg-[rgba(255,255,255,0.75)] backdrop-blur-sm hover:scale-105">
-                              <Link href={item.urlPlay} target="_blank" className="w-full h-full">
-                                <Image src={item.image} alt={item.title} className="w-full h-full" />
-                              </Link>
-                            </div>
-                          )
-                          )
-                        }
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
               </div>
+
             </div>
-          </>
-          : <Loading />}
-      </Suspense>
+          </div>
+        </>
+        : <Loading />}
+      {/* </Suspense> */}
     </div >
   );
 }

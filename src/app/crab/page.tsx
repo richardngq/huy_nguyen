@@ -40,7 +40,7 @@ export default function IPFS() {
 
   return (
     <section>
-      <div className="hero h-[400px] card CRA overflow-hidden">
+      <div className="hero h-[400px] card CRAB overflow-hidden">
         <Image src={imageURL0} alt='' />
       </div>
 
