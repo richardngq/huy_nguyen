@@ -18,25 +18,25 @@ export default function About<IAbout>({ classNames = '' }) {
   return (
     <div className={`relative w-full h-auto lg:h-svh flex flex-col md:flex-row items-start md:items-center gap-6 z-20 pt-40 pb-20 ${classNames}`}>
 
-      <div className="container w-full mx-auto group flex flex-col md:flex-row items-center gap-16 relative z-10">
-        <div className="relative mix-blend-multiply w-80 aspect-square" data-aos="zoom-in">
-          <Image src={Avatar} alt="" className="w-full h-full rounded-[34px]" />
+      <div className="container w-full mx-auto group flex flex-col md:flex-row items-center gap-20 relative z-10">
+        <div className="mix-blend-multiply w-80 aspect-square rounded-3xl overflow-hidden" data-aos="fade-up">
+          <Image src={Avatar} alt="" className="w-full h-full" />
         </div>
 
         <div>
           <div className="text-4xl md:text-6xl text-[#6E6E73] font-bold" data-aos="fade-up">
             Hi, I&rsquo;m <span className="text-bg px-2 pb-1.5">Huy Nguyen</span>
           </div>
-          <div className="text-xl space-x-1 leading-8 mt-10 max-w-full" data-aos="fade-up" data-aos-delay={200}>
-            <p className="opacity-75">I&rsquo;m a <b>Product Designer</b> based in Vietnam with experience in delivering end-to-end UX/UI design for software products.
-              <br />
-              I&rsquo;m passionate about improving the lives of others through design and am constantly looking to learn new things everyday.</p>
+          <div className="text-xl space-x-1 leading-8 mt-10 max-w-full opacity-50" data-aos="fade-up" data-aos-delay={200}>
+            I&rsquo;m a <b>Product Designer</b> based in Vietnam with experience in delivering end-to-end UX/UI design for software products.
+            <br />
+            I&rsquo;m passionate about improving the lives of others through design and am constantly looking to learn new things everyday.
           </div>
 
           <div className="inline-flex gap-6 mt-8" data-aos="fade-up" data-aos-delay={400}>
             {Contacts.map((item, index) => {
               return (
-                <Link key={index} href={item.href} target="_blank" className="opacity-75 hover:opacity-100 hover:scale-125 transition-all">
+                <Link key={index} href={item.href} target="_blank" className="opacity-50 hover:opacity-75 hover:scale-125 transition-all">
                   <Icon icon={item?.Icon} fontSize={32} />
                 </Link>
               )

@@ -1,5 +1,9 @@
 {
   "node": {},
   "edge": {},
+<<<<<<< HEAD
   "encryptionKey": "kdG4xZ3Ugl8sU8Qbdsyf4pnRsqLs/B1BhfcBLHJJFlU="
+=======
+  "encryptionKey": "3exFF03DkTfxdU/js/O4IZSPF8Eds9xj+0Yoc9TJlxA="
+>>>>>>> 320851d (Revert "update port menu")
 }

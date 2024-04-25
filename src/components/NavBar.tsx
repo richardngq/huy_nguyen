@@ -1,5 +1,5 @@
 'use client'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { NavItem } from './NavItem'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
@@ -10,7 +10,12 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 export const Navbar: FC = () => {
   const pathname = usePathname()
 
+  useEffect(() => {
+    console.log(pathname);
+  }, [])
+
   const Links = [
+<<<<<<< HEAD
     { href: '/', target: false, label: 'Home', icon: `solar:home-bold-duotone` },
     { href: '/about', target: false, label: 'About me', icon: `solar:user-bold-duotone` },
     { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Present', icon: `solar:document-bold-duotone` },
@@ -18,6 +23,19 @@ export const Navbar: FC = () => {
   return (
     <div id='nav' className='fixed left-[calc(100vw/6)] right-[calc(100vw/6)] top-2 mx-2 lg:left-auto lg:right-4 lg:top-8 z-10' data-aos='zoom-in' data-aos-delay={2000}>
       <div className="flex flex-row lg:flex-col p-2 gap-2 justify-between bg-white box-shadow rounded-2xl">
+=======
+    { href: '/', target: false, label: 'Home' },
+    // { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Resume' },
+    { href: '/about', target: false, label: 'About' },
+    { href: 'https://drive.google.com/file/d/1jBdGjjszc4RqqqTfEsre1GcXm7MESuLF/view', target: true, label: 'Document' },
+  ]
+  return (
+    <div className='fixed top-0 left-0 right-0 bg-[#FCFCFC] text-[#515b87] inline-flex p-3 lg:p-6 z-[999]' data-aos="fade-in" style={{ boxShadow: `0px -1px 8px rgba(0,0,0,0.05)` }}>
+      <Link href={'/'}>
+        <Image src={Logo} alt="" />
+      </Link>
+      <nav className='w-full inline-flex items-center justify-end gap-6'>
+>>>>>>> 320851d (Revert "update port menu")
         {
           Links.map((o, i) =>
             <Link key={i} href={o.href} target={o.target ? `_blank` : `_self`}

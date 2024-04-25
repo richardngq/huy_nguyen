@@ -8,7 +8,6 @@ import { Footer } from "@/components/Footer";
 import { AOSInit } from "@/components/AnimateOnScroll";
 import "./globals.css";
 import "@/assets/style/App.scss";
-import Transition from "@/components/Transition";
 
 const font = Oswald({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
@@ -49,11 +48,9 @@ export default function RootLayout({
         <div className="text-[#6E6E73] flex flex-col h-screen">
           <Navbar />
 
-          <Transition>
-            {/* <div className="flex-auto"> */}
+          <div className="flex-auto">
             {children}
-            {/* </div> */}
-          </Transition>
+          </div>
 
           <Footer />
         </div>

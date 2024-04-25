@@ -1,5 +1,10 @@
 {
   "/not-found": "app/not-found.js",
+<<<<<<< HEAD
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
+=======
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+>>>>>>> 320851d (Revert "update port menu")
 }

@@ -81,7 +81,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               ref={ref}
               className={`card group ${item.key} ${index % 2 !== 0 ? `` : ``} rounded-[24px]`}
               onClick={() => handleClick(`${item.url}`)}
-              data-aos="fade"
+              data-aos="slide-up"
               data-aos-delay={400 + 400 * index}
             >
               <div className="relative hover:shadow-[0px_8px_12px_rgba(0,0,0,0.5)] rounded-3xl overflow-hidden" style={{ transition: `box-shadow 0.2s ease-in-out` }}>
