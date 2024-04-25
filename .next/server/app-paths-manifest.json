@@ -1,10 +1,15 @@
 {
-  "/not-found": "app/not-found.js",
-<<<<<<< HEAD
+  "/_not-found": "app/_not-found.js",
+  "/about/page": "app/about/page.js",
+  "/crab/page": "app/crab/page.js",
+  "/cra/page": "app/cra/page.js",
+  "/gs/page": "app/gs/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js"
-=======
+  "/ipfs1/page": "app/ipfs1/page.js",
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
->>>>>>> 320851d (Revert "update port menu")
+  "/sm/page": "app/sm/page.js",
+  "/f2/page": "app/f2/page.js",
+  "/resume/page": "app/resume/page.js",
+  "/opengraph-image.png/route": "app/opengraph-image.png/route.js",
+  "/twitter-image.png/route": "app/twitter-image.png/route.js"
 }

@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/richardnguyen/Documents/Repo/huy_nguyen/src/app/layout\":[\"static/media/f8a669a999c483ca-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

@@ -1,17 +1,1 @@
-{
-  "node": {},
-  "edge": {},
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "encryptionKey": "kdG4xZ3Ugl8sU8Qbdsyf4pnRsqLs/B1BhfcBLHJJFlU="
-=======
-  "encryptionKey": "3exFF03DkTfxdU/js/O4IZSPF8Eds9xj+0Yoc9TJlxA="
->>>>>>> 320851d (Revert "update port menu")
-=======
-  "encryptionKey": "Ifp86c5Kh/V+8DWImVmYZ0oBHhIpid6ULzSxlme0jAk="
->>>>>>> 6b8fbd7 (rv)
-=======
-  "encryptionKey": "3exFF03DkTfxdU/js/O4IZSPF8Eds9xj+0Yoc9TJlxA="
->>>>>>> 8605511 (Revert "update port menu")
-}
+{"node":{},"edge":{},"encryptionKey":"QvJV/Gu5WcAddNudDtbop4EovoNScA0j55sO5MosUHA="}
