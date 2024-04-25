@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"N03QB84E2zhtTqr4973hhLBpE+5V9e9aF6pRIHj7PwI=\"\n}"
-=======
-self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"nelXXCPuJn2VZW6fWwz5pFt7VvjZl4cUbkiO/FfUVz0=\"\n}"
->>>>>>> feat/ver2.0
+self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"kdG4xZ3Ugl8sU8Qbdsyf4pnRsqLs/B1BhfcBLHJJFlU=\"\n}"
