@@ -7,7 +7,10 @@
       "static/chunks/app/page.js"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8605511 (Revert "update port menu")
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

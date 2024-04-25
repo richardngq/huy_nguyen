@@ -1,11 +1,10 @@
 // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 100 to 900
 
-@import 'Carousel';
 @import 'Anim';
 
 body {
-  background-color: #F5F5F7;
+  background-color: #FFFFFF;
   scroll-behavior: auto !important;
   line-height: 150% !important;
   @apply transition-all;
@@ -82,70 +81,25 @@ $shadowW: 8px;
     (-$shadowW) $shadowW 0px #FFFFFF;
 }
 
-.box-shadow {
-  position: relative;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.14
-  );
-}
-
 .card {
   &.IPFS {
-    background: linear-gradient(45deg, #3C80D7 0%, #3C80D7 100%);
-  }
-
-  &.GS {
-    background: linear-gradient(45deg, #AA9385 0%, #AA9385 100%);
-  }
-
-  &.SM {
-    background: linear-gradient(45deg, #1a62c5 0%, #7fa4d7 75%);
-  }
-
-  &.CRAB {
-    background: linear-gradient(45deg, #FC712C 0%, #FFB490 100%);
-  }
-
-
-<<<<<<< HEAD
-  &-box-anim {
-    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 4s ease;
-  }
+    background: linear-gradient(45deg, #3C80D7 0%, #3C80D7 100%
+    );
 }
 
-.text-bg {
-  // animation: anim .8s linear;
-  // border-radius: 4px;
-  // background-color: #6470a7;
-  transition: all .8s linear;
-  position: relative;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  line-height: 1 !important;
-  overflow: hidden;
+&.GS {
+  background: linear-gradient(45deg, #AA9385 0%, #AA9385 100%);
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -8px;
-    height: 16px;
-    background: rgba(194, 201, 237, 0.75);
-    transition: all .8s linear;
+&.SM {
+  background: linear-gradient(45deg, #1a62c5 0%, #7fa4d7 75%);
+}
 
-    animation: leftToRight .8s linear;
-  }
+&.CRAB {
+  background: linear-gradient(45deg, #FC712C 0%, #FFB490 100%);
+}
 
-  @keyframes leftToRight {
-    0% {
-      transform: translateX(100%);
-    }
 
-    100% {
-      transform: translateX(0%);
-    }
-=======
 &-box-anim {
   animation: boxShadow .4s ease;
   animation-delay: 600ms;
@@ -184,18 +138,13 @@ $shadowW: 8px;
       @apply text-white;
     }
 
->>>>>>> 320851d (Revert "update port menu")
   }
 }
 
 .box {
   &-right {
-    border-bottom-left-radius: 12px;
-    border-top-right-radius: 12px;
-
-    &>* {
-      z-index: 2;
-    }
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
 
     &::before,
     &::after {
@@ -204,7 +153,7 @@ $shadowW: 8px;
       height: 100%;
       position: absolute;
       background: rgba(255, 255, 255, 0);
-      box-shadow: 12px -12px 0px #FFF;
+      box-shadow: 8px -8px 0px #FFF;
       border-top-right-radius: 12px;
     }
 
