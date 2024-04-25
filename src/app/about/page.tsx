@@ -1,10 +1,7 @@
-"use client"
 import { dataDomains, dataStacks } from "@/resources/constants/dataDefine";
-import Avatar from "@/assets/image/image-avatar.png";
+import Avatar from "@/assets/img/avatar.png";
 import { FC } from "react";
 import Image from "next/image";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import Link from "next/link";
 
 export default function About() {
 
@@ -17,7 +14,7 @@ export default function About() {
     }) => {
     return (
       <div className={`text-sm flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
-        <div className="uppercase font-semibold text-base text-black">{title}</div>
+        <div className="uppercase font-semibold text-base opacity-75">{title}</div>
         {children}
       </div>
     )
@@ -30,7 +27,7 @@ export default function About() {
       Dates: `Mar 2023 - Present`,
       Descriptions: [
         `Senior designer at <b>IPFS Services</b>`,
-        `Design DRI for all <b>Ecosystems Products</b> and <b>Solution Solving</b> for <b>Mobile Applications</b>`,
+        `Design DRI for all PWA Projects and Solution Resolving for <b>Mobile Application</b>`,
         `Successful upgrade and take care User Experience and Accessibility for thousands Clients with <b>Retail Product</b>`
       ],
     },
@@ -88,12 +85,12 @@ export default function About() {
       Descriptions?: string[],
     }) => {
     return (
-      <div className={`${classNames} text-black`} data-aos="fade-up">
+      <div className={`${classNames}`} data-aos="fade-up">
         <div className="flex flex-col">
-          <p><span className="text-xl font-semibold">{CompanyName}</span><span className="text-[#6E6E73] text-lg">&nbsp;{`-`}&nbsp;{Role}</span></p>
-          <p className="text-sm mt-1 opacity-25">{Dates}</p>
+          <p><span className="text-xl font-semibold">{CompanyName}</span><span className="opacity-75 text-lg">&nbsp;{`-`}&nbsp;{Role}</span></p>
+          <p className="text-slate-500 text-base mt-1 opacity-75">{Dates}</p>
         </div>
-        <ul className="text-base mt-2 text-[#6E6E73]">
+        <ul className="text-slate-700 text-sm mt-2">
           {Descriptions?.map((i, j) => (
             <li key={j} dangerouslySetInnerHTML={{ __html: i }} className="mt-2" />
           ))}
@@ -103,76 +100,64 @@ export default function About() {
   }
 
   return (
-    <section className="container my-20 mx-auto bg-white overflow-hidden box-shadow p-4 rounded-2xl">
+    <section className="container mt-20 mx-auto pt-10">
       <div className=" group" data-aos="fade-up">
         <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
-          {/* <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-4 border-[#efefef]"> */}
-          <div className="relative mix-blend-multiply w-[120px] aspect-square">
-            <Image src={Avatar} alt="" className="w-full h-full rounded-2xl" />
+          <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-4 border-[#efefef]">
+            <Image src={Avatar} alt='' className="w-full h-full object-contain" />
           </div>
-          {/* </div> */}
           <div className="flex flex-col gap-1">
             <div className="text-xl font-bold">Huy Nguyen</div>
-            <div className="text-base leading-6 font-thin">
-              I am a <b>Product Designer</b>, <b>UI/UX Designer</b>, <b>UI Developer</b> with 5 years of experience.<br />
-              Specialized working with domains about <b>Web3 (2+ Years)</b>, <b> Fintech(3+ Years)</b>, <b>Blockchain (6+ Years)</b>, <b>Crypto</b>, <b>Healthcare</b>, <b>E-Commerce</b> and <b>SaaS</b>.
+            <div className="text-base font-thin">
+              Hi, I am a <span className='group-hover:bg-lime-200 group-hover:px-1'>Product Designer</span> and <span className='group-hover:bg-lime-200 group-hover:px-1'>UI/UX Designer</span> with 5 years of experience.<br />
+              Specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce and SaaS.
             </div>
           </div>
         </div>
-
-        <Link href='https://drive.google.com/file/d/1fXCEupkTlTWr7mrk88WGHkj4DAmEy0Xn/view?usp=sharing' className="absolute top-0 right-0 bg-[rgba(0,0,0,.5)] text-white inline-flex items-center gap-2 p-2 pe-3 rounded-xl hover:shadow-[0px_4px_8px_rgba(0,0,0,.08)] hover:scale-105">
-          <Icon icon={`solar:sticker-smile-square-bold-duotone`} fontSize={24} />
-          My CV
-        </Link>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 mt-10">
-        <div className="lg:col-span-8">
-          <Parts title="My Experience"
-          >
-            <div className="flex flex-col gap-10">
-              {
-                dataExp.map((item, index) => (
-                  <Experience key={index} CompanyName={item.CompanyName} Role={item.Role} Dates={item.Dates} Descriptions={item.Descriptions} />
-                ))
-              }
-            </div>
-          </Parts>
+      <Parts classNames="mt-10" title="My Experience"
+      >
+        <div className="flex flex-col gap-10">
+          {
+            dataExp.map((item, index) => (
+              <Experience key={index} CompanyName={item.CompanyName} Role={item.Role} Dates={item.Dates} Descriptions={item.Descriptions} />
+            ))
+          }
         </div>
-        <div className="lg:col-span-4">
-          <Parts title="My Stack"
-          >
-            <div className="inline-flex items-center flex-wrap gap-2">
-              {
-                dataStacks.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
-                    data-aos="fade-left"
-                    data-aos-delay={100 + index * 100}
-                    dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
-                ))
-              }
-            </div>
-          </Parts>
+      </Parts>
 
-          <Parts classNames="mt-10" title="Specialized Domains Experience"
-          >
-            <div className="inline-flex items-center flex-wrap gap-2">
-              {
-                dataDomains.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
-                    data-aos="fade-left"
-                    data-aos-delay={100 + index * 100}
-                    dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
-                ))
-              }
-            </div>
-          </Parts>
+      <Parts classNames="mt-10" title="My Stack"
+      >
+        <div className="inline-flex items-center flex-wrap gap-2">
+          {
+            dataStacks.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                data-aos="fade-left"
+                data-aos-delay={100 + index * 100}
+                dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
+            ))
+          }
         </div>
-      </div>
+      </Parts>
+
+      <Parts classNames="mt-10" title="Specialized Domains Experience"
+      >
+        <div className="inline-flex items-center flex-wrap gap-2">
+          {
+            dataDomains.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                data-aos="fade-left"
+                data-aos-delay={100 + index * 100}
+                dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
+            ))
+          }
+        </div>
+      </Parts>
     </section>
   )
 }

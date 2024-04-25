@@ -17,7 +17,6 @@ import ImageGridLogoGS from '@/assets/image/img-logo-GSb.png';
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Icon } from '@iconify/react/dist/iconify.js';
 
 export default function IPFS() {
 
@@ -40,26 +39,25 @@ export default function IPFS() {
 
   return (
     <section>
-      <div className="hero h-[400px] card IPFS overflow-hidden">
-        <Image src={imageURL0} alt='' />
+      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-ipfs-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `contain` }}>
+        {/* <Image src={imageURL0} alt='' /> */}
       </div>
 
       <div className="overview py-10" data-aos="fade-up">
         <div className="container mx-auto">
-          <h1 className='text-black text-4xl font-bold'>FXCE</h1>
+          <h1 className='text-5xl font-bold'>FXCE</h1>
           <div className='uppercase opacity-80 font-semibold mt-10'>Overview</div>
           <p className='text-base opacity-75 mt-4'>
             An FX Social Trading Platform is considered to have the most optimized technology features related to FX. Here, users are known as Traders will have the opportunity to use and optimize the tools in FX. In addition, this is also an FX community sharing trading strategies and profiting from user&rsquo;s own FX strategies.
           </p>
-          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit inline-flex items-center gap-2 py-3 ps-6 pe-4 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://fxce.com/`} target="_blank">
-            Go to Website
-            <Icon icon={`solar:arrow-right-line-duotone`} fontSize={24} />
+          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://fxce.com/`} target="_blank">
+            Explore Now
           </Link>
         </div>
       </div>
 
 
-      <div className="role py-10 bg-[#eeeeee] group" data-aos="fade-up">
+      <div className="role py-10 bg-[#F2F7FE] group" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto lg:text-center'>I am a product designer for <span className='group-hover:bg-blue-200'>IPFS - FXCE Technical Solution</span></div>
           <p className='text-base opacity-75 mt-4'>
@@ -86,7 +84,7 @@ export default function IPFS() {
         </div>
       </div>
 
-      <div className="insight py-10 bg-[#eeeeee]" data-aos="fade-up">
+      <div className="insight py-10 bg-[#F2F7FE]" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto'>Gathering insights</div>
           <p className='text-base opacity-75 mt-4'>
@@ -145,7 +143,7 @@ export default function IPFS() {
         </div>
       </div>
 
-      <div className="solution py-10 bg-[#eeeeee]" data-aos="fade-up">
+      <div className="solution py-10 bg-[#F2F7FE]" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto'>The Solution</div>
           <p className='text-base opacity-75 mt-4'>

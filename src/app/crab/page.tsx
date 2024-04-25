@@ -40,13 +40,13 @@ export default function IPFS() {
 
   return (
     <section>
-      <div className="hero h-[400px] card CRAB overflow-hidden">
-        <Image src={imageURL0} alt='' />
+      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-crab1-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `contain` }}>
+        {/* <Image src={imageURL0} alt='' /> */}
       </div>
 
       <div className="overview py-10" data-aos="fade-up">
         <div className="container mx-auto">
-          <h1 className='text-black text-4xl font-bold'>Crabada</h1>
+          <h1 className='text-5xl font-bold'>Crabada</h1>
           <div className='uppercase opacity-80 font-semibold mt-10'>Overview</div>
           <p className='text-base opacity-75 mt-4'>
             A Game-Fi title inspired by oceans and seas, taking the lead on the Avalanche platform in 2021. We have an entire ecosystem for our brainchild including: Game-Fi Landing Page, Marketplace , Application Game on multi-platform, Liquidity System and 1 Subnet on Avalanche system
@@ -58,7 +58,7 @@ export default function IPFS() {
       </div>
 
 
-      <div className="role py-10 bg-[#eeeeee] group" data-aos="fade-up">
+      <div className="role py-10 bg-[#F2F7FE] group" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto lg:text-center'>I am a Product Designer and UI Developer for <span className='group-hover:bg-blue-200'>Crabada</span></div>
           <p className='text-base opacity-75 mt-4'>
@@ -82,7 +82,7 @@ export default function IPFS() {
         </div>
       </div>
 
-      <div className="insight py-10 bg-[#eeeeee]" data-aos="fade-up">
+      <div className="insight py-10 bg-[#F2F7FE]" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto'>Wireframing</div>
           <p className='text-base opacity-75 mt-4'>

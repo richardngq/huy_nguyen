@@ -64,7 +64,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       </div>
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6">
         <div
-          className="font-semibold text-6xl p-10 uppercase rounded-3xl text-[#6E6E73] card-box-anim"
+          className="font-semibold text-6xl p-10 uppercase rounded-3xl text-[#515b87] card-box-anim"
         >
           <div
             className="flex flex-col justify-center items-center h-full w-full"
@@ -81,7 +81,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               ref={ref}
               className={`card group ${item.key} ${index % 2 !== 0 ? `` : ``} rounded-[24px]`}
               onClick={() => handleClick(`${item.url}`)}
-              data-aos="slide-up"
+              data-aos="fade"
               data-aos-delay={400 + 400 * index}
             >
               <div className="relative hover:shadow-[0px_8px_12px_rgba(0,0,0,0.5)] rounded-3xl overflow-hidden" style={{ transition: `box-shadow 0.2s ease-in-out` }}>

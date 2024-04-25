@@ -38,26 +38,25 @@ export default function Gestreon() {
 
   return (
     <section>
-      <div className="hero h-[400px] card GS overflow-hidden">
-        <Image src={imageURL0} alt='' />
+      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-gs-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `contain` }}>
+        {/* <Image src={imageURL0} alt='' /> */}
       </div>
 
       <div className="overview py-10" data-aos="fade-up">
         <div className="container mx-auto">
-          <h1 className='text-black text-4xl font-bold'>The Gesteron</h1>
+          <h1 className='text-5xl font-bold'>The Gesteron</h1>
           <div className='uppercase opacity-80 font-semibold mt-10'>Overview</div>
           <p className='text-base opacity-75 mt-4'>
             As an e-commerce website, it serves as a third-party platform for collectors of luxury items. Here, they are provided with buying and selling services for the items they own without concerns about authenticity, damage, or credibility issues. The transactions take place entirely visually between both the buyer and seller on the website
           </p>
-          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit inline-flex items-center gap-2 py-3 ps-6 pe-4 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://thegestreon.com/`} target="_blank">
-            Go to Website
-            <Icon icon={`solar:arrow-right-line-duotone`} fontSize={24} />
+          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://thegestreon.com/`} target="_blank">
+            Explore Now
           </Link>
         </div>
       </div>
 
 
-      <div className="role py-10 bg-[#eeeeee] group" data-aos="fade-up">
+      <div className="role py-10 bg-[#F2F7FE] group" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto lg:text-center'>I am a Product Designer for <span className='group-hover:bg-blue-200'>The Gesteron</span></div>
           <p className='text-base opacity-75 mt-4'>
@@ -111,7 +110,7 @@ export default function Gestreon() {
         </div>
       </div>
 
-      <div className="insight py-10 bg-[#eeeeee]" data-aos="fade-up">
+      <div className="insight py-10 bg-[#F2F7FE]" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto'>Gathering insights</div>
           <p className='text-base opacity-75 mt-4'>
@@ -171,7 +170,7 @@ export default function Gestreon() {
         </div>
       </div>
 
-      <div className="solution py-10 bg-[#eeeeee]" data-aos="fade-up">
+      <div className="solution py-10 bg-[#F2F7FE]" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto'>The Solution</div>
           <p className='text-base opacity-75 mt-4'>

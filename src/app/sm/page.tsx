@@ -12,7 +12,6 @@ import ImageGridLogoGS from '@/assets/image/img-logo-GSb.png';
 import ImageGridLogoIPFS from '@/assets/image/img-logo-IPFS.png';
 
 import Link from "next/link";
-import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function SkyMavis() {
 
@@ -35,26 +34,25 @@ export default function SkyMavis() {
 
   return (
     <section>
-      <div className="hero h-[400px] card SM overflow-hidden">
-        <Image src={imageURL0} alt='' />
+      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-sm-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `80% auto`, backgroundPosition: `center` }}>
+        {/* <Image src={imageURL0} alt='' /> */}
       </div>
 
       <div className="overview py-10" data-aos="fade-up">
         <div className="container mx-auto">
-          <h1 className='text-black text-4xl font-bold'>Sky Mavis</h1>
+          <h1 className='text-5xl font-bold'>Sky Mavis</h1>
           <div className='uppercase opacity-80 font-semibold mt-10'>Overview</div>
           <p className='text-base opacity-75 mt-4'>
             The objective is to establish an internal application for employee compensation and facilitate the transfer of multiple assets between entities based on assets. As a busy user with external commitments, a mobile phone is considered a closely-held item, allowing users to diversify asset conversions within their community anytime, anywhere on their phones. The application is developed based on blockchain and cryptocurrency platforms.
           </p>
-          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit inline-flex items-center gap-2 py-3 ps-6 pe-4 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
-            Go to Website
-            <Icon icon={`solar:arrow-right-line-duotone`} fontSize={24} />
+          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
+            Explore Now
           </Link>
         </div>
       </div>
 
 
-      <div className="role py-10 bg-[#eeeeee] group" data-aos="fade-up">
+      <div className="role py-10 bg-[#F2F7FE] group" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto lg:text-center'>I am a UI UX designer</div>
           <p className='text-base opacity-75 mt-4'>
@@ -78,7 +76,7 @@ export default function SkyMavis() {
         </div>
       </div>
 
-      <div className="insight py-10 bg-[#eeeeee]" data-aos="fade-up">
+      <div className="insight py-10 bg-[#F2F7FE]" data-aos="fade-up">
         <div className="container mx-auto">
           <div className='uppercase opacity-80 font-semibold mx-auto'>Gathering insights</div>
           <p className='text-base opacity-75 mt-4 group'>
