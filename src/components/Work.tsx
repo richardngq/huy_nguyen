@@ -162,10 +162,12 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                         <Image src={item.image} alt="" className="w-full object-cover group-hover:scale-110" fill />
                       </div>
                     </div>
-                    <div className="bg-white text-black group-hover:text-blue-500 absolute right-0 top-0 flex flex-col justify-center items-center gap- box-right">
-                      <Link href={item.behance} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'fa6-brands:behance'} className="text-lg" /></Link>
-                      {item.href &&
-                        <Link href={item.href} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'mingcute:arrow-right-fill'} className="text-lg -rotate-45" /></Link>}
+                    <div className="bg-white text-black absolute right-0 top-0 flex flex-col justify-center items-center box-right z-20">
+                      {item.href ?
+                        <Link href={item.href} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'ph:globe-bold'} className="text-lg" /></Link>
+                        :
+                        <Link href={item.behance} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'fa6-brands:behance'} className="text-lg" /></Link>
+                      }
                     </div>
                     <div className="inline-flex items-center absolute top-4 left-4 gap-2 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm py-1 px-2 rounded-md">
                       <div className={`w-2 h-2 rounded-full ${item.href ? `bg-green-400` : `bg-red-500`}`} />

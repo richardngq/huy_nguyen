@@ -28,16 +28,7 @@ export const Backers: FC = () => {
   ]
 
   return (
-    <section className="relative flex flex-col gap-10 mt-20 mb-20 z-10 py-4 lg:py-4 bg-[linear-gradient(360deg,rgba(0,0,0,1)_0%,rgba(81,91,135,1)_50%,rgba(81,91,135,.75)_100%)] overflow-hidden" data-aos="fade">
-      <div className="w-full h-full absolute inset-0 mix-blend-darken inline-flex items-center gap-0">
-        <Image src={ImageIso} alt="" className="w-full h-full object-contain" />
-        <Image src={ImageIso} alt="" className="w-full h-full object-contain" />
-        <Image src={ImageIso} alt="" className="w-full h-full object-contain" />
-        <Image src={ImageIso} alt="" className="w-full h-full object-contain" />
-      </div>
-      {/* <div className="inline-flex justify-center items-center gap-4 text-white font-semibold text-[28px] uppercase relative">
-        More Impact Works
-      </div> */}
+    <section className="bg-[#e1e1e1] relative flex flex-col gap-10 py-2 z-10 overflow-hidden" data-aos="fade">
       <Marquee className="py-1">
         {listImage.map((item, i) => (
           <div key={i} className="w-fit h-14 mx-4 hover:scale-105 marque-item">

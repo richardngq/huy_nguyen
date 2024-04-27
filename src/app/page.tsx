@@ -22,7 +22,6 @@ export default function Home() {
         <ShowCases />
         <Work />
       </div>
-      <Backers />
     </div>
   );
 }

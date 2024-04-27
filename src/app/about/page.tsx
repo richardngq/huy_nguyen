@@ -109,7 +109,7 @@ export default function About() {
           <div className="flex flex-col gap-1">
             <div className="text-xl font-bold">Huy Nguyen</div>
             <div className="text-base font-thin">
-              Hi, I am a <span className='group-hover:bg-lime-200 group-hover:px-1'>Product Designer</span> and <span className='group-hover:bg-lime-200 group-hover:px-1'>UI/UX Designer</span> with 5 years of experience.<br />
+              Hi, I am a <b>Product Designer</b> and <b>UI Developer</b> with 5 years of experience.<br />
               Specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce and SaaS.
             </div>
           </div>
