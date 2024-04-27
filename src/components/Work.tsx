@@ -110,7 +110,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
   return (
     <div className="container w-full mx-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
       <div className={`col-span-1 md:col-span-3`} data-aos="fade">
-        <div className="w-full text-[#515b87] flex flex-row justify-between items-end" data-aos="fade">
+        <div className="w-full flex flex-row justify-between items-end" data-aos="fade">
           <div className="inline-flex justify-end items-end gap-1.5 font-semibold text-[28px] uppercase">
             <span className="opacity-50">My</span> Projects
           </div>
@@ -122,7 +122,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                     e.stopPropagation() || instanceRef.current?.prev()
                   }
                   className={`
-                  text-[#515b87] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
+                  h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
                   ${currentSlide === 0 && `opacity-50`}
                   `}
                 >
@@ -137,7 +137,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                     e.stopPropagation() || instanceRef.current?.next()
                   }
                   className={`
-                  text-[#515b87] h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
+                  h-fit cursor-pointer rounded-full flex flex-row justify-center items-center
                   ${currentSlide ===
                     instanceRef.current.track.details.slides.length - 1 && `opacity-50`}
                     `}
@@ -163,10 +163,10 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                       </div>
                     </div>
                     <div className="bg-white text-black absolute right-0 top-0 flex flex-col justify-center items-center box-right z-20">
-                      {item.href ?
-                        <Link href={item.href} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'ph:globe-bold'} className="text-lg" /></Link>
+                      {item.href && item.behance ?
+                        <Link href={item.href} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'ph:globe-bold'} className="text-xl" /></Link>
                         :
-                        <Link href={item.behance} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'fa6-brands:behance'} className="text-lg" /></Link>
+                        <Link href={item.behance} className="w-12 h-12 flex flex-col justify-center items-center group-hover:scale-110"><Icon icon={'fa6-brands:behance'} className="text-xl" /></Link>
                       }
                     </div>
                     <div className="inline-flex items-center absolute top-4 left-4 gap-2 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm py-1 px-2 rounded-md">
@@ -175,7 +175,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                       <div className={`text-white text-xs hidden ${item.href ? `` : '!flex'}`} dangerouslySetInnerHTML={{ __html: `Offline` }} />
                     </div>
                   </div>
-                  <Link href={item.behance} target="_blank" className="absolute inset-0" />
+                  <Link href={item.href && item.behance ? item.href : item.behance} target="_blank" className="absolute inset-0" />
                 </div>
               }
               )
@@ -185,7 +185,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
       </div>
 
       {/* <div className={``} data-aos="fade">
-        <div className="inline-flex justify-center items-center gap-1.5 text-[#515b87] font-semibold text-4xl uppercase">
+        <div className="inline-flex justify-center items-center gap-1.5 font-semibold text-4xl uppercase">
           Launching<span className="text-bg px-2">Apps</span>
         </div>
         <div className="grid grid-cols-3 lg:flex lg:flex-row flex-wrap gap-6 overflow-hidden mt-6">

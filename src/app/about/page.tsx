@@ -101,7 +101,7 @@ export default function About() {
 
   return (
     <section className="container mt-20 mx-auto pt-10">
-      <div className=" group" data-aos="fade-up">
+      <div className="group" data-aos="fade-up">
         <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
           <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-4 border-[#efefef]">
             <Image src={Avatar} alt='' className="w-full h-full object-contain" />
@@ -115,49 +115,55 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <Parts classNames="mt-10" title="My Experience"
-      >
-        <div className="flex flex-col gap-10">
-          {
-            dataExp.map((item, index) => (
-              <Experience key={index} CompanyName={item.CompanyName} Role={item.Role} Dates={item.Dates} Descriptions={item.Descriptions} />
-            ))
-          }
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-20">
+        <div>
+          <Parts classNames="mt-10" title="My Experience"
+          >
+            <div className="flex flex-col gap-10">
+              {
+                dataExp.map((item, index) => (
+                  <Experience key={index} CompanyName={item.CompanyName} Role={item.Role} Dates={item.Dates} Descriptions={item.Descriptions} />
+                ))
+              }
+            </div>
+          </Parts>
         </div>
-      </Parts>
 
-      <Parts classNames="mt-10" title="My Stack"
-      >
-        <div className="inline-flex items-center flex-wrap gap-2">
-          {
-            dataStacks.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-delay={100 + index * 100}
-                dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
-            ))
-          }
-        </div>
-      </Parts>
+        <div>
+          <Parts classNames="mt-10" title="My Stack"
+          >
+            <div className="inline-flex items-center flex-wrap gap-2">
+              {
+                dataStacks.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    data-aos="fade-left"
+                    data-aos-delay={100 + index * 100}
+                    dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
+                ))
+              }
+            </div>
+          </Parts>
 
-      <Parts classNames="mt-10" title="Specialized Domains Experience"
-      >
-        <div className="inline-flex items-center flex-wrap gap-2">
-          {
-            dataDomains.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-delay={100 + index * 100}
-                dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
-            ))
-          }
+          <Parts classNames="mt-10" title="Specialized Domains Experience"
+          >
+            <div className="inline-flex items-center flex-wrap gap-2">
+              {
+                dataDomains.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    data-aos="fade-left"
+                    data-aos-delay={100 + index * 100}
+                    dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
+                ))
+              }
+            </div>
+          </Parts>
         </div>
-      </Parts>
+      </div>
+
     </section>
   )
 }

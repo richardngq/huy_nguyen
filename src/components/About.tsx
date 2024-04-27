@@ -23,7 +23,7 @@ export default function About<IAbout>({ classNames = '' }) {
         <div className="container w-full mx-auto group flex flex-col md:flex-row items-center gap-16 relative z-10">
 
           <div>
-            <div className="text-[28px] md:text-4xl text-[#515b87] font-bold" data-aos="fade-up">
+            <div className="text-[28px] md:text-4xl font-bold" data-aos="fade-up">
               Hello World~
             </div>
             <div className="text-xl space-x-1 leading-8 mt-4 max-w-full" data-aos="fade-up" data-aos-delay={200}>

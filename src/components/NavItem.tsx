@@ -30,6 +30,10 @@ export const NavItem: FC<INav> = ({ text, link, target, classNames = '' }) => {
     {
       title: `Crabada`,
       url: '/crab',
+    },
+    {
+      title: `Sky Mavis`,
+      url: '/sm',
     }
   ]
 

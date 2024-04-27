@@ -10,32 +10,10 @@ import imageURL3 from '@/assets/image/image-detail-ipfs-3.png'
 import imageURL4 from '@/assets/image/image-detail-ipfs-4.png'
 import imageURL4b from '@/assets/image/image-detail-ipfs-4b.png'
 
-import ImageGridSM from '@/assets/img/img-grid-sm.png';
-import ImageGridGS from '@/assets/image/image-mockup-gs.png';
-import ImageGridLogoSM from '@/assets/image/img-logo-SM.png';
-import ImageGridLogoGS from '@/assets/image/img-logo-GSb.png';
-
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function IPFS() {
-
-  const dataGrid = [
-    {
-      logo: ImageGridLogoGS,
-      image: ImageGridGS,
-      url: '/gs',
-    },
-    {
-      logo: ImageGridLogoSM,
-      image: ImageGridSM,
-      url: '/sm',
-    },
-  ]
-
-  const handleClick = (url?: any) => {
-    window.location.replace(`./${url}`)
-  }
 
   return (
     <section>

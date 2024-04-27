@@ -7,41 +7,16 @@ import imageURL4 from '@/assets/image/image-detail-crab1-4.png'
 import imageURL5 from '@/assets/image/image-detail-crab1-5.png'
 import imageURL6 from '@/assets/image/image-detail-crab1-6.png'
 
-import ImageGridSM from '@/assets/img/img-grid-sm.png';
-import ImageGridGS from '@/assets/image/image-mockup-gs.png';
-import ImageGridLogoSM from '@/assets/image/img-logo-SM.png';
-import ImageGridLogoGS from '@/assets/image/img-logo-GSb.png';
-
-import LottieJson from '@/assets/lottie/Crabada#3.json'
-import Lottie from 'lottie-react'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import PlayVideo from '@/components/Video';
 
 export default function IPFS() {
 
-  const dataGrid = [
-    {
-      logo: ImageGridLogoGS,
-      image: ImageGridGS,
-      url: '/gs',
-    },
-    {
-      logo: ImageGridLogoSM,
-      image: ImageGridSM,
-      url: '/sm',
-    },
-  ]
-
-  const handleClick = (url?: any) => {
-    window.location.replace(`./${url}`)
-  }
-
   return (
     <section>
-      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-crab1-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `contain` }}>
-        {/* <Image src={imageURL0} alt='' /> */}
+      <div className="hero h-[400px] card CRAB overflow-hidden">
+        <Image src={imageURL0} alt='' />
       </div>
 
       <div className="overview py-10" data-aos="fade-up">

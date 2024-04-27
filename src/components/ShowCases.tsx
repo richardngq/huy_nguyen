@@ -20,28 +20,15 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
 
   const dataGrid = [
     {
-      key: `IPFS`,
-      image: ImageGridIPFS,
-      title: `IPFS - FXCE`,
-      description: `Main responsibility and designing to enhance UI/UX Product`,
-      url: '/ipfs1',
-      href: 'https://www.fxce.com/',
-    },
-    {
-      key: `GS`,
-      image: ImageGridGS,
-      title: `Gesteron`,
-      description: `Re-Design UX for payment system`,
-      url: '/gs',
-      href: 'https://thegestreon.com/',
-    },
-    {
       key: `SM`,
       image: ImageGridSM,
       title: `Sky Mavis`,
       description: `Design Mobile App for sending multiple assets`,
       url: '/sm',
       href: 'https://scatter.roninchain.com/',
+      tags: [
+        'Web3'
+      ]
     },
     {
       key: `CRAB`,
@@ -50,7 +37,32 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       description: `Design feature miragation on Web3 to Application Game`,
       url: '/crab',
       href: 'https://crabada.com/',
-    }
+      tags: [
+        'Web3'
+      ]
+    },
+    {
+      key: `IPFS`,
+      image: ImageGridIPFS,
+      title: `IPFS - FXCE`,
+      description: `Main responsibility and designing to enhance UI/UX Product`,
+      url: '/ipfs1',
+      href: 'https://www.fxce.com/',
+      tags: [
+        'Web3'
+      ]
+    },
+    {
+      key: `GS`,
+      image: ImageGridGS,
+      title: `Gesteron`,
+      description: `Re-Design UX for payment system`,
+      url: '/gs',
+      href: 'https://thegestreon.com/',
+      tags: [
+        'Web3'
+      ]
+    },
   ]
 
   const handleClick = (url?: any) => {
@@ -61,7 +73,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
   return (
     <div className={`container mx-auto relative z-20 mt-20 ${classNames}`}>
       <div
-        className="font-semibold text-[28px] uppercase rounded-3xl text-[#515b87] card-box-anim"
+        className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
       >
         <div
           className="h-full w-full"

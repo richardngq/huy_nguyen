@@ -38,8 +38,8 @@ export default function Gestreon() {
 
   return (
     <section>
-      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-gs-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `contain` }}>
-        {/* <Image src={imageURL0} alt='' /> */}
+      <div className="hero h-[400px] card GS overflow-hidden">
+        <Image src={imageURL0} alt='' />
       </div>
 
       <div className="overview py-10" data-aos="fade-up">

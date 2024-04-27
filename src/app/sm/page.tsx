@@ -6,36 +6,14 @@ import imageURL2 from "@/assets/image/image-detail-sm-2.png"
 import imageURL3 from "@/assets/image/image-detail-sm-3.png"
 import imageURL4 from "@/assets/image/image-detail-sm-4.png"
 
-import ImageGridGS from '@/assets/image/image-mockup-gs.png';
-import ImageGridIPFS from '@/assets/image/image-mockup-fxce.png';
-import ImageGridLogoGS from '@/assets/image/img-logo-GSb.png';
-import ImageGridLogoIPFS from '@/assets/image/img-logo-IPFS.png';
-
 import Link from "next/link";
 
 export default function SkyMavis() {
 
-  const dataGrid = [
-    {
-      logo: ImageGridLogoIPFS,
-      image: ImageGridIPFS,
-      url: '/ipfs1',
-    },
-    {
-      logo: ImageGridLogoGS,
-      image: ImageGridGS,
-      url: '/gs',
-    }
-  ]
-
-  const handleClick = (url?: any) => {
-    window.location.replace(`./${url}`)
-  }
-
   return (
     <section>
-      <div className="hero h-[400px] bg-no-repeat" style={{ backgroundColor: '#ECEFF4', backgroundImage: `url(./assets/image/image-detail-sm-0.png)`, backgroundAttachment: `fixed`, backgroundSize: `80% auto`, backgroundPosition: `center` }}>
-        {/* <Image src={imageURL0} alt='' /> */}
+      <div className="hero h-[400px] card SM overflow-hidden">
+        <Image src={imageURL0} alt='' />
       </div>
 
       <div className="overview py-10" data-aos="fade-up">
