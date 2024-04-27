@@ -27,7 +27,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       url: '/sm',
       href: 'https://scatter.roninchain.com/',
       tags: [
-        'Web3'
+        'Mobile App', 'Crypto', 'Blockchain', 'Fintech'
       ]
     },
     {
@@ -38,7 +38,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       url: '/crab',
       href: 'https://crabada.com/',
       tags: [
-        'Web3'
+        'Web3', 'Crypto', 'GameFi'
       ]
     },
     {
@@ -49,7 +49,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       url: '/ipfs1',
       href: 'https://www.fxce.com/',
       tags: [
-        'Web3'
+        'Fintech', 'Blockchain'
       ]
     },
     {
@@ -60,7 +60,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       url: '/gs',
       href: 'https://thegestreon.com/',
       tags: [
-        'Web3'
+        'E-Commerce'
       ]
     },
   ]
@@ -104,6 +104,20 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                 </div>
                 <div className="w-10 h-10 bg-white text-black absolute right-2 top-2 lg:right-6 lg:top-6 flex flex-col justify-center items-center rounded-full">
                   <Icon icon={'mingcute:arrow-right-fill'} className="text-xl -rotate-45" />
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex gap-3 z-10">
+                  {
+                    item?.tags.map((o, i) =>
+                      <div
+                        key={i}
+                        className="bg-[rgba(0,0,0,0.5)] relative text-white backdrop-blur-sm py-1 px-3 rounded-xl text-sm"
+                        style={{ boxShadow: `inset -1px -1px 0px rgba(255,255,255,0.25)` }}
+                      >
+                        <span className="opacity-75">{o}</span>
+                      </div>
+                    )
+                  }
                 </div>
               </div>
             </div>
