@@ -101,10 +101,7 @@ $shadowW: 8px;
 }
 
 
-&-box-anim {
-  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 4s ease;
-}
+&-box-anim {}
 }
 
 .text-bg {

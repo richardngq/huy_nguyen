@@ -2,6 +2,7 @@ import { FC, useEffect, useRef } from "react";
 import Image from "next/image";
 import ImageGridGS from '@/assets/image/image-thumbnail--gs.png';
 import ImageGridIPFS from '@/assets/image/image-thumbnail--ipfs.png';
+import ImageGridSM from '@/assets/image/image-thumbnail--sm.png';
 import ImageGridCRAB from '@/assets/image/image-thumbnail--crab.png';
 
 import ImageIso from '@/assets/image/image-iso--01.png';
@@ -34,14 +35,14 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       url: '/gs',
       href: 'https://thegestreon.com/',
     },
-    // {
-    //   key: `SM`,
-    //   image: ImageGridSM,
-    //   title: `Sky Mavis`,
-    //   description: `Design Mobile App for sending multiple assets`,
-    //   url: '/sm',
-    //   href: 'https://scatter.roninchain.com/',
-    // },
+    {
+      key: `SM`,
+      image: ImageGridSM,
+      title: `Sky Mavis`,
+      description: `Design Mobile App for sending multiple assets`,
+      url: '/sm',
+      href: 'https://scatter.roninchain.com/',
+    },
     {
       key: `CRAB`,
       image: ImageGridCRAB,
@@ -59,21 +60,16 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
 
   return (
     <div className={`container mx-auto relative z-20 mt-20 ${classNames}`}>
-      <div className="absolute -z-10 top-0" data-aos="zoom-in">
-        <Image src={ImageIso} alt='' className="-translate-x-2/4 -translate-y-2/4 w-1/3 scale-x-[-1]" />
-      </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6">
+      <div
+        className="font-semibold text-[28px] uppercase rounded-3xl text-[#515b87] card-box-anim"
+      >
         <div
-          className="font-semibold text-6xl p-10 uppercase rounded-3xl text-[#515b87] card-box-anim"
-        >
-          <div
-            className="flex flex-col justify-center items-center h-full w-full"
-            data-aos="zoom-in"
-            data-aos-delay={400}>
-            Check out<br />
-            <span className="text-bg pt-0.5 pb-2 px-2 mt-1">My Works</span>
-          </div>
+          className="h-full w-full"
+          data-aos="fade-up">
+          <span className="opacity-50">My</span> Cases Studies
         </div>
+      </div>
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-6">
         {
           dataGrid.map((item, index) => (
             <div
