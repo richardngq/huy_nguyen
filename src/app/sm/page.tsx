@@ -23,7 +23,7 @@ export default function SkyMavis() {
           <p className='text-base opacity-75 mt-4'>
             The objective is to establish an internal application for employee compensation and facilitate the transfer of multiple assets between entities based on assets. As a busy user with external commitments, a mobile phone is considered a closely-held item, allowing users to diversify asset conversions within their community anytime, anywhere on their phones. The application is developed based on blockchain and cryptocurrency platforms.
           </p>
-          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
+          <Link className='bg-[#6B7280] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://scatter.roninchain.com/`} target="_blank">
             Explore Now
           </Link>
         </div>

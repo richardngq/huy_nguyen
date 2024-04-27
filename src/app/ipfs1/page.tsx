@@ -28,7 +28,7 @@ export default function IPFS() {
           <p className='text-base opacity-75 mt-4'>
             An FX Social Trading Platform is considered to have the most optimized technology features related to FX. Here, users are known as Traders will have the opportunity to use and optimize the tools in FX. In addition, this is also an FX community sharing trading strategies and profiting from user&rsquo;s own FX strategies.
           </p>
-          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://fxce.com/`} target="_blank">
+          <Link className='bg-[#6B7280] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://fxce.com/`} target="_blank">
             Explore Now
           </Link>
         </div>

@@ -49,7 +49,7 @@ export default function Gestreon() {
           <p className='text-base opacity-75 mt-4'>
             As an e-commerce website, it serves as a third-party platform for collectors of luxury items. Here, they are provided with buying and selling services for the items they own without concerns about authenticity, damage, or credibility issues. The transactions take place entirely visually between both the buyer and seller on the website
           </p>
-          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://thegestreon.com/`} target="_blank">
+          <Link className='bg-[#6B7280] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://thegestreon.com/`} target="_blank">
             Explore Now
           </Link>
         </div>

@@ -26,7 +26,7 @@ export default function IPFS() {
           <p className='text-base opacity-75 mt-4'>
             A Game-Fi title inspired by oceans and seas, taking the lead on the Avalanche platform in 2021. We have an entire ecosystem for our brainchild including: Game-Fi Landing Page, Marketplace , Application Game on multi-platform, Liquidity System and 1 Subnet on Avalanche system
           </p>
-          <Link className='bg-[#515b87] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://www.behance.net/gallery/168289687/Crabada-NFT-Marketplace-Game-Fi`} target="_blank">
+          <Link className='bg-[#6B7280] text-white hover:opacity-50 w-fit block py-3 px-6 mt-6 rounded-xl cursor-pointer hover:scale-105' href={`https://www.behance.net/gallery/168289687/Crabada-NFT-Marketplace-Game-Fi`} target="_blank">
             Go to Behance
           </Link>
         </div>
