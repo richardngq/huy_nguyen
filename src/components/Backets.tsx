@@ -1,16 +1,16 @@
 import { FC } from "react";
 import Image from "next/image";
 import Marquee from 'react-fast-marquee';
-import Image01 from '@/assets/Backers/dark/img-logo-01.png'
-import Image02 from '@/assets/Backers/dark/img-logo-02.png'
-import Image03 from '@/assets/Backers/dark/img-logo-03.png'
-import Image04 from '@/assets/Backers/dark/img-logo-04.png'
-import Image05 from '@/assets/Backers/dark/img-logo-05.png'
-import Image06 from '@/assets/Backers/dark/img-logo-06.png'
-import Image07 from '@/assets/Backers/dark/img-logo-07.png'
-import Image08 from '@/assets/Backers/dark/img-logo-08.png'
-import Image09 from '@/assets/Backers/dark/img-logo-09.png'
-import Image10 from '@/assets/Backers/dark/img-logo-10.png'
+import Image01 from '@/assets/backers/dark/img-logo-01.png'
+import Image02 from '@/assets/backers/dark/img-logo-02.png'
+import Image03 from '@/assets/backers/dark/img-logo-03.png'
+import Image04 from '@/assets/backers/dark/img-logo-04.png'
+import Image05 from '@/assets/backers/dark/img-logo-05.png'
+import Image06 from '@/assets/backers/dark/img-logo-06.png'
+import Image07 from '@/assets/backers/dark/img-logo-07.png'
+import Image08 from '@/assets/backers/dark/img-logo-08.png'
+import Image09 from '@/assets/backers/dark/img-logo-09.png'
+import Image10 from '@/assets/backers/dark/img-logo-10.png'
 import { Vortex } from "./ui/vortex";
 
 export const Backers: FC = () => {
