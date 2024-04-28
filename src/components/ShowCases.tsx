@@ -118,7 +118,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                     )
                   }
                 </div>
-                <Link href={item.url} className="absolute inset-0" />
+                <Link href={item.url} className="absolute inset-0 z-20" />
               </WobbleCard>
             </div>
           ))
