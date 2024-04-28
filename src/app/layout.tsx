@@ -3,12 +3,12 @@ import { Work_Sans } from "next/font/google";
 import { Oswald } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Navbar } from "@/components/NavBar";
-import { Footer } from "@/components/Footer";
-import { AOSInit } from "@/components/AnimateOnScroll";
+import { AOSInit } from "@/utils/AnimateOnScroll";
 import "./globals.css";
 import "@/assets/style/App.scss";
-import Transition from "@/components/Transition";
+import Transition from "@/utils/Transition";
+import { Navbar } from "@/components/common/NavBar";
+import { Footer } from "@/components/common/Footer";
 
 const font = Oswald({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
@@ -42,20 +42,20 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body className={font.className}
+    <html lang="en" suppressHydrationWarning={true} className="dark">
+      <body className={`dark:bg-[#0B0B0F] dark:text-white ${font.className}`}
         suppressHydrationWarning={true}
       >
-        <div className="text-[#6B7280] flex flex-col h-screen">
-          <Navbar />
+        <div className="flex flex-col h-screen">
 
           <Transition>
+            <Navbar />
             {/* <div className="flex-auto"> */}
             {children}
             {/* </div> */}
+            <Footer />
           </Transition>
 
-          <Footer />
         </div>
         <SpeedInsights />
       </body>

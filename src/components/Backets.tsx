@@ -1,16 +1,17 @@
 import { FC } from "react";
 import Image from "next/image";
 import Marquee from 'react-fast-marquee';
-import Image01 from '@/assets/Backers/light/img-logo-01.png'
-import Image02 from '@/assets/Backers/light/img-logo-02.png'
-import Image03 from '@/assets/Backers/light/img-logo-03.png'
-import Image04 from '@/assets/Backers/light/img-logo-04.png'
-import Image05 from '@/assets/Backers/light/img-logo-05.png'
-import Image06 from '@/assets/Backers/light/img-logo-06.png'
-import Image07 from '@/assets/Backers/light/img-logo-07.png'
-import Image08 from '@/assets/Backers/light/img-logo-08.png'
-import Image09 from '@/assets/Backers/light/img-logo-09.png'
-import Image10 from '@/assets/Backers/light/img-logo-10.png'
+import Image01 from '@/assets/Backers/dark/img-logo-01.png'
+import Image02 from '@/assets/Backers/dark/img-logo-02.png'
+import Image03 from '@/assets/Backers/dark/img-logo-03.png'
+import Image04 from '@/assets/Backers/dark/img-logo-04.png'
+import Image05 from '@/assets/Backers/dark/img-logo-05.png'
+import Image06 from '@/assets/Backers/dark/img-logo-06.png'
+import Image07 from '@/assets/Backers/dark/img-logo-07.png'
+import Image08 from '@/assets/Backers/dark/img-logo-08.png'
+import Image09 from '@/assets/Backers/dark/img-logo-09.png'
+import Image10 from '@/assets/Backers/dark/img-logo-10.png'
+import { Vortex } from "./ui/vortex";
 
 export const Backers: FC = () => {
   const listImage = [
@@ -27,14 +28,19 @@ export const Backers: FC = () => {
   ]
 
   return (
-    <section className="relative flex flex-col gap-10 py-2 z-10 overflow-hidden" data-aos="fade">
+    <div className="mt-20" data-aos="fade" data-aos-delay={400}>
+      {/* <Vortex
+        backgroundColor="transparent"
+        className="flex items-center flex-col justify-center w-full"
+      > */}
       <Marquee className="py-1">
         {listImage.map((item, i) => (
-          <div key={i} className="w-fit h-14 mx-4 hover:scale-105 marque-item grayscale opacity-75">
+          <div key={i} className="w-fit h-14 mx-4 hover:scale-105 marque-item">
             <Image src={item.src} alt="" className={`!relative block !w-fit h-full object-contain`} fill />
           </div>
         ))}
       </Marquee>
-    </section>
+      {/* </Vortex> */}
+    </div >
   )
 }

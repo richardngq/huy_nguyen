@@ -9,6 +9,8 @@ import ImageIso from '@/assets/image/image-iso--01.png';
 
 import { useFollowPointer } from "@/resources/use-follow-poiner";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { WobbleCard } from "./ui/wobble-card";
+import Link from "next/link";
 
 interface IShowCases {
   classNames?: string
@@ -77,7 +79,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       >
         <div
           className="h-full w-full"
-          data-aos="fade-up">
+          data-aos="fade">
           <span className="opacity-50">My</span> Cases Studies
         </div>
       </div>
@@ -86,17 +88,14 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
           dataGrid.map((item, index) => (
             <div
               key={index}
-              ref={ref}
-              className={`card group ${item.key} ${index % 2 !== 0 ? `` : ``} rounded-[24px]`}
-              onClick={() => handleClick(`${item.url}`)}
               data-aos="fade"
-              data-aos-delay={400 + 400 * index}
+              data-aos-delay={200 + 200 * index}
             >
-              <div className="relative hover:shadow-[0px_8px_12px_rgba(0,0,0,0.5)] rounded-3xl overflow-hidden" style={{ transition: `box-shadow 0.2s ease-in-out` }}>
-                <div className="cursor-pointer relative max-w-full w-full flex flex-col justify-end items-end overflow-hidden aspect-[4/3]">
-                  <div className="w-full h-5/6 group-hover:scale-105">
-                    <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
-                  </div>
+              <WobbleCard
+                containerClassName={`relative card group ${item.key}`}
+              >
+                <div className="w-full h-full pt-8">
+                  <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
                 </div>
                 <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 lg:mt-4 ml-2">
                   <div className="font-bold text-xl">{item.title}</div>
@@ -119,7 +118,8 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                     )
                   }
                 </div>
-              </div>
+                <Link href={item.url} className="absolute inset-0" />
+              </WobbleCard>
             </div>
           ))
         }

@@ -1,5 +1,5 @@
 import { dataDomains, dataStacks } from "@/resources/constants/dataDefine";
-import Avatar from "@/assets/img/avatar.png";
+import Avatar from "@/assets/image/image-avatar.png";
 import { FC } from "react";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ export default function About() {
     }) => {
     return (
       <div className={`text-sm flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
-        <div className="uppercase font-semibold text-base opacity-75">{title}</div>
+        <div className="uppercase font-semibold text-[28px] mb-3">{title}</div>
         {children}
       </div>
     )
@@ -87,10 +87,10 @@ export default function About() {
     return (
       <div className={`${classNames}`} data-aos="fade-up">
         <div className="flex flex-col">
-          <p><span className="text-xl font-semibold">{CompanyName}</span><span className="opacity-75 text-lg">&nbsp;{`-`}&nbsp;{Role}</span></p>
-          <p className="text-slate-500 text-base mt-1 opacity-75">{Dates}</p>
+          <p><span className="text-blue-300 text-xl font-semibold">{CompanyName}</span><span className="opacity-75 text-lg">&nbsp;{`-`}&nbsp;{Role}</span></p>
+          <p className="text-base mt-1 opacity-25">{Dates}</p>
         </div>
-        <ul className="text-slate-700 text-sm mt-2">
+        <ul className="opacity-50 text-sm mt-2">
           {Descriptions?.map((i, j) => (
             <li key={j} dangerouslySetInnerHTML={{ __html: i }} className="mt-2" />
           ))}
@@ -103,14 +103,15 @@ export default function About() {
     <section className="container mt-20 mx-auto pt-10">
       <div className="group" data-aos="fade-up">
         <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
-          <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-4 border-[#efefef]">
+          <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-2 border-[#efefef]">
             <Image src={Avatar} alt='' className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col gap-1">
             <div className="text-xl font-bold">Huy Nguyen</div>
             <div className="text-base font-thin">
-              Hi, I am a <b>Product Designer</b> and <b>UI Developer</b> with 5 years of experience.<br />
-              Specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce and SaaS.
+              As a <b>Product Designer</b> and <b>UI Developer</b> with <i>5 years of experience</i>.
+              <br />
+              I am so lucky to work with specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
             </div>
           </div>
         </div>
@@ -137,7 +138,7 @@ export default function About() {
                 dataStacks.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-white text-black backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
@@ -153,7 +154,7 @@ export default function About() {
                 dataDomains.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-white text-black backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />

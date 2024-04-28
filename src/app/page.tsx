@@ -1,27 +1,41 @@
 "use client"
-import About from "@/components/About";
 import { Work } from "@/components/Work";
-import Image from "next/image";
-import { GlowFloating } from "@/components/GlowFloating";
 import { ShowCases } from "@/components/ShowCases";
-import { motion, useScroll } from 'framer-motion'
+import { useEffect, useRef, useState } from "react";
 import { Backers } from "@/components/Backets";
+import { Boxes } from "@/components/ui/background-boxes";
+import { motion } from "framer-motion";
+import About from "@/components/About";
+import { Loading } from "@/components/common/Loading";
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+
+    setTimeout(() => {
+      setLoading(false)
+    }, 400);
+  });
 
   return (
-    <div>
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
-      <div className="mx-auto overflow-hidden h-full flex flex-col justify-center">
-        {/* <GlowFloating /> */}
-        <About />
-        <ShowCases />
-        <Work />
-      </div>
-    </div>
+    <>
+      {
+        !loading ?
+          <div className="min-h-svh">
+            <div className="h-auto lg:h-svh relative w-full overflow-hidden bg-black flex flex-col items-center justify-center rounded-lg">
+              <div className="absolute inset-0 w-full h-full bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+              <div className="lg:absolute z-20 flex flex-col justify-center items-center">
+                <About />
+              </div>
+              <Boxes />
+            </div>
+            <ShowCases />
+            <Work />
+            <Backers />
+          </div>
+          : <Loading />
+      }
+    </>
   );
 }
