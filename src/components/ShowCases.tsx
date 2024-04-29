@@ -105,12 +105,12 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                   <Icon icon={'mingcute:arrow-right-fill'} className="text-xl -rotate-45" />
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex gap-3 z-10">
+                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-3 z-10">
                   {
                     item?.tags.map((o, i) =>
                       <div
                         key={i}
-                        className="bg-[rgba(0,0,0,0.5)] relative text-white backdrop-blur-sm py-1 px-3 rounded-xl text-sm"
+                        className="bg-[rgba(0,0,0,0.5)] relative text-white backdrop-blur-sm py-1 px-3 rounded-xl text-sm whitespace-nowrap"
                         style={{ boxShadow: `inset -1px -1px 0px rgba(255,255,255,0.25)` }}
                       >
                         <span className="opacity-75">{o}</span>

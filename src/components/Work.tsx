@@ -61,7 +61,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
 
   return (
     <>
-      <div className="container w-full mx-auto mt-20">
+      <div className="container w-full mx-auto mt-20 overflow-x-auto md:overflow-auto">
         <div
           className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
         >

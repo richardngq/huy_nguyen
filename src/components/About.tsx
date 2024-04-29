@@ -21,7 +21,7 @@ export default function About<IAbout>({ classNames = '' }) {
     <>
       <div className={`relative w-full h-auto flex flex-col md:flex-row items-start md:items-center gap-6 z-10 ${classNames}`}>
 
-        <div className="container w-full mx-auto group flex flex-col md:flex-row justify-center items-center gap-16 relative z-10">
+        <div className="container w-full mx-auto group flex flex-col md:flex-row justify-center items-center gap-16 relative z-10 pt-20 pb-10 md:py-0">
 
           <div className="text-center">
             <div className="text-[28px] md:text-4xl font-bold" data-aos="fade-up">
@@ -29,7 +29,7 @@ export default function About<IAbout>({ classNames = '' }) {
             </div>
             <div className="text-xl space-x-1 leading-[200%] mt-8 max-w-full" data-aos="fade-up" data-aos-delay={200}>
               <p>
-                A <Highlight>UI/UX Designer</Highlight> and a <Highlight>UI Developer</Highlight> passionate about creating seamless User Experiences and beautiful User Interfaces.
+                A <Highlight>UI/UX Designer</Highlight> and<br className="flex md:hidden" /> a <Highlight>UI Developer</Highlight> passionate about creating seamless User Experiences and beautiful User Interfaces.
                 <br />
                 Let&rsquo;s work together to design and develop user-friendly digital products that make a real impact!
               </p>

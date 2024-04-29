@@ -35,7 +35,7 @@ export const Backers: FC = () => {
       > */}
       <Marquee className="py-1">
         {listImage.map((item, i) => (
-          <div key={i} className="w-fit h-14 mx-4 hover:scale-105 marque-item">
+          <div key={i} className="w-fit h-10 md:h-14 mx-4 hover:scale-105 marque-item">
             <Image src={item.src} alt="" className={`!relative block !w-fit h-full object-contain`} fill />
           </div>
         ))}
