@@ -85,14 +85,17 @@ export default function About() {
       Descriptions?: string[],
     }) => {
     return (
-      <div className={`${classNames}`} data-aos="fade-up">
-        <div className="flex flex-col">
-          <p><span className="text-blue-300 text-xl font-semibold">{CompanyName}</span><span className="opacity-75 text-lg">&nbsp;{`-`}&nbsp;{Role}</span></p>
-          <p className="text-base mt-1 opacity-25">{Dates}</p>
+      <div className={`flex flex-col gap-4 ${classNames}`} data-aos="fade-up">
+        <div className="flex flex-col gap-2">
+          <p className="text-base text-slate-600">{Dates}</p>
+          <p>
+            <span className="text-blue-300 text-xl font-semibold">{CompanyName}</span>
+            &nbsp;{`-`}&nbsp;
+            <span className="text-lg font-bold">{Role}</span></p>
         </div>
-        <ul className="opacity-50 text-sm mt-2">
+        <ul className="text-sm">
           {Descriptions?.map((i, j) => (
-            <li key={j} dangerouslySetInnerHTML={{ __html: i }} className="mt-2" />
+            <li key={j} dangerouslySetInnerHTML={{ __html: i }} className={`mt-2 ${j === 0 && `!mt-0`}`} />
           ))}
         </ul>
       </div>
@@ -109,7 +112,7 @@ export default function About() {
           <div className="flex flex-col gap-1">
             <div className="text-xl font-bold">Huy Nguyen</div>
             <div className="text-base font-thin">
-              As a <b>Product Designer</b> and <b>UI Developer</b> with <i>5 years of experience</i>.
+              As a <b>Product Designer</b> and <b>FE Developer</b> with <i>5 years of experience</i>.
               <br />
               I am so lucky to work with specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
             </div>
@@ -120,7 +123,7 @@ export default function About() {
         <div>
           <Parts classNames="mt-10" title="My Experience"
           >
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 lg:gap-14">
               {
                 dataExp.map((item, index) => (
                   <Experience key={index} CompanyName={item.CompanyName} Role={item.Role} Dates={item.Dates} Descriptions={item.Descriptions} />
@@ -138,7 +141,7 @@ export default function About() {
                 dataStacks.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white text-black backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-slate-600 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
@@ -154,7 +157,7 @@ export default function About() {
                 dataDomains.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white text-black backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-slate-600 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
