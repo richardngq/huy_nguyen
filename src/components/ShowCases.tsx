@@ -73,7 +73,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
 
 
   return (
-    <div className={`container mx-auto relative z-20 mt-20 ${classNames}`}>
+    <div className={`container mx-auto relative z-20 py-6 lg:py-20 mt-6 lg:mt-20 ${classNames}`}>
       <div
         className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
       >
@@ -83,7 +83,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
           <span className="opacity-50">My</span> Cases Studies
         </div>
       </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-6">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-8">
         {
           dataGrid.map((item, index) => (
             <div

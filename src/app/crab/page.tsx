@@ -22,7 +22,7 @@ export default function IPFS() {
       </div>
       <TracingBeam className="px-6">
         <div>
-          <div className="overview py-10" data-aos="fade-up">
+          <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
               <h1 className='text-5xl font-bold'>Crabada</h1>
               <div className='uppercase opacity-80 font-semibold mt-10'>Overview</div>
@@ -33,9 +33,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="role py-10 bg-[#17171e] group" data-aos="fade-up">
+          <div className="role py-14 bg-[#17171e] group" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto lg:text-center'>I am a Product Designer and UI Developer for <span className=''>Crabada</span></div>
+              <div className='uppercase opacity-100 font-semibold mx-auto lg:text-center'>I am a Product Designer and UI Developer for <span className=''>Crabada</span></div>
               <p className='text-base opacity-75 mt-4'>
                 I joined the project as a UI/UX Designer and also took on the responsibility of UI Developer at a time when the startup was just starting to brainstorm product ideas, design, and build it. In this article, I will discuss a Case Study for user management of their Crabs entering and exiting the game, as well as asset system partitioning.
               </p>
@@ -47,9 +47,9 @@ export default function IPFS() {
 
           </div>
 
-          <div className="scope py-10" data-aos="fade-up">
+          <div className="scope py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Define</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Define</div>
               <p className='text-base opacity-75 mt-4'>
                 We need to help users bring their NFTs (Crabs, Items, Tokens, Assets) into the Game Application. This allows players to use their purchased NFTs to explore the game and its experiences. At the same time, while playing, players will earn valuable rewards and tokens that they can withdraw to their Web3 wallets for real-world profit.
               </p>
@@ -57,9 +57,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="insight py-10 bg-[#17171e]" data-aos="fade-up">
+          <div className="insight py-14 bg-[#17171e]" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Wireframing</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Wireframing</div>
               <p className='text-base opacity-75 mt-4'>
                 Comprehensive NFT Management and User-Friendly Interface<br />
                 We are committed to providing a transparent and user-friendly experience for NFT management, ensuring that players have a clear understanding of how their NFTs will be utilized within the game. This encompasses:
@@ -100,9 +100,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="problem py-10" data-aos="fade-up">
+          <div className="problem py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Design</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Design</div>
               <p className='text-base opacity-75 mt-4'>
                 Our NFT management system empowers users to transfer NFTs between the Game Application and their Web3 wallets seamlessly, catering to their diverse needs and preferences. Users can select the specific categories of NFTs they wish to transfer, ensuring a streamlined and organized transfer process.
               </p>

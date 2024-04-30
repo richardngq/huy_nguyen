@@ -24,7 +24,7 @@ export default function Gestreon() {
 
       <TracingBeam className="px-6">
         <div>
-          <div className="overview py-10" data-aos="fade-up">
+          <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
               <h1 className='text-5xl font-bold'>The Gesteron</h1>
               <div className='uppercase opacity-80 font-semibold mt-10'>Overview</div>
@@ -35,9 +35,9 @@ export default function Gestreon() {
             </div>
           </div>
 
-          <div className="role py-10 bg-[#17171e] group" data-aos="fade-up">
+          <div className="role py-14 bg-[#17171e] group" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto lg:text-center'>I am a Product Designer for <span className=''>The Gesteron</span></div>
+              <div className='uppercase opacity-100 font-semibold mx-auto lg:text-center'>I am a Product Designer for <span className=''>The Gesteron</span></div>
               <p className='text-base opacity-75 mt-4'>
                 I joined the project as a Product Designer at the early stages when the startup began to brainstorm ideas about the product, design, and its creation. In this article, I will discuss one case study during the final stages of the product development.
               </p>
@@ -49,9 +49,9 @@ export default function Gestreon() {
 
           </div>
 
-          <div className="scope py-10" data-aos="fade-up">
+          <div className="scope py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Scope Of Work</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Scope Of Work</div>
               <p className='text-base opacity-75 mt-4'>
                 With the core structure remaining an e-commerce platform, we provide a full range of features based on customer research from within the collector community. Smooth operation and maintenance are key for the majority of our customers. To substantiate this:
               </p>
@@ -89,9 +89,9 @@ export default function Gestreon() {
             </div>
           </div>
 
-          <div className="insight py-10 bg-[#17171e]" data-aos="fade-up">
+          <div className="insight py-14 bg-[#17171e]" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Gathering insights</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Gathering insights</div>
               <p className='text-base opacity-75 mt-4'>
                 After collecting user feedback, I proceeded to create user personas to consolidate the identified challenges. I will summarize the fundamental pain points of the users.
               </p>
@@ -112,9 +112,9 @@ export default function Gestreon() {
             </div>
           </div>
 
-          <div className="problem py-10" data-aos="fade-up">
+          <div className="problem py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Problem Driven</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Problem Driven</div>
               <p className='text-base opacity-75 mt-4'>
                 Based on user feedback, my team and I empathized and unanimously proceeded to research and improve this issue.
               </p>
@@ -149,9 +149,9 @@ export default function Gestreon() {
             </div>
           </div>
 
-          <div className="solution py-10 bg-[#17171e]" data-aos="fade-up">
+          <div className="solution py-14 bg-[#17171e]" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>The Solution</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>The Solution</div>
               <p className='text-base opacity-75 mt-4'>
                 After a period of brainstorming, we conducted market research on competitors. We referenced various competitors, but here are two examples that I consider most representative for this e-commerce industry sector.
               </p>
@@ -195,9 +195,9 @@ export default function Gestreon() {
             </div>
           </div>
 
-          <div className="result py-10" data-aos="fade-up">
+          <div className="result py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Results and takeaways</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Results and takeaways</div>
               <p className='text-base opacity-75 mt-4 group'>
                 Customer feedback has been very positive. This marks our first step on the Trustpilot rating system. Particularly noteworthy is the feedback from older customers who share, &ldquo;<i className="">Now we won&rsquo;t need assistance to check and edit troublesome payment details anymore</i>&rdquo;
               </p>

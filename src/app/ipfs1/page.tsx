@@ -24,7 +24,7 @@ export default function IPFS() {
 
       <TracingBeam className="px-6">
         <div>
-          <div className="overview py-10" data-aos="fade-up">
+          <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
               <h1 className='text-5xl font-bold'>FXCE</h1>
               <div className='uppercase opacity-80 font-semibold mt-10'>Overview</div>
@@ -35,9 +35,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="role py-10 bg-[#17171e] group" data-aos="fade-up">
+          <div className="role py-14 bg-[#17171e] group" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto lg:text-center'>I am a product designer for <span className=''>IPFS - FXCE Technical Solution</span></div>
+              <div className='uppercase opacity-100 font-semibold mx-auto lg:text-center'>I am a product designer for <span className=''>IPFS - FXCE Technical Solution</span></div>
               <p className='text-base opacity-75 mt-4'>
                 I joined the project as a Product Designer at a time when the project had been up and running for a while, but had not yet gained user traction. The leaders here are looking for the best way for their flagship product to reach and engage users.
               </p>
@@ -49,9 +49,9 @@ export default function IPFS() {
 
           </div>
 
-          <div className="scope py-10" data-aos="fade-up">
+          <div className="scope py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Understanding the problem</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Understanding the problem</div>
               <p className='text-base opacity-75 mt-4'>
                 The product was launched by the entire development team with all the features but without any user experience (UX) research or consideration. Based on customer service (CS) and complaints from the customer support online channel, I have observed the following issues:
               </p>
@@ -62,9 +62,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="insight py-10 bg-[#17171e]" data-aos="fade-up">
+          <div className="insight py-14 bg-[#17171e]" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Gathering insights</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Gathering insights</div>
               <p className='text-base opacity-75 mt-4'>
                 Summary of the process of customer segmentation based on driven tracing data:
               </p>
@@ -95,9 +95,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="problem py-10" data-aos="fade-up">
+          <div className="problem py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Problem Driven</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Problem Driven</div>
               <p className='text-base opacity-75 mt-4'>
                 Declining Traffic and Low Conversion Rate
               </p>
@@ -121,9 +121,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="solution py-10 bg-[#17171e]" data-aos="fade-up">
+          <div className="solution py-14 bg-[#17171e]" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>The Solution</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>The Solution</div>
               <p className='text-base opacity-75 mt-4'>
                 Based on the research and findings, the following key issues have been identified and require immediate attention:
               </p>
@@ -158,9 +158,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="result py-10" data-aos="fade-up">
+          <div className="result py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Results</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Results</div>
               <p className='text-base opacity-75 mt-4'>
                 In today&rsquo;s competitive business landscape, customer experience (CX) has emerged as a critical differentiator for success. Businesses that prioritize CX optimization are reaping significant rewards, including increased customer loyalty, higher conversion rates, and enhanced brand reputation.
                 Investing in CX optimization is not just a cost; it&rsquo;s a strategic decision that drives long-term business growth and profitability.
@@ -178,9 +178,9 @@ export default function IPFS() {
             </div>
           </div>
 
-          <div className="feedbacks py-10" data-aos="fade-up">
+          <div className="feedbacks py-14" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-80 font-semibold mx-auto'>Customer and Colleague Feedback: A Powerful Combination for Growth</div>
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Customer and Colleague Feedback: A Powerful Combination for Growth</div>
 
               <div className='flex flex-col lg:flex-row gap-6 mt-4'>
 

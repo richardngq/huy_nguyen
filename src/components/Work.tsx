@@ -61,17 +61,17 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
 
   return (
     <>
-      <div className="container w-full mx-auto mt-20 overflow-x-auto md:overflow-auto">
+      <div className="container w-full mx-auto py-6 lg:py-20 overflow-x-auto md:overflow-auto">
         <div
           className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
         >
           <div
-            className="h-full w-full mb-6"
+            className="h-full w-full"
             data-aos="fade">
             <span className="opacity-50">My</span> Projects
           </div>
         </div>
-        <div className="">
+        <div className="-mx-3 mt-8">
           <HoverEffect items={dataWorks} />
         </div>
       </div>
