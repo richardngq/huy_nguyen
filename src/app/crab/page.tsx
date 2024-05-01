@@ -17,7 +17,7 @@ export default function IPFS() {
 
   return (
     <section>
-      <div className="hero h-[400px] card CRAB overflow-hidden">
+      <div className="hero h-[400px] card CRAB overflow-hidden" data-aos='fade'>
         <Image src={imageURL0} alt='' />
       </div>
       <TracingBeam className="px-6">

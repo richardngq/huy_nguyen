@@ -3,6 +3,10 @@
 
 @import 'Anim';
 
+* {
+  outline: none !important;
+}
+
 body {
   scroll-behavior: auto !important;
   line-height: 150% !important;

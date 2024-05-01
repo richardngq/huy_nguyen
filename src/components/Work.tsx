@@ -68,10 +68,10 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
           <div
             className="h-full w-full"
             data-aos="fade">
-            <span className="opacity-50">My</span> Projects
+            Projects
           </div>
         </div>
-        <div className="-mx-3 mt-8">
+        <div className="-mx-3 mt-5">
           <HoverEffect items={dataWorks} />
         </div>
       </div>

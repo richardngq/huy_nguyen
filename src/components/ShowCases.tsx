@@ -80,7 +80,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
         <div
           className="h-full w-full"
           data-aos="fade">
-          <span className="opacity-50">My</span> Cases Studies
+          Cases Studies
         </div>
       </div>
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-8">
@@ -94,18 +94,18 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               <WobbleCard
                 containerClassName={`relative card group ${item.key}`}
               >
-                <div className="w-full h-full pt-8">
+                <div className="w-full h-full pt-6">
                   <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
                 </div>
-                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 lg:mt-4 ml-2">
-                  <div className="font-bold text-xl">{item.title}</div>
-                  <div className="text-base opacity-75 mt-2">{item.description}</div>
+                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0">
+                  <div className="font-bold text-2xl">{item.title}</div>
+                  <div className="text-base mt-1.5">{item.description}</div>
                 </div>
-                <div className="w-10 h-10 bg-white text-black absolute right-2 top-2 lg:right-6 lg:top-6 flex flex-col justify-center items-center rounded-full">
+                <div className="w-10 h-10 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-xl">
                   <Icon icon={'mingcute:arrow-right-fill'} className="text-xl -rotate-45" />
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-3 z-10">
+                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-10">
                   {
                     item?.tags.map((o, i) =>
                       <div

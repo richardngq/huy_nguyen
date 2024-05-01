@@ -14,7 +14,7 @@ export default function About() {
     }) => {
     return (
       <div className={`text-sm flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
-        <div className="uppercase font-semibold text-[28px] mb-3">{title}</div>
+        <div className="uppercase font-semibold text-2xl">{title}</div>
         {children}
       </div>
     )
@@ -85,11 +85,11 @@ export default function About() {
       Descriptions?: string[],
     }) => {
     return (
-      <div className={`flex flex-col gap-4 ${classNames}`} data-aos="fade-up">
-        <div className="flex flex-col gap-2">
-          <p className="text-base text-slate-600">{Dates}</p>
+      <div className={`flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
+        <div className="flex flex-col gap-1">
+          <p className="text-base text-slate-300">{Dates}</p>
           <p>
-            <span className="text-blue-300 text-xl font-semibold">{CompanyName}</span>
+            <span className="text-orange-300 text-xl font-semibold">{CompanyName}</span>
             &nbsp;{`-`}&nbsp;
             <span className="text-lg font-bold">{Role}</span></p>
         </div>
@@ -109,12 +109,12 @@ export default function About() {
           <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-2 border-[#efefef]">
             <Image src={Avatar} alt='' className="w-full h-full object-contain" />
           </div>
-          <div className="flex flex-col gap-1">
-            <div className="text-xl font-bold">Huy Nguyen</div>
+          <div className="flex flex-col gap-2">
+            <div className="text-[28px] font-bold">Huy Nguyen</div>
             <div className="text-base font-thin">
               As a <b>Product Designer</b> and <b>FE Developer</b> with <i>5 years of experience</i>.
               <br />
-              I am so lucky to work with specialized working with domains about Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
+              I am so lucky to work with specialized working with domains about <br />Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function About() {
                 dataStacks.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-slate-600 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-slate-500 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
@@ -157,7 +157,7 @@ export default function About() {
                 dataDomains.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-slate-600 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-slate-500 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />

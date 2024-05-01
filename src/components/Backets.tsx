@@ -28,11 +28,13 @@ export const Backers: FC = () => {
   ]
 
   return (
-    <div className="mt-20" data-aos="fade" data-aos-delay={400}>
+    // <div className="relative mt-20" data-aos="fade" data-aos-delay={400}>
+    <div className="relative mt-20">
       {/* <Vortex
         backgroundColor="transparent"
         className="flex items-center flex-col justify-center w-full"
       > */}
+      <div className="absolute bg-gradient-to-r from-black to-transparent w-40 h-full top-0 left-0 z-10" />
       <Marquee className="py-1">
         {listImage.map((item, i) => (
           <div key={i} className="w-fit h-10 md:h-12 mx-4 hover:scale-105 marque-item">
@@ -41,6 +43,7 @@ export const Backers: FC = () => {
         ))}
       </Marquee>
       {/* </Vortex> */}
-    </div >
+      <div className="absolute bg-gradient-to-l from-black to-transparent w-40 h-full top-0 right-0 z-10" />
+    </div>
   )
 }

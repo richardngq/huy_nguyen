@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import { Oswald } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -10,7 +11,7 @@ import Transition from "@/utils/Transition";
 import { Navbar } from "@/components/common/NavBar";
 import { Footer } from "@/components/common/Footer";
 
-const font = Oswald({ subsets: ["latin"], weight: ["300", "400", "600"] });
+const font = Source_Sans_3({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://huy-nguyen.vercel.app/`),

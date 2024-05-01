@@ -11,7 +11,7 @@ const Transition: FC<TypeTransition> = ({ children }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ ease: `easeInOut`, duration: .8 }}
+      transition={{ ease: `easeInOut`, duration: 1 }}
     >
       {children}
     </motion.div>

@@ -18,7 +18,7 @@ export default function Gestreon() {
 
   return (
     <section>
-      <div className="hero h-[400px] card GS overflow-hidden">
+      <div className="hero h-[400px] card GS overflow-hidden" data-aos='fade'>
         <Image src={imageURL0} alt='' />
       </div>
 
