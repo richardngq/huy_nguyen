@@ -17,6 +17,10 @@ body {
     scroll-behavior: auto !important;
     letter-spacing: 1px;
   }
+
+  &::-webkit-scrollbar {
+    background: transparent;
+  }
 }
 
 .slide {
