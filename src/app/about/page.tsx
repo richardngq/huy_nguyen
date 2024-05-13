@@ -23,17 +23,17 @@ export default function About() {
   const dataExp = [
     {
       CompanyName: `IPFS Inc`,
-      Role: `Product Designer`,
+      Role: `Product Designer Lead`,
       Dates: `Mar 2023 - Present`,
       Descriptions: [
-        `Senior designer at <b>IPFS Services</b>`,
+        `Product Designer Leader at <b>IPFS Services</b>`,
         `Design DRI for all PWA Projects and Solution Resolving for <b>Mobile Application</b>`,
         `Successful upgrade and take care User Experience and Accessibility for thousands Clients with <b>Retail Product</b>`
       ],
     },
     {
       CompanyName: `Metahaki Inc - Crabada`,
-      Role: `Product Designer`,
+      Role: `Product Designer && Front End Developer`,
       Dates: `Nov 2021 - Ferb 2023`,
       Descriptions: [
         `Product designer and responsibility about UI Front-End coding for <b>Crabada</b> and Related Products`,
