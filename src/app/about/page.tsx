@@ -112,7 +112,7 @@ export default function About() {
           <div className="flex flex-col gap-2">
             <div className="text-[28px] font-bold">Huy Nguyen</div>
             <div className="text-base font-thin">
-              As a <b>Product Designer</b> and <b>FE Developer</b> with <i>5 years of experience</i>.
+              As a <b>Product Designer</b> and <b>FE Developer</b> with <i>over 5+ years of experience</i>.
               <br />
               I am so lucky to work with specialized working with domains about <br />Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
             </div>
@@ -141,7 +141,7 @@ export default function About() {
                 dataStacks.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-slate-500 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-orange-100 text-orange-700 backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
@@ -157,7 +157,7 @@ export default function About() {
                 dataDomains.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-slate-500 text-white backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-orange-100 text-orange-700 backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
