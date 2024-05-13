@@ -87,11 +87,13 @@ export default function About() {
     return (
       <div className={`flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
         <div className="flex flex-col gap-1">
-          <p className="text-base text-slate-300">{Dates}</p>
+          <p className="flex flex-col gap-0.5">
+            <span className="text-base opacity-75">{Dates}</span>
+            <span className="text-orange-400 text-xl font-semibold">{CompanyName}</span>
+          </p>
           <p>
-            <span className="text-orange-300 text-xl font-semibold">{CompanyName}</span>
-            &nbsp;{`-`}&nbsp;
-            <span className="text-lg font-bold">{Role}</span></p>
+            <span className="text-lg font-bold">{Role}</span>
+          </p>
         </div>
         <ul className="text-sm">
           {Descriptions?.map((i, j) => (
