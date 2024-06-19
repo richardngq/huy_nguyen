@@ -80,7 +80,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
         <div
           className="h-full w-full"
           data-aos="fade">
-          Cases Studies
+          Explore Now
         </div>
       </div>
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-8">
