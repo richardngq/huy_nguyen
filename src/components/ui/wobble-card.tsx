@@ -49,16 +49,17 @@ export const WobbleCard = ({
         }}
       >
         <motion.div
-          style={{
-            transform: isHovering
-              ? `translate3d(${-mousePosition.x}px, ${-mousePosition.y}px, 0) scale3d(1.03, 1.03, 1)`
-              : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
-            transition: "transform 0.1s ease-out",
-          }}
+          // style={{
+          //   transform: isHovering
+          //     ? `translate3d(${-mousePosition.x}px, ${-mousePosition.y}px, 0) scale3d(1.03, 1.03, 1)`
+          //     : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
+          //   transition: "transform 0.1s ease-out",
+          // }}
           className={cn("h-full", className)}
         >
           <Noise />
           {children}
+          <div className={`absolute inset-0 ${isHovering ? `` : `opacity-0`} bg-black bg-opacity-50 backdrop-blur-sm z-10 duration-800`}></div>
         </motion.div>
       </div>
     </motion.section>

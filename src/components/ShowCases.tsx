@@ -97,15 +97,15 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                 <div className="w-full h-full pt-6">
                   <Image src={item.image} alt="" className="relative w-full h-full object-cover z-10" />
                 </div>
-                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0">
+                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0 group-hover:text-center group-hover:right-0 group-hover:top-1/4 group-hover:scale-125 duration-1000">
                   <div className="font-bold text-2xl">{item.title}</div>
                   <div className="text-base mt-1.5">{item.description}</div>
                 </div>
-                <div className="w-10 h-10 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-xl">
+                <div className="w-10 h-10 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-xl z-20 group-hover:scale-125 duration-1000">
                   <Icon icon={'mingcute:arrow-right-fill'} className="text-xl -rotate-45" />
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-10">
+                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-20 group-hover:justify-center group-hover:bottom-10 group-hover:scale-110 duration-1000">
                   {
                     item?.tags.map((o, i) =>
                       <div
@@ -118,7 +118,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                     )
                   }
                 </div>
-                <Link href={item.url} className="absolute inset-0 z-20" />
+                {/* <Link href={item.url} className="absolute inset-0 z-20" /> */}
               </WobbleCard>
             </div>
           ))
