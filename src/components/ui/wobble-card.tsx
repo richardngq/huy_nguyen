@@ -18,8 +18,8 @@ export const WobbleCard = ({
   const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
     const { clientX, clientY } = event;
     const rect = event.currentTarget.getBoundingClientRect();
-    const x = (clientX - (rect.left + rect.width / 2)) / 20;
-    const y = (clientY - (rect.top + rect.height / 2)) / 20;
+    const x = (clientX - (rect.left + rect.width / 2)) / 32;
+    const y = (clientY - (rect.top + rect.height / 2)) / 32;
     setMousePosition({ x, y });
   };
   return (
@@ -59,7 +59,7 @@ export const WobbleCard = ({
         >
           <Noise />
           {children}
-          <div className={`absolute inset-0 ${isHovering ? `` : `opacity-0`} bg-black bg-opacity-50 backdrop-blur-sm z-10 duration-800`}></div>
+          <div className={`absolute inset-0 ${isHovering ? `` : `opacity-0`} bg-black bg-opacity-50 backdrop-blur-[2px] z-10 duration-800`}></div>
         </motion.div>
       </div>
     </motion.section>
@@ -71,7 +71,6 @@ const Noise = () => {
     <div
       className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
       style={{
-        backgroundImage: "url(/noise.webp)",
         backgroundSize: "30%",
       }}
     ></div>
