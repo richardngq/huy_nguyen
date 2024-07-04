@@ -95,10 +95,10 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               <WobbleCard
                 containerClassName={`relative card group ${item.key}`}
               >
-                <div className="w-full h-full">
+                {/* <div className="w-full h-full">
                   <PlayVideo video={`./assets/video/video-thumbnail--sm.webm`} classNames="relative w-full h-full object-cover z-10" />
-                </div>
-                <div className="w-full h-full absolute z-10">
+                </div> */}
+                <div className="w-full h-full">
                   <Image src={item.image} alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0">
@@ -122,7 +122,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                     )
                   }
                 </div>
-                {/* <Link href={item.url} className="absolute inset-0 z-20" /> */}
+                <Link href={item.url} className="absolute inset-0 z-20" />
               </WobbleCard>
             </div>
           ))
