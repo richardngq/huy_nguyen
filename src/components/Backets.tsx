@@ -11,7 +11,6 @@ import Image07 from '@/assets/backers/dark/img-logo-07.png'
 import Image08 from '@/assets/backers/dark/img-logo-08.png'
 import Image09 from '@/assets/backers/dark/img-logo-09.png'
 import Image10 from '@/assets/backers/dark/img-logo-10.png'
-import { Vortex } from "./ui/vortex";
 
 export const Backers: FC = () => {
   const listImage = [
@@ -30,10 +29,6 @@ export const Backers: FC = () => {
   return (
     // <div className="relative mt-20" data-aos="fade" data-aos-delay={400}>
     <div className="relative mt-20 z-10">
-      {/* <Vortex
-        backgroundColor="transparent"
-        className="flex items-center flex-col justify-center w-full"
-      > */}
       <div className="absolute bg-gradient-to-r from-black to-transparent w-40 h-full top-0 left-0 z-10" />
       <Marquee className="py-1">
         {listImage.map((item, i) => (
@@ -42,7 +37,6 @@ export const Backers: FC = () => {
           </div>
         ))}
       </Marquee>
-      {/* </Vortex> */}
       <div className="absolute bg-gradient-to-l from-black to-transparent w-40 h-full top-0 right-0 z-10" />
     </div>
   )

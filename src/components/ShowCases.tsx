@@ -1,26 +1,18 @@
-import { FC, useEffect, useRef } from "react";
+import { FC } from "react";
 import Image from "next/image";
 import ImageGridGS from '@/assets/image/image-thumbnail--gs.png';
 import ImageGridIPFS from '@/assets/image/image-thumbnail--ipfs.png';
 import ImageGridSM from '@/assets/image/image-thumbnail--sm.png';
 import ImageGridCRAB from '@/assets/image/image-thumbnail--crab.png';
-
-import ImageIso from '@/assets/image/image-iso--01.png';
-
-import { useFollowPointer } from "@/resources/use-follow-poiner";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { WobbleCard } from "./ui/wobble-card";
 import Link from "next/link";
-import PlayVideo from "@/utils/Video";
 
 interface IShowCases {
   classNames?: string
 }
 
 export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
-  const ref = useRef(null);
-  const { x, y } = useFollowPointer(ref);
-
   const dataGrid = [
     {
       key: `SM`,
@@ -95,9 +87,6 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               <WobbleCard
                 containerClassName={`relative card group ${item.key}`}
               >
-                {/* <div className="w-full h-full">
-                  <PlayVideo video={`./assets/video/video-thumbnail--sm.webm`} classNames="relative w-full h-full object-cover z-10" />
-                </div> */}
                 <div className="w-full h-full">
                   <Image src={item.image} alt="" className="w-full h-full object-cover" />
                 </div>
