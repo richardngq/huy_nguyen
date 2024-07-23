@@ -29,7 +29,7 @@ export const Backers: FC = () => {
 
   return (
     // <div className="relative mt-20" data-aos="fade" data-aos-delay={400}>
-    <div className="relative mt-20">
+    <div className="relative mt-20 z-10">
       {/* <Vortex
         backgroundColor="transparent"
         className="flex items-center flex-col justify-center w-full"

@@ -74,7 +74,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
 
 
   return (
-    <div className={`container mx-auto relative z-20 py-6 lg:py-20 mt-6 lg:mt-20 ${classNames}`}>
+    <div className={`container mx-auto relative z-20 py-6 lg:pb-20 mt-6 ${classNames}`}>
       <div
         className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
       >

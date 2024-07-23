@@ -15,6 +15,7 @@ export default function Home() {
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
+
       <div className="mx-auto overflow-hidden h-full flex flex-col justify-center">
         <About />
         <ShowCases />

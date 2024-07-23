@@ -5,6 +5,7 @@ import { Oswald } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AOSInit } from "@/utils/AnimateOnScroll";
+
 import "./globals.css";
 import "@/assets/style/App.scss";
 import Transition from "@/utils/Transition";
@@ -44,7 +45,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning={true} className="dark">
-      <body className={`dark:bg-[#0B0B0F] dark:text-white ${font.className}`}
+      <body className={`dark:bg-black dark:text-white ${font.className}`}
         suppressHydrationWarning={true}
       >
         <div className="flex flex-col h-screen">
