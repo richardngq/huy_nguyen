@@ -32,7 +32,9 @@ export default function Home() {
             <ShowCases />
             <div className='relative overflow-hidden'>
               <Work />
-              {/* <div className='absolute w-svw h-[1px] bottom-0 glowing' /> */}
+              <div id="spline3" className="absolute bottom-0 right-0 w-52 lg:w-[400px] aspect-square translate-x-1/4 fade">
+                <SplineWrapper scene='https://prod.spline.design/ffzbJDOGnD-6Kiha/scene.splinecode' />
+              </div>
             </div>
             <Backers />
           </div >

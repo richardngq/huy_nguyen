@@ -1,6 +1,6 @@
 #spline,
 .spline {
-  animation: fadeOut 1s ease;
+  @extend .fade;
 
   &::after {
     content: '';
@@ -9,15 +9,7 @@
     background: rgba(0, 0, 0, 0.1);
   }
 
-  @keyframes fadeOut {
-    0% {
-      opacity: 0;
-    }
 
-    100% {
-      opacity: 1;
-    }
-  }
 
   canvas {
     width: 100vw !important;
@@ -36,11 +28,36 @@
   }
 }
 
+#spline3 {
+  @extend .fade;
+
+  canvas {
+    width: 100% !important;
+    height: unset !important;
+    aspect-ratio: 1 !important;
+  }
+}
+
 #spline2 {
   @extend .spline;
 
   canvas {
     aspect-ratio: auto !important;
     // transform: translateY(100%) scale(2);
+  }
+}
+
+.fade {
+  animation: fadeOut 1s ease;
+  transition: all .4s ease;
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 }

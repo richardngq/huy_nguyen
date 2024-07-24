@@ -85,7 +85,7 @@ export default function Crabada() {
             "
           />
           <div>
-            <Image alt="" src={Image03} className="w-full h-full object-contain" />
+            <Image alt="" src={Image03} className="w-full h-full object-contain p-2 bg-slate-950" />
           </div>
         </div>
 

@@ -37,7 +37,7 @@ export default function Gestreon() {
 
           <div className="role py-14 bg-[#17171e] group" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-100 font-semibold mx-auto lg:text-center'>I am a Product Designer for <span className=''>The Gesteron</span></div>
+              <div className='uppercase opacity-100 font-semibold'>I am a Product Designer for <span className=''>The Gesteron</span></div>
               <p className='text-base opacity-75 mt-4'>
                 I joined the project as a Product Designer at the early stages when the startup began to brainstorm ideas about the product, design, and its creation. In this article, I will discuss one case study during the final stages of the product development.
               </p>

@@ -35,7 +35,7 @@ export default function SkyMavis() {
 
             <div className="role py-14 bg-[#17171e] group" data-aos="fade-up">
               <div className="container mx-auto">
-                <div className='uppercase opacity-100 font-semibold mx-auto lg:text-center'>I am a UI UX designer</div>
+                <div className='uppercase opacity-100 font-semibold'>I am a UI UX designer</div>
                 <p className='text-base opacity-75 mt-4'>
                   As the product designer is to create a user-friendly internal application for employee compensation and asset transfer.
                 </p>

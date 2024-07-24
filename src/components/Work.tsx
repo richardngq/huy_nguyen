@@ -61,7 +61,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
 
   return (
     <>
-      <div className="container w-full mx-auto py-10 lg:py-20 overflow-x-auto md:overflow-x-visible relative z-10">
+      <div className="container w-full mx-auto py-10 lg:py-20 overflow-x-auto md:overflow-x-visible relative z-10 overflow-y-hidden">
         <div
           className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
         >

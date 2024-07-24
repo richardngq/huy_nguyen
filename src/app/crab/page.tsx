@@ -35,7 +35,7 @@ export default function IPFS() {
 
           <div className="role py-14 bg-[#17171e] group" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-100 font-semibold mx-auto lg:text-center'>I am a Product Designer and UI Developer for <span className=''>Crabada</span></div>
+              <div className='uppercase opacity-100 font-semibold'>I am a Product Designer and UI Developer for <span className=''>Crabada</span></div>
               <p className='text-base opacity-75 mt-4'>
                 I joined the project as a UI/UX Designer and also took on the responsibility of UI Developer at a time when the startup was just starting to brainstorm product ideas, design, and build it. In this article, I will discuss a Case Study for user management of their Crabs entering and exiting the game, as well as asset system partitioning.
               </p>
@@ -71,7 +71,7 @@ export default function IPFS() {
                 <li className='group'>We provide clear and concise information about the entire NFT flow, from depositing NFTs into the Game Application to withdrawing earned rewards.</li>
                 <li className='group'>This transparency empowers players to make informed decisions about their NFTs and navigate the game with ease.</li>
               </ul>
-              <Image src={imageURL1} alt="" className='w-auto h-10 mt-4' data-aos="fade-up" data-aos-delay={400} />
+              <Image src={imageURL1} alt="" className='w-auto h-10 mt-4 p-1 bg-[#555562] rounded-xl' data-aos="fade-up" data-aos-delay={400} />
 
               <p className='text-base opacity-75 mt-8' data-aos="fade-up">
                 Efficient NFT Search and Filtering:
@@ -81,7 +81,7 @@ export default function IPFS() {
                 <li className='group'>Players can effortlessly search for and filter their NFTs based on various properties, such as species, attributes, and rarity levels.</li>
                 <li className='group'>This efficient system enables players to quickly locate the NFTs they need for specific gameplay purposes.</li>
               </ul>
-              <Image src={imageURL2} alt="" className='w-auto h-16 mt-4' data-aos="fade-up" data-aos-delay={400} />
+              <Image src={imageURL2} alt="" className='w-auto h-16 mt-4 p-1 bg-[#555562] rounded-xl' data-aos="fade-up" data-aos-delay={400} />
 
               <p className='text-base opacity-75 mt-8' data-aos="fade-up">
                 Multiple Select for Effortless NFT Management:
@@ -92,7 +92,7 @@ export default function IPFS() {
                 <li className='group'>Players can simply select multiple Crabs and perform actions on them in bulk, such as depositing, withdrawing, or transferring.</li>
                 <li className='group'>This feature saves time and enhances the overall user experience.</li>
               </ul>
-              <PlayVideo video={`./assets/video/crabada.webm`} loop={false} classNames='w-full lg:w-2/3 mt-4' />
+              <PlayVideo video={`./assets/video/crabada.webm`} loop={false} classNames='w-full lg:w-2/3 mt-4 px-3 py-4 bg-[#555562] rounded-xl' />
 
               <p className='text-base opacity-75 mt-4'>
                 In essence, our NFT management system is designed to provide players with a clear, efficient, and user-friendly experience, allowing them to seamlessly manage their NFTs and fully immerse themselves in the game.
@@ -114,7 +114,7 @@ export default function IPFS() {
                 <li>For the Crab category, we employ a standard transfer mechanism, allowing users to effortlessly transfer individual Crabs or groups of Crabs.</li>
                 <li>This straightforward approach aligns with the nature of Crabs as distinct and identifiable NFTs.</li>
               </ul>
-              <Image src={imageURL3} alt="" className='w-auto mt-4' data-aos="fade-up" />
+              <Image src={imageURL3} alt="" className='w-auto mt-4 pt-2 bg-[#333] rounded-xl' data-aos="fade-up" />
 
               <p className='text-base opacity-75 mt-8' data-aos="fade-up">
                 <b>Equipment Category Transfer:</b>
@@ -123,7 +123,7 @@ export default function IPFS() {
                 <li>Similar to Crabs, Equipment NFTs can be transferred individually or in groups, enabling users to manage their equipment collection effectively.</li>
                 <li>This method aligns with the typical usage of equipment items, where players often transfer multiple pieces of equipment at once.</li>
               </ul>
-              <Image src={imageURL4} alt="" className='w-auto mt-4' data-aos="fade-up" />
+              <Image src={imageURL4} alt="" className='w-auto mt-4 pt-2 bg-[#333] rounded-xl' data-aos="fade-up" />
 
               <p className='text-base opacity-75 mt-8' data-aos="fade-up">
                 <b>Material and Chest Category Transfer:</b>
@@ -134,7 +134,7 @@ export default function IPFS() {
                 <li>Users can specify the desired transfer quantity for Materials, ensuring precise management of their resources.</li>
                 <li>For Chests, users can transfer individual chests or multiple chests simultaneously.</li>
               </ul>
-              <Image src={imageURL5} alt="" className='w-auto mt-4' data-aos="fade-up" />
+              <Image src={imageURL5} alt="" className='w-auto mt-4 pt-2 bg-[#333] rounded-xl' data-aos="fade-up" />
 
               <p className='text-base opacity-75 mt-8' data-aos="fade-up">
                 <b>Chest Category Transfer:</b>
@@ -143,7 +143,7 @@ export default function IPFS() {
                 <li>Users can transfer individual chests or multiple chests simultaneously, catering to their specific needs.</li>
                 <li>This method aligns with the typical usage of Chests, where players often open multiple chests at once to discover their contents.</li>
               </ul>
-              <Image src={imageURL6} alt="" className='w-auto mt-4' data-aos="fade-up" />
+              <Image src={imageURL6} alt="" className='w-auto mt-4 pt-2 bg-[#333] rounded-xl' data-aos="fade-up" />
 
               <p className='text-base opacity-75 mt-8' data-aos="fade-up">
                 <b>In essence, our NFT transfer system provides users with a flexible and intuitive approach to managing their NFTs, allowing them to seamlessly transfer items between the Game Application and the Web3 based on their specific needs and the unique characteristics of each NFT category</b>

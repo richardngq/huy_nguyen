@@ -31,7 +31,7 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group block p-4 lg:p-6 h-full w-full -mx-2 lg:-mx-3"
+          className="relative group block p-4 lg:p-6 h-full w-full mx-0 lg:-mx-3"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
           data-aos="zoom-out"

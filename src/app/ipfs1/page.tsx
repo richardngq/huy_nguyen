@@ -37,7 +37,7 @@ export default function IPFS() {
 
           <div className="role py-14 bg-[#17171e] group" data-aos="fade-up">
             <div className="container mx-auto">
-              <div className='uppercase opacity-100 font-semibold mx-auto lg:text-center'>I am a product designer for <span className=''>IPFS - FXCE Technical Solution</span></div>
+              <div className='uppercase opacity-100 font-semibold'>I am a product designer for <span className=''>IPFS - FXCE Technical Solution</span></div>
               <p className='text-base opacity-75 mt-4'>
                 I joined the project as a Product Designer at a time when the project had been up and running for a while, but had not yet gained user traction. The leaders here are looking for the best way for their flagship product to reach and engage users.
               </p>
@@ -187,9 +187,10 @@ export default function IPFS() {
                 <div className='flex-1 w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)] mt-4'>
                   <Image src={imageURL4} alt="" className='w-full' />
                 </div>
-                <div className='flex-1 w-full h-fit mt-4'>
+                <div className='flex-1'></div>
+                {/* <div className='flex-1 w-full h-fit mt-4'>
                   <Image src={imageURL4b} alt="" className='w-full' />
-                </div>
+                </div> */}
               </div>
 
               <p className='text-sm opacity-50 mt-12'>
