@@ -1,5 +1,13 @@
-#spline {
+#spline,
+.spline {
   animation: fadeOut 1s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
 
   @keyframes fadeOut {
     0% {
@@ -15,7 +23,24 @@
     width: 100vw !important;
     height: auto !important;
     aspect-ratio: 1 !important;
-    transform: translateY(-14%);
+    transform: translateY(-20%) scale(0.85);
     cursor: pointer !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    canvas {
+      transform: translateY(0%) scale(1.25);
+      // width: auto !important;
+      // height: 100vh !important;
+    }
+  }
+}
+
+#spline2 {
+  @extend .spline;
+
+  canvas {
+    aspect-ratio: auto !important;
+    // transform: translateY(100%) scale(2);
   }
 }

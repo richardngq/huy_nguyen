@@ -23,16 +23,19 @@ export default function Home() {
       {
         !loading ?
           <div className="md:min-h-svh">
-            <div className="h-auto lg:h-svh relative w-full bg-black flex flex-col items-center justify-center rounded-lg py-20 lg:py-0">
+            <div className="h-svh lg:h-svh relative w-full bg-black flex flex-col items-center justify-center rounded-lg lg:py-0">
               <About />
-              <div id="spline" className="h-svh w-svw absolute top-0">
-                <SplineWrapper />
+              <div id="spline" className="max-h-full lg:max-h-max lg:h-svh w-svw absolute top-auto lg:top-0">
+                <SplineWrapper scene='https://prod.spline.design/AJx1xBJwBzUdNuPV/scene.splinecode' />
               </div>
             </div>
             <ShowCases />
-            <Work />
+            <div className='relative overflow-hidden'>
+              <Work />
+              {/* <div className='absolute w-svw h-[1px] bottom-0 glowing' /> */}
+            </div>
             <Backers />
-          </div>
+          </div >
           : <Loading />
       }
     </>

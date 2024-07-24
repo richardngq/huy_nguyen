@@ -66,7 +66,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
 
 
   return (
-    <div className={`container mx-auto relative z-20 py-6 lg:pb-20 mt-6 ${classNames}`}>
+    <div className={`container mx-auto relative z-20 pb-10 lg:pb-20 mt-0 ${classNames}`}>
       <div
         className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
       >
@@ -76,12 +76,12 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
           Explore Now
         </div>
       </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 mt-8">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-10 mt-10">
         {
           dataGrid.map((item, index) => (
             <div
               key={index}
-              data-aos="fade"
+              data-aos="zoom-out"
               data-aos-delay={200 + 200 * index}
             >
               <WobbleCard

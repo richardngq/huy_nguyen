@@ -21,7 +21,7 @@ export default function About<IAbout>({ classNames = '' }) {
     <>
       <div className={`relative w-full h-auto flex flex-col md:flex-row items-start md:items-center gap-6 z-10 ${classNames}`}>
 
-        <div className="container w-full mx-auto group flex flex-col md:flex-row justify-center items-center gap-16 relative z-10 pt-20 pb-10 md:py-0">
+        <div className="container w-full mx-auto group flex flex-col md:flex-row justify-center items-center gap-16 relative z-10">
 
           <div className="text-center">
             <div className="text-[28px] md:text-4xl font-bold" data-aos="fade-up">

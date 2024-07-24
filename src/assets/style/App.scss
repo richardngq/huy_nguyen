@@ -229,3 +229,33 @@ ul#shape {
     border-radius: 10%;
   }
 }
+
+.glowing {
+  opacity: .25;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    transform: translateY(42%);
+    background: linear-gradient(180deg, #ff9900 0%, transparent 34%);
+    bottom: 0;
+    border-radius: 1000% 1000% 0 0;
+    filter: blur(4px);
+    box-shadow: -1px -20px 20px 0px #fdb241;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    transform: translateY(42%) scale(0.85);
+    background: #000000;
+    bottom: 0;
+    border-radius: 1000% 1000% 0 0;
+    filter: blur(40px);
+    z-index: 2;
+  }
+}

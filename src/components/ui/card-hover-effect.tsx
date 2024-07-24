@@ -31,10 +31,10 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group block p-3 h-full w-full"
+          className="relative group block p-4 lg:p-6 h-full w-full -mx-2 lg:-mx-3"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
-          data-aos="fade"
+          data-aos="zoom-out"
           data-aos-delay={200 + 200 * idx}
         >
           {/* <AnimatePresence>
