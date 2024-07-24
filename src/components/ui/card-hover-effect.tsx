@@ -55,7 +55,11 @@ export const HoverEffect = ({
             )}
           </AnimatePresence> */}
           <Card>
-            <CardImage><img src={item.image} alt='' /></CardImage>
+            <CardImage>
+              <div>
+                <Image src={item.image} alt='' fill className="!relative" />
+              </div>
+            </CardImage>
             <div className={`w-10 h-10 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm ${item?.online ? `text-green-400` : `text-blue-500`} absolute right-2 top-2 lg:right-2 lg:top-2 flex flex-col justify-center items-center rounded-xl`}>
               <Icon icon={`${item?.online ? `ph:globe-bold` : `fa6-brands:behance`}`} className="text-lg" />
             </div>
