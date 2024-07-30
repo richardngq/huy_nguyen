@@ -83,7 +83,7 @@ export default function SkyMavis() {
                           </div>
 
                           <TransformComponent>
-                            <Image src={imageURL1} alt="" className='w-full' />
+                            <Image src={imageURL1} alt='' className='w-full' />
                           </TransformComponent>
                         </div>
                       )}
@@ -102,7 +102,7 @@ export default function SkyMavis() {
                     </p>
                   </div>
                   <div className='flex-1 w-full h-fit'>
-                    <Image src={imageURL2} alt="" className='w-full' />
+                    <Image src={imageURL2} alt='' className='w-full' />
                   </div>
                 </div>
                 <div className="flex flex-col gap-6 lg:flex-row mt-20">
@@ -116,7 +116,7 @@ export default function SkyMavis() {
                     </ul>
                   </div>
                   <div className='flex-1 w-full h-fit'>
-                    <Image src={imageURL3} alt="" className='w-full' />
+                    <Image src={imageURL3} alt='' className='w-full' />
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function SkyMavis() {
                   Overall, Scatter&rsquo;s impact on end-users is undeniable, offering a secure, user-friendly, and accessible interface for interacting with blockchain-based applications and digital assets. As blockchain technology continues to evolve, Scatter remains at the forefront, driving innovation and empowering users to participate in the decentralized economy.
                 </p>
                 <div className='flex-1 w-full h-fit mt-4'>
-                  <Image src={imageURL4} alt="" className='w-full' />
+                  <Image src={imageURL4} alt='' className='w-full' />
                 </div>
               </div>
             </div>

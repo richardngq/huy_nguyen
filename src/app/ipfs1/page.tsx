@@ -81,15 +81,15 @@ export default function IPFS() {
               </ul>
               <div className='flex flex-col lg:flex-row gap-6 mt-6'>
                 <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                  <Image src={imageURL1} alt="" className='w-full scale-105' />
+                  <Image src={imageURL1} alt='' className='w-full scale-105' />
                 </div>
 
                 <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                  <Image src={imageURL1b} alt="" className='w-full scale-105' />
+                  <Image src={imageURL1b} alt='' className='w-full scale-105' />
                 </div>
 
                 <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                  <Image src={imageURL1c} alt="" className='w-full scale-105' />
+                  <Image src={imageURL1c} alt='' className='w-full scale-105' />
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function IPFS() {
                 To implement user experience (UX) improvements and product enhancements, a standardized Design System is being rapidly developed and implemented for the team.
               </p>
               <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)] mt-4'>
-                <Image src={imageURL2} alt="" className='w-full scale-[103%]' />
+                <Image src={imageURL2} alt='' className='w-full scale-[103%]' />
               </div>
 
               <p className='text-base opacity-75 mt-10'>
@@ -144,10 +144,10 @@ export default function IPFS() {
               </p>
               <div className='flex flex-col lg:flex-row gap-6 mt-4'>
                 <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                  <Image src={imageURL2b} alt="" className='w-full scale-105' />
+                  <Image src={imageURL2b} alt='' className='w-full scale-105' />
                 </div>
                 <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                  <Image src={imageURL2c} alt="" className='w-full scale-105' />
+                  <Image src={imageURL2c} alt='' className='w-full scale-105' />
                 </div>
               </div>
               <p className='text-sm opacity-50 mt-12'>
@@ -172,7 +172,7 @@ export default function IPFS() {
                   <li className='mt-2 group'><b className=''>The competitive landscape is constantly changing.</b><br /> More and more businesses are recognizing the importance of CX, and they are investing heavily in improving their CX offerings. This means that businesses need to constantly innovate and differentiate in order to stand out from the crowd.</li>
                 </ul>
                 <div className='flex-1 w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)] mt-4'>
-                  <Image src={imageURL3} alt="" className='w-full' />
+                  <Image src={imageURL3} alt='' className='w-full' />
                 </div>
               </div>
             </div>
@@ -185,11 +185,11 @@ export default function IPFS() {
               <div className='flex flex-col lg:flex-row gap-6 mt-4'>
 
                 <div className='flex-1 w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)] mt-4'>
-                  <Image src={imageURL4} alt="" className='w-full' />
+                  <Image src={imageURL4} alt='' className='w-full' />
                 </div>
                 <div className='flex-1'></div>
                 {/* <div className='flex-1 w-full h-fit mt-4'>
-                  <Image src={imageURL4b} alt="" className='w-full' />
+                  <Image src={imageURL4b} alt='' className='w-full' />
                 </div> */}
               </div>
 

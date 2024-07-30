@@ -10,7 +10,7 @@ import Image03 from "@/assets/img/image-detail-CR03.png"
 export default function Crabada() {
   return (
     <section className="container mt-20 mx-auto">
-      <Image alt="" src={Logo} className="w-auto h-20" data-aos="fade-up" />
+      <Image alt='' src={Logo} className="w-auto h-20" data-aos="fade-up" />
       <div data-aos="fade-up">
         <Paragraph
           classNames="mt-6"
@@ -20,7 +20,7 @@ export default function Crabada() {
       </div>
 
       <div className="flex flex-col gap-12 mt-12">
-        <Image alt="" src={Image00} data-aos="fade-up" />
+        <Image alt='' src={Image00} data-aos="fade-up" />
 
         <div data-aos="fade-up">
           <Paragraph
@@ -31,7 +31,7 @@ export default function Crabada() {
 
         <div data-aos="fade-up" className="flex flex-col md:grid md:grid-cols-10 gap-6">
           <div className="col-span-6">
-            <Image alt="" src={Image01} className="w-full h-full object-contain" />
+            <Image alt='' src={Image01} className="w-full h-full object-contain" />
           </div>
           <Paragraph
             classNames="col-span-4"
@@ -54,7 +54,7 @@ export default function Crabada() {
             "
           />
           <div className="col-span-6">
-            <Image alt="" src={Image02} className="w-full h-full object-contain" />
+            <Image alt='' src={Image02} className="w-full h-full object-contain" />
           </div>
         </div>
 
@@ -85,7 +85,7 @@ export default function Crabada() {
             "
           />
           <div>
-            <Image alt="" src={Image03} className="w-full h-full object-contain p-2 bg-slate-950" />
+            <Image alt='' src={Image03} className="w-full h-full object-contain p-2 bg-slate-950" />
           </div>
         </div>
 

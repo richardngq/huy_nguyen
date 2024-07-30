@@ -97,7 +97,7 @@ export default function Gestreon() {
               </p>
               <div className='flex flex-col lg:flex-row gap-6 mt-6'>
                 <div className='w-full h-fit '>
-                  <Image src={imageURL1} alt="" className='w-full object-contain' />
+                  <Image src={imageURL1} alt='' className='w-full object-contain' />
                 </div>
               </div>
 
@@ -134,10 +134,10 @@ export default function Gestreon() {
               </p>
               <div className='flex flex-col lg:flex-row gap-6 mt-4'>
                 <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                  <Image src={imageURL2} alt="" className='w-full' />
+                  <Image src={imageURL2} alt='' className='w-full' />
                 </div>
                 <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                  <Image src={imageURL2b} alt="" className='w-full' />
+                  <Image src={imageURL2b} alt='' className='w-full' />
                 </div>
                 <div className="hidden lg:block w-full" />
               </div>
@@ -158,13 +158,13 @@ export default function Gestreon() {
               <div className='flex flex-col lg:flex-row gap-6 mt-4'>
                 <div className="w-full group">
                   <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                    <Image src={imageURL3} alt="" className='w-full' />
+                    <Image src={imageURL3} alt='' className='w-full' />
                   </div>
                   <p className='opacity-75 text-sm mt-4 '><b>Farfetch:</b> Requires users to confirm information and the recipient&rsquo;s address during checkout, even if they have logged in and confirmed the billing address previously.</p>
                 </div>
                 <div className="w-full group">
                   <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                    <Image src={imageURL3b} alt="" className='w-full' />
+                    <Image src={imageURL3b} alt='' className='w-full' />
                   </div>
                   <p className='opacity-75 text-sm mt-4 '><b>Pacsun:</b> Does not provide e-payment services and remains loyal to the charge by card system.</p>
                 </div>
@@ -185,10 +185,10 @@ export default function Gestreon() {
                 </div>
                 <div className='flex-1 flex flex-col gap-6 mt-4'>
                   <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]'>
-                    <Image src={imageURL3c} alt="" className='w-full' />
+                    <Image src={imageURL3c} alt='' className='w-full' />
                   </div>
                   <div className='w-full h-fit border-4 border-white rounded-2xl overflow-hidden shadow-[0px_6px_6px_rgba(0,0,0,0.1)]' data-aos='fade-down'>
-                    <Image src={imageURL3d} alt="" className='w-full' />
+                    <Image src={imageURL3d} alt='' className='w-full' />
                   </div>
                 </div>
               </div>

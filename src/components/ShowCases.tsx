@@ -82,35 +82,32 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               key={i}
               data-aos="zoom-out"
               data-aos-delay={200 + 200 * i}
-            >
-
-              <div className={`relative card group bg-[linear-gradient(180deg,#161515_0%,#0e0e0e_100%)] overflow-hidden rounded-2xl ring-1 ring-[rgba(255,255,255,.15)] ${o.key}`}>
-                <div className="img w-full h-full relative">
-                  <Image src={o.image} alt="" className="w-full h-full object-cover" />
-                </div>
-                <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0">
-                  <div className="font-bold text-2xl">{o.title}</div>
-                  <div className="text-base mt-1.5">{o.description}</div>
-                </div>
-                <div className="w-8 h-8 p-0.5 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-full z-20 ring-1 ring-[rgba(255,255,255,.25)] group-hover:ring-white">
-                  <Icon icon={'mingcute:arrow-right-fill'} className="-rotate-45" />
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-20">
-                  {
-                    o?.tags.map((o, i) =>
-                      <div
-                        key={i}
-                        className="bg-[rgba(0,0,0,0.5)] relative text-white backdrop-blur-sm py-1 px-3 rounded-xl text-sm whitespace-nowrap ring-1 ring-[rgba(255,255,255,.15)] group-hover:ring-[rgba(255,255,255,.5)]"
-                      >
-                        <span className="opacity-75">{o}</span>
-                      </div>
-                    )
-                  }
-                </div>
-                <div className="bg" />
-                {/* <Link href={o.url} className="absolute inset-0 z-20" /> */}
+              className={`relative card group bg-[linear-gradient(180deg,#161515_0%,#0e0e0e_100%)] overflow-hidden rounded-2xl ring-1 ring-[rgba(255,255,255,.15)] ${o.key}`}>
+              <div className="img w-full h-full relative">
+                <Image src={o.image} alt='' className="w-full h-full object-cover" />
               </div>
+              <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0">
+                <div className="font-bold text-2xl">{o.title}</div>
+                <div className="text-base mt-1.5">{o.description}</div>
+              </div>
+              <div className="w-8 h-8 p-0.5 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-full z-20 ring-1 ring-[rgba(255,255,255,.25)] group-hover:ring-white">
+                <Icon icon={'mingcute:arrow-right-fill'} className="-rotate-45" />
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-20">
+                {
+                  o?.tags.map((o, i) =>
+                    <div
+                      key={i}
+                      className="bg-[rgba(0,0,0,0.5)] relative text-white backdrop-blur-sm py-1 px-3 rounded-xl text-sm whitespace-nowrap ring-1 ring-[rgba(255,255,255,.15)] group-hover:ring-[rgba(255,255,255,.5)]"
+                    >
+                      <span className="opacity-75">{o}</span>
+                    </div>
+                  )
+                }
+              </div>
+              <div className="bg" />
+              {/* <Link href={o.url} className="absolute inset-0 z-20" /> */}
             </div>
           ))
         }

@@ -1,6 +1,4 @@
-'use client'; // Đánh dấu là client-side
-
-import dynamic from 'next/dynamic';
+'use client';
 import { useEffect, useState } from 'react';
 import { Work } from '@/components/Work';
 import { ShowCases } from '@/components/ShowCases';
