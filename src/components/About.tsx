@@ -23,7 +23,7 @@ export default function About<IAbout>({ classNames = '' }) {
 
         <div className="container w-full mx-auto group flex flex-col md:flex-row justify-center items-center gap-16 relative z-10">
 
-          <div className="text-center">
+          <div className="text-center" style={{ textShadow: '0px 0px 0px 2px red' }}>
             <div className="text-[28px] md:text-4xl font-bold" data-aos="fade-up">
               Hi! I am <Highlight><span>Huy Nguyen</span></Highlight>
             </div>

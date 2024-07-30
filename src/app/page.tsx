@@ -6,6 +6,7 @@ import { Backers } from '@/components/Backets';
 import About from '@/components/About';
 import { Loading } from '@/components/common/Loading';
 import SplineWrapper from '@/components/SplineWrapper';
+import PlayVideo from '@/utils/Video';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -23,8 +24,11 @@ export default function Home() {
           <div className="md:min-h-svh">
             <div className="h-svh lg:h-svh relative w-full bg-black flex flex-col items-center justify-center rounded-lg lg:py-0">
               <About />
-              <div id="spline" className="max-h-full lg:max-h-max lg:h-svh w-svw absolute top-auto lg:top-0">
+              {/* <div id="spline" className="max-h-full lg:max-h-max lg:h-svh w-svw absolute top-auto lg:top-0">
                 <SplineWrapper scene='https://prod.spline.design/AJx1xBJwBzUdNuPV/scene.splinecode' />
+              </div> */}
+              <div className='absolute inset-0 lg:-translate-y-1/3 lg:scale-75 fade'>
+                <PlayVideo video={`./assets/video/cubic.mp4`} />
               </div>
             </div>
             <ShowCases />
