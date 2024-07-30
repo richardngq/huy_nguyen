@@ -45,6 +45,19 @@
     transition: all .4s ease;
   }
 
+  @media screen and (max-width: 768px) {
+    aspect-ratio: 1;
+
+    .img {
+      transform: scale(1.15) !important;
+      margin-left: auto;
+      margin-top: 15vw;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
 
   &-box-anim {}
 }

@@ -24,10 +24,10 @@ export default function Home() {
           <div className="md:min-h-svh">
             <div className="h-svh lg:h-svh relative w-full bg-black flex flex-col items-center justify-center rounded-lg lg:py-0">
               <About />
-              {/* <div id="spline" className="max-h-full lg:max-h-max lg:h-svh w-svw absolute top-auto lg:top-0">
+              <div id="spline" className="max-h-full lg:max-h-max lg:h-svh w-svw absolute top-auto lg:top-0 block lg:hidden">
                 <SplineWrapper scene='https://prod.spline.design/AJx1xBJwBzUdNuPV/scene.splinecode' />
-              </div> */}
-              <div className='absolute inset-0 fade'>
+              </div>
+              <div className='absolute inset-0 fade hidden lg:block'>
                 <PlayVideo video={`./assets/video/colorfulStreak2.webm`} />
                 <div className='absolute bg-black inset-0 opacity-50'></div>
               </div>

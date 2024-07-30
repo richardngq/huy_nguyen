@@ -50,6 +50,12 @@
   }
 
   @media screen and (max-width: 768px) {
+    @apply gap-6;
+
+    &:hover {
+      @apply gap-6;
+    }
+
     &--item {
       .tag {
         .text {
