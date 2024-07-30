@@ -5,7 +5,6 @@ import ImageGridIPFS from '@/assets/image/image-thumbnail--ipfs.png';
 import ImageGridSM from '@/assets/image/image-thumbnail--sm.png';
 import ImageGridCRAB from '@/assets/image/image-thumbnail--crab.png';
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { WobbleCard } from "./ui/wobble-card";
 import Link from "next/link";
 
 interface IShowCases {
@@ -76,43 +75,42 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
           Explore Now
         </div>
       </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-10 mt-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-10 mt-10" data-aos="zoom-out">
         {
-          dataGrid.map((item, index) => (
+          dataGrid.map((o, i) => (
             <div
-              key={index}
+              key={i}
               data-aos="zoom-out"
-              data-aos-delay={200 + 200 * index}
+              data-aos-delay={200 + 200 * i}
             >
-              <WobbleCard
-                containerClassName={`relative card group ${item.key}`}
-              >
-                <div className="w-full h-full">
-                  <Image src={item.image} alt="" className="w-full h-full object-cover" />
+
+              <div className={`relative card group bg-[linear-gradient(180deg,#161515_0%,#0e0e0e_100%)] overflow-hidden rounded-2xl ring-1 ring-[rgba(255,255,255,.15)] ${o.key}`}>
+                <div className="img w-full h-full relative">
+                  <Image src={o.image} alt="" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0">
-                  <div className="font-bold text-2xl">{item.title}</div>
-                  <div className="text-base mt-1.5">{item.description}</div>
+                  <div className="font-bold text-2xl">{o.title}</div>
+                  <div className="text-base mt-1.5">{o.description}</div>
                 </div>
-                <div className="w-10 h-10 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-xl z-20 group-hover:scale-125">
-                  <Icon icon={'mingcute:arrow-right-fill'} className="text-xl -rotate-45" />
+                <div className="w-8 h-8 p-0.5 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-full z-20 ring-1 ring-[rgba(255,255,255,.25)] group-hover:ring-white">
+                  <Icon icon={'mingcute:arrow-right-fill'} className="-rotate-45" />
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-20">
                   {
-                    item?.tags.map((o, i) =>
+                    o?.tags.map((o, i) =>
                       <div
                         key={i}
-                        className="bg-[rgba(0,0,0,0.5)] relative text-white backdrop-blur-sm py-1 px-3 rounded-xl text-sm whitespace-nowrap"
-                        style={{ boxShadow: `inset -1px -1px 0px rgba(255,255,255,0.25)` }}
+                        className="bg-[rgba(0,0,0,0.5)] relative text-white backdrop-blur-sm py-1 px-3 rounded-xl text-sm whitespace-nowrap ring-1 ring-[rgba(255,255,255,.15)] group-hover:ring-[rgba(255,255,255,.5)]"
                       >
                         <span className="opacity-75">{o}</span>
                       </div>
                     )
                   }
                 </div>
-                <Link href={item.url} className="absolute inset-0 z-20" />
-              </WobbleCard>
+                <div className="bg" />
+                {/* <Link href={o.url} className="absolute inset-0 z-20" /> */}
+              </div>
             </div>
           ))
         }

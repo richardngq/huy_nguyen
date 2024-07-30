@@ -1,0 +1,50 @@
+.card {
+  &::before {
+    @apply rounded-full absolute aspect-square;
+    content: '';
+    inset: -150%;
+    transform: scale(0);
+    transition: all .8s ease;
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1);
+    }
+  }
+
+  &.IPFS {
+    &::before {
+      background: linear-gradient(45deg, #3C80D7 0%, #3C80D7 100%);
+    }
+  }
+
+  &.GS {
+    &::before {
+      background: linear-gradient(45deg, #AA9385 0%, #AA9385 100%);
+    }
+  }
+
+  &.SM {
+    .img {
+      transform: translateY(5%) scale(0.9);
+    }
+
+    &::before {
+      background: linear-gradient(45deg, #1a62c5 0%, #7fa4d7 75%);
+    }
+  }
+
+  &.CRAB {
+    &::before {
+      background: linear-gradient(45deg, #FC712C 0%, #FFB490 100%);
+    }
+  }
+
+  &:hover {
+    transition: all .4s ease;
+  }
+
+
+  &-box-anim {}
+}
