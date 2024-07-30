@@ -107,7 +107,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                 }
               </div>
               <div className="bg" />
-              {/* <Link href={o.url} className="absolute inset-0 z-20" /> */}
+              <Link href={o.url} className="absolute inset-0 z-20" />
             </div>
           ))
         }
