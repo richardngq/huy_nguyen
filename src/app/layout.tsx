@@ -45,20 +45,18 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning={true} className="dark">
-      <body className={`dark:bg-black dark:text-white ${font.className}`}
+      <body
+        className={`flex flex-col min-h-screen ${font.className}`}
+        style={{ backgroundColor: `#0C1117`, color: `#FAFAFA` }}
         suppressHydrationWarning={true}
       >
-        <div className="flex flex-col h-screen">
-
-          <Transition>
-            <Navbar />
-            {/* <div className="flex-auto"> */}
+        <Transition>
+          <Navbar />
+          <div className="flex-auto">
             {children}
-            {/* </div> */}
-            <Footer />
-          </Transition>
-
-        </div>
+          </div>
+          <Footer />
+        </Transition>
         <SpeedInsights />
       </body>
       <AOSInit />

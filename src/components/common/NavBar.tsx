@@ -17,9 +17,7 @@ export const Navbar: FC = () => {
   ]
   return (
     <div className='fixed top-0 left-0 right-0 bg-black backdrop-blur-lg inline-flex gap-8 p-3 lg:p-6 z-[999]' data-aos="fade" data-aos-delay={1000} style={{ boxShadow: `0px -1px 8px rgba(0,0,0,0.05)` }}>
-      <Link href={'/'}>
-        <Image src={Logo} alt='' className='w-fit h-8' />
-      </Link>
+
       <nav className='w-full inline-flex items-center justify-end gap-6'>
         {
           Links.map((item, index) => {

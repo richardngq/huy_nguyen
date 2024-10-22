@@ -12,6 +12,7 @@ const Transition: FC<TypeTransition> = ({ children }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: `easeInOut`, duration: 1 }}
+      className="flex-auto flex flex-col"
     >
       {children}
     </motion.div>
