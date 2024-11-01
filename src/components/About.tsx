@@ -29,7 +29,7 @@ export default function About<IAbout>({ classNames = '' }) {
             </div>
             <div className="text-xl space-x-1 leading-[200%] mt-8 max-w-full" data-aos="fade-up" data-aos-delay={200}>
               <p>
-                A <Highlight>UI/UX Designer</Highlight> and<br className="flex md:hidden" /> a <Highlight>Front-End Developer</Highlight> from Vietnam. With over 5+ Years of Experience.
+                A <Highlight>Front-End Developer</Highlight>, <Highlight>UI Developer</Highlight>, <Highlight>Markup Developer</Highlight> and<br className="flex md:hidden" /> a <Highlight>Product Designer</Highlight> from Vietnam. With 6+ Years of Experience.
                 <br />
                 Let&rsquo;s work together to Design and Develop user-friendly technical products that make a real impact!
               </p>
