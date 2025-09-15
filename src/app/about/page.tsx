@@ -23,17 +23,17 @@ export default function About() {
   const dataExp = [
     {
       CompanyName: `IPFS Inc`,
-      Role: `Product Designer Lead`,
+      Role: `Product Designer`,
       Dates: `Mar 2023 - Present`,
       Descriptions: [
-        `Product Designer Leader at <b>IPFS Services</b>`,
+        `Product Designer at <b>IPFS Services</b>`,
         `Design DRI for all PWA Projects and Solution Resolving for <b>Mobile Application</b>`,
         `Successful upgrade and take care User Experience and Accessibility for thousands Clients with <b>Retail Product</b>`
       ],
     },
     {
       CompanyName: `Metahaki Inc - Crabada`,
-      Role: `Product Designer && Front End Developer`,
+      Role: `UI/UX Designer && Front End Developer`,
       Dates: `Nov 2021 - Ferb 2023`,
       Descriptions: [
         `Product designer and responsibility about UI Front-End coding for <b>Crabada</b> and Related Products`,
@@ -114,7 +114,7 @@ export default function About() {
           <div className="flex flex-col gap-2">
             <div className="text-[28px] font-bold">Huy Nguyen</div>
             <div className="text-base font-thin">
-              As a <b>Front-End Developer</b>, <b>UI Developer</b>, <b>Markup Developer</b> and <b>Product Designer</b> with <i>6+ years of experience</i>.
+              As a <b>Product Designer</b>, <b>UI-UX Designer</b> and<br className="flex md:hidden" /> a <b>FE Developer</b> with <i>6+ years of experience</i>.
               <br />
               I am so lucky to work with specialized working with domains about <br />Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
             </div>
@@ -136,14 +136,13 @@ export default function About() {
         </div>
 
         <div>
-          <Parts classNames="mt-10" title="My Stack"
-          >
-            <div className="inline-flex items-center flex-wrap gap-2">
+          <Parts classNames="mt-10" title="My Stack">
+            <div className="inline-flex items-center flex-wrap gap-4">
               {
                 dataStacks.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-orange-100 text-orange-700 backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-white/10 text-white/75 backdrop-blur-sm text-sm px-3 py-0.5 filter-blur rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
@@ -152,14 +151,13 @@ export default function About() {
             </div>
           </Parts>
 
-          <Parts classNames="mt-10" title="Specialized Domains Experience"
-          >
-            <div className="inline-flex items-center flex-wrap gap-2">
+          <Parts classNames="mt-10" title="Specialized Domains Experience">
+            <div className="inline-flex items-center flex-wrap gap-4">
               {
                 dataDomains.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-orange-100 text-orange-700 backdrop-blur-sm text-sm px-3 py-0.5 rounded-full cursor-pointer"
+                    className="bg-white/10 text-white/75 backdrop-blur-sm text-sm px-3 py-0.5 filter-blur rounded-full cursor-pointer"
                     data-aos="fade-left"
                     data-aos-delay={100 + index * 100}
                     dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
