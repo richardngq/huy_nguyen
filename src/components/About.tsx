@@ -1,9 +1,5 @@
-import Image from "next/image"
-import ImageIso from '@/assets/image/image-iso--02.png'
-import Avatar from '@/assets/image/image-avatar.png'
 import { Icon } from "@iconify/react/dist/iconify.js"
 import Link from "next/link"
-import { Backers } from "./Backets"
 import { Highlight } from "./ui/hero-highlight"
 import { motion } from "framer-motion"
 interface IAbout {

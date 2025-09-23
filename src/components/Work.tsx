@@ -103,8 +103,11 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
           <Marquee className="card-works flex flex-col lg:flex-row !gap-0" autoFill pauseOnHover>
             {
               dataWorks.map((o, i) => (
-                <div key={i} className={`card-works--item relative overflow-hidden ${o.title}`}>
+                <div key={i} className={`card-works--item relative overflow-hidden group ${o.title}`}>
                   <Image src={o.image} alt='' fill className="!relative object-cover" />
+                  <div className="scale-0 group-hover:scale-100 w-8 h-8 p-0.5 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-full z-20 ring-1 ring-[rgba(255,255,255,.25)] group-hover:ring-white">
+                    <Icon icon={'mingcute:arrow-right-fill'} className="-rotate-45" />
+                  </div>
                   <div className="inline-flex items-center gap-2 absolute bottom-0 left-0 right-0 p-2 pt-10 tag">
                     <div className={`w-8 h-8 p-1 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm
                     ${o?.online ? `text-green-400` : `text-blue-500`} flex flex-col justify-center items-center rounded-full ring-1 ring-[rgba(255,255,255,.15)] group-hover:ring-[rgba(255,255,255,.5)]`}>
