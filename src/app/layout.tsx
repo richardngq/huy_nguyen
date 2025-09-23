@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import { Source_Sans_3 } from "next/font/google";
-import { Oswald } from "next/font/google";
+import { Archivo as TheFont } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AOSInit } from "@/utils/AnimateOnScroll";
@@ -12,7 +10,7 @@ import Transition from "@/utils/Transition";
 import { Navbar } from "@/components/common/NavBar";
 import { Footer } from "@/components/common/Footer";
 
-const font = Source_Sans_3({ subsets: ["latin"], weight: ["300", "400", "600"] });
+const font = TheFont({ subsets: ["latin"], weight: ["300", "400", "600"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://huy-nguyen.vercel.app/`),
@@ -44,11 +42,11 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" suppressHydrationWarning={true} className="dark">
+    <html lang="en" suppressHydrationWarning={true} className="dark overflow-x-hidden">
       <body className={`dark:bg-black dark:text-white ${font.className}`}
         suppressHydrationWarning={true}
       >
-        <div className="flex flex-col h-screen">
+        <main className="flex flex-col h-screen">
 
           <Transition>
             <Navbar />
@@ -58,7 +56,7 @@ export default function RootLayout({
             <Footer />
           </Transition>
 
-        </div>
+        </main>
         <SpeedInsights />
       </body>
       <AOSInit />

@@ -49,10 +49,10 @@ export const NavItem: FC<INav> = ({ text, link, target, classNames = '' }) => {
           <Icon className={`flex group-hover:scale-y-[-1]`} icon='mingcute:down-fill' fontSize={12} />
         </div>
         <div className="absolute -left-4 -right-4 top-0 h-0 overflow-hidden group-hover:h-auto">
-          <div className={`bg-black flex flex-col shadow-sm rounded-es-lg rounded-ee-lg backdrop-blur-md mt-12 py-2`}>
+          <div className={`bg-black border flex flex-col shadow-sm rounded-2xl backdrop-blur-lg mt-12 py-2`}>
             {
               linkWorks.map((item, i) => (
-                <Link key={i} href={item.url} className="py-2 px-4 opacity-50 hover:opacity-100">{item.title}</Link>
+                <Link key={i} href={item.url} className="py-2 px-4 opacity-50 hover:opacity-100 whitespace-nowrap">{item.title}</Link>
               ))
             }
           </div>

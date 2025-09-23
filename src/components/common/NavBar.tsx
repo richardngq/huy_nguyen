@@ -16,7 +16,7 @@ export const Navbar: FC = () => {
     { href: 'https://drive.google.com/file/d/1LjN_U_yG4A1B2PbrJvWZCoDkyBrRZgXM/view?usp=drive_link', target: true, label: 'My CV' },
   ]
   return (
-    <div className='fixed top-0 left-0 right-0 bg-black backdrop-blur-lg inline-flex gap-8 p-3 lg:p-6 z-[999]' data-aos="fade" data-aos-delay={1000} style={{ boxShadow: `0px -1px 8px rgba(0,0,0,0.05)` }}>
+    <div className='fixed top-2 inset-x-2 bg-black/10 border border-white/10 backdrop-blur-lg rounded-full inline-flex gap-8 p-3 lg:p-6 lg:px-8 z-[999]' data-aos="fade" data-aos-delay={1000} style={{ boxShadow: `0px -1px 8px rgba(0,0,0,0.05)` }}>
       <Link href={'/'}>
         <Image src={Logo} alt='' className='w-fit h-8' />
       </Link>

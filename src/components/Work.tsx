@@ -1,17 +1,15 @@
 import { FC, useState } from "react";
 import Image from "next/image"
 import Link from "next/link";
-import Tilt from "react-parallax-tilt";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import App1 from '@/assets/app/fxce.webp';
-import App2 from '@/assets/app/xfun.webp';
-import App3 from '@/assets/app/f2nft.webp';
+import imageSushi from '@/assets/image/work/image-work-sushi.png'
+import imageColorpool from '@/assets/image/work/image-work-colorpool.png'
+import imageAnimix from '@/assets/image/work/image-work-animix.png'
+import imageTofu from '@/assets/image/work/image-work-tofu.png'
+import imageSoyu from '@/assets/image/work/image-work-soyu.png'
 
-import { useKeenSlider } from 'keen-slider/react'
 import "keen-slider/keen-slider.min.css"
-import { ParallaxScroll } from "./ui/parallax-scroll";
-import { HoverEffect } from "./ui/card-hover-effect";
-import { PinContainer, PinPerspective } from "./ui/3d-pin";
+import Marquee from "react-fast-marquee";
 
 
 interface IWork {
@@ -21,6 +19,36 @@ interface IWork {
 export const Work: FC<IWork> = ({ classNames = '' }) => {
 
   const dataWorks = [
+    {
+      online: true,
+      link: `http://dev.soyu.ai/`,
+      title: `Soyu`,
+      image: imageSoyu,
+    },
+    {
+      online: true,
+      link: `https://tofu.toys/`,
+      title: `Tofu`,
+      image: imageTofu,
+    },
+    {
+      online: true,
+      link: `http://animix.tech/`,
+      title: `Animix`,
+      image: imageAnimix,
+    },
+    {
+      online: true,
+      link: `http://colorpool.xyz/`,
+      title: `ColorPool Dex`,
+      image: imageColorpool,
+    },
+    {
+      online: true,
+      link: `https://sss.game/`,
+      title: `Super Sushi Samurai`,
+      image: imageSushi,
+    },
     {
       online: true,
       link: `https://mooncat.metahaki.com/`,
@@ -34,8 +62,8 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
       image: `https://mir-s3-cdn-cf.behance.net/projects/808/4d6e91195838445.Y3JvcCwxMDI0LDgwMCwwLDI.png`,
     },
     {
-      online: true,
-      link: `https://f2nft.games/`,
+      online: false,
+      link: `https://www.behance.net/gallery/167131231/F2NFT-Marketplace-v20`,
       title: `F2FNT`,
       image: `https://mir-s3-cdn-cf.behance.net/projects/808/4c3ca0167131231.Y3JvcCwxMDI0LDgwMCwwLDI.png`,
     },
@@ -72,10 +100,10 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
           </div>
         </div>
         <div className="mt-10">
-          <div className="card-works flex flex-col lg:flex-row" data-aos="zoom-out">
+          <Marquee className="card-works flex flex-col lg:flex-row !gap-0" autoFill pauseOnHover>
             {
               dataWorks.map((o, i) => (
-                <div key={i} className={`card-works--item relative rounded-2xl overflow-hidden ring-1 ring-[rgba(255,255,255,.15)] ${o.title}`}>
+                <div key={i} className={`card-works--item relative overflow-hidden ${o.title}`}>
                   <Image src={o.image} alt='' fill className="!relative object-cover" />
                   <div className="inline-flex items-center gap-2 absolute bottom-0 left-0 right-0 p-2 pt-10 tag">
                     <div className={`w-8 h-8 p-1 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm
@@ -88,7 +116,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                 </div>
               ))
             }
-          </div>
+          </Marquee>
         </div>
       </div>
     </>
