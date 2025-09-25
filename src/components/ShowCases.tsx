@@ -6,6 +6,7 @@ import ImageGridSM from '@/assets/image/image-thumbnail--sm.png';
 import ImageGridCRAB from '@/assets/image/image-thumbnail--crab.png';
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface IShowCases {
   classNames?: string
@@ -71,17 +72,20 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       >
         <div
           className="h-full w-full"
-          data-aos="fade">
-          Explore Now
+          data-aos="fade"
+        >
+          Achievement & Impact
         </div>
       </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-10 mt-10" data-aos="zoom-out">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-10 mt-10">
         {
           dataGrid.map((o, i) => (
-            <div
+            <motion.div
               key={i}
-              data-aos="zoom-out"
-              data-aos-delay={200 + 200 * i}
+              initial={{ opacity: 0, scale: 1.2 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ ease: "linear", delay: i * 0.2 }}
+              viewport={{ once: true }}
               className={`relative card group bg-[linear-gradient(180deg,#161515_0%,#0e0e0e_100%)] overflow-hidden rounded-2xl ring-1 ring-[rgba(255,255,255,.15)] ${o.key}`}>
               <div className="img w-full h-full relative">
                 <Image src={o.image} alt='' className="w-full h-full object-cover" />
@@ -108,7 +112,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               </div>
               <div className="bg" />
               <Link href={o.url} className="absolute inset-0 z-20" />
-            </div>
+            </motion.div>
           ))
         }
       </div>

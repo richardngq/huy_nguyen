@@ -4,13 +4,14 @@ import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import imageSushi from '@/assets/image/work/image-work-sushi.png'
 import imageColorpool from '@/assets/image/work/image-work-colorpool.png'
+import imageFlip from '@/assets/image/work/image-work-flip.png'
 import imageAnimix from '@/assets/image/work/image-work-animix.png'
 import imageTofu from '@/assets/image/work/image-work-tofu.png'
 import imageSoyu from '@/assets/image/work/image-work-soyu.png'
 
 import "keen-slider/keen-slider.min.css"
 import Marquee from "react-fast-marquee";
-
+import { motion } from "framer-motion";
 
 interface IWork {
   classNames?: string
@@ -36,6 +37,12 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
       link: `http://animix.tech/`,
       title: `Animix`,
       image: imageAnimix,
+    },
+    {
+      online: true,
+      link: `https://flip.meme/solana`,
+      title: `FlipMeme`,
+      image: imageFlip,
     },
     {
       online: true,
@@ -99,7 +106,12 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
             Projects
           </div>
         </div>
-        <div className="mt-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-10"
+        >
           <Marquee className="card-works flex flex-col lg:flex-row !gap-0" autoFill pauseOnHover>
             {
               dataWorks.map((o, i) => (
@@ -120,7 +132,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
               ))
             }
           </Marquee>
-        </div>
+        </motion.div>
       </div>
     </>
   )
