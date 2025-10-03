@@ -11,10 +11,10 @@ export const Navbar: FC = () => {
 
   const Links = [
     { href: '/', target: false, label: 'Home' },
-    { target: false, label: 'Projects' },
     { href: '/about', target: false, label: 'About' },
-    // { href: 'https://drive.google.com/file/d/1LjN_U_yG4A1B2PbrJvWZCoDkyBrRZgXM/view?usp=drive_link', target: true, label: 'My CV' },
+    { target: false, label: 'Work Log' },
     { href: 'https://drive.google.com/file/d/1mgD2coQg19a9d4Sw1YqLvUTrXF_TG8Ku/view?usp=sharing', target: true, label: 'My CV' },
+    // { href: 'https://drive.google.com/file/d/1LjN_U_yG4A1B2PbrJvWZCoDkyBrRZgXM/view?usp=drive_link', target: true, label: 'My CV' },
   ]
   return (
     <div className='fixed top-2 inset-x-2 bg-black/10 border border-white/10 backdrop-blur-lg rounded-full inline-flex gap-8 py-2 px-6 lg:p-6 lg:px-8 z-[999]' data-aos="fade" data-aos-delay={1000} style={{ boxShadow: `0px -1px 8px rgba(0,0,0,0.05)` }}>

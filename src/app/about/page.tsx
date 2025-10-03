@@ -86,13 +86,13 @@ export default function About() {
     }) => {
     return (
       <div className={`flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-0">
           <p className="flex flex-col gap-0.5">
-            <span className="text-base opacity-75">{Dates}</span>
-            <span className="text-orange-400 text-xl font-semibold">{CompanyName}</span>
+            <span className="text-xs opacity-75">{Dates}</span>
+            <span className="text-orange-400 text-base font-semibold">{CompanyName}</span>
           </p>
           <p>
-            <span className="text-lg font-bold">{Role}</span>
+            <span className="text-base font-bold">{Role}</span>
           </p>
         </div>
         <ul className="text-sm">
@@ -108,13 +108,13 @@ export default function About() {
     <section className="container mt-20 mx-auto pt-10">
       <div className="group" data-aos="fade-up">
         <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
-          <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-3xl overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)] border-2 border-[#efefef]">
-            <Image src={Avatar} alt='' className="w-full h-full object-contain" />
+          <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)]">
+            <Image src={Avatar} alt='' className="w-full h-full object-cover" />
           </div>
           <div className="flex flex-col gap-2">
             <div className="text-[28px] font-bold">Huy Nguyen</div>
-            <div className="text-base font-thin">
-              As a <b>Product Designer</b>, <b>UI-UX Designer</b> and<br className="flex md:hidden" /> a <b>FE Developer</b> with <i>6+ years of experience</i>.
+            <div className="text-base font-thin mt-4">
+              As a <b>Product Designer</b>, <b>UI-UX Designer</b> and<br className="flex md:hidden" /> a <b>FE Developer</b> with <i>7+ years of experience</i>.
               <br />
               I am so lucky to work with specialized working with domains about <br />Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
             </div>

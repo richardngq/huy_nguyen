@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo as TheFont } from "next/font/google";
+import { Source_Sans_3 as TheFont } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AOSInit } from "@/utils/AnimateOnScroll";
