@@ -11,6 +11,7 @@ import Image07 from '@/assets/backers/dark/img-logo-07.png'
 import Image08 from '@/assets/backers/dark/img-logo-08.png'
 import Image09 from '@/assets/backers/dark/img-logo-09.png'
 import Image10 from '@/assets/backers/dark/img-logo-10.png'
+import { motion } from "framer-motion";
 
 export const Backers: FC = () => {
   const listImage = [
@@ -32,9 +33,9 @@ export const Backers: FC = () => {
       <div className="absolute bg-gradient-to-r from-black to-transparent w-40 h-full top-0 left-0 z-10" />
       <Marquee className="py-1">
         {listImage.map((item, i) => (
-          <div key={i} className="w-fit h-10 md:h-12 mx-4 hover:scale-105 marque-item">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear", duration: 2, delay: .1 + i * .05 }} viewport={{ once: true }} key={i} className="w-fit h-10 md:h-12 mx-4 hover:scale-105 marque-item">
             <Image src={item.src} alt='' className={`!relative block !w-fit h-full object-contain`} fill />
-          </div>
+          </motion.div>
         ))}
       </Marquee>
       <div className="absolute bg-gradient-to-l from-black to-transparent w-40 h-full top-0 right-0 z-10" />

@@ -22,16 +22,13 @@ export default function About<IAbout>({ classNames = '' }) {
 
           <div className="text-center" style={{ textShadow: '0px 0px 0px 2px red' }}>
             <div className="text-[28px] md:text-4xl" data-aos="fade-up">
-              Hi! I am <b>Huy Nguyen</b>
+              Hi! I am <span className="font-black">Huy Nguyen</span>
             </div>
             <div className="text-xl space-x-1 leading-[200%] mt-8 max-w-full" data-aos="fade-up" data-aos-delay={200}>
               <p>
-                A
-                Product Designer,
-                UI-UX Designer and<br className="flex md:hidden" /> a
-                FE Developer from Vietnam. With 6+ Years of Experience.
-                <br />
-                Let&rsquo;s work together to Design and Develop user-friendly technical products that make a real impact!
+                A <Highlight><span className="font-black invert">Product Designer</span></Highlight>,
+                <Highlight><span className="font-black invert"> UI-UX Designer</span></Highlight> and <br className="flex md:hidden" />
+                a <Highlight><span className="font-black invert">FE Developer</span></Highlight> from Vietnam. Over 7 Years of Experience.
               </p>
             </div>
           </div>

@@ -96,7 +96,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
 
   return (
     <>
-      <div className="container w-full mx-auto py-10 lg:py-20 overflow-x-auto md:overflow-x-visible relative z-10 overflow-y-hidden">
+      <div className="container py-10 lg:py-20 overflow-x-auto md:overflow-x-visible relative z-10 overflow-y-hidden">
         <div
           className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
         >
@@ -107,15 +107,22 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
           </div>
         </div>
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-10"
+          // initial={{ opacity: 0 }}
+          // whileInView={{ opacity: 1 }}
+          // viewport={{ once: true }}
+          className="mt-10 lg:-mx-10"
         >
           <Marquee className="card-works flex flex-col lg:flex-row !gap-0" autoFill pauseOnHover>
             {
               dataWorks.map((o, i) => (
-                <div key={i} className={`card-works--item relative overflow-hidden group ${o.title}`}>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: [1, 1.2, 1] }}
+                  viewport={{ once: true }}
+                  transition={{ delay: .1 + i * .05 }}
+                  className={`card-works--item relative overflow-hidden group ${o.title}`}
+                >
                   <Image src={o.image} alt='' fill className="!relative object-cover" />
                   <div className="scale-0 group-hover:scale-100 w-8 h-8 p-0.5 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-full z-20 ring-1 ring-[rgba(255,255,255,.25)] group-hover:ring-white">
                     <Icon icon={'mingcute:arrow-right-fill'} className="-rotate-45" />
@@ -128,7 +135,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                     <span className="text relative">{o.title}</span>
                   </div>
                   <Link href={o.link} className="absolute inset-0" />
-                </div>
+                </motion.div>
               ))
             }
           </Marquee>
