@@ -21,12 +21,15 @@ export default function About<IAbout>({ classNames = '' }) {
         <div className="container w-full h-screen lg:h-auto mx-auto group flex flex-col md:flex-row justify-center items-center gap-16 relative z-10">
 
           <div className="text-center" style={{ textShadow: '0px 0px 0px 2px red' }}>
-            <div className="text-[28px] md:text-4xl font-bold" data-aos="fade-up">
-              Hi! I am <Highlight><span>Huy Nguyen</span></Highlight>
+            <div className="text-[28px] md:text-4xl" data-aos="fade-up">
+              Hi! I am <b>Huy Nguyen</b>
             </div>
             <div className="text-xl space-x-1 leading-[200%] mt-8 max-w-full" data-aos="fade-up" data-aos-delay={200}>
               <p>
-                A <Highlight>Product Designer</Highlight>, <Highlight>UI-UX Designer</Highlight> and<br className="flex md:hidden" /> a <Highlight>FE Developer</Highlight> from Vietnam. With 6+ Years of Experience.
+                A
+                Product Designer,
+                UI-UX Designer and<br className="flex md:hidden" /> a
+                FE Developer from Vietnam. With 6+ Years of Experience.
                 <br />
                 Let&rsquo;s work together to Design and Develop user-friendly technical products that make a real impact!
               </p>
