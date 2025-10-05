@@ -13,7 +13,7 @@ export const Navbar: FC = () => {
     { href: '/', target: false, label: 'Home' },
     { href: '/about', target: false, label: 'About' },
     { target: false, label: 'Work Log' },
-    { href: 'https://drive.google.com/file/d/1mgD2coQg19a9d4Sw1YqLvUTrXF_TG8Ku/view?usp=sharing', target: true, label: 'My CV' },
+    { href: 'https://drive.google.com/file/d/14yXzKHsQQG9iO-TojaQ7-A5NB6CoGz3C/view?usp=sharing', target: true, label: 'My CV' },
     // { href: 'https://drive.google.com/file/d/1LjN_U_yG4A1B2PbrJvWZCoDkyBrRZgXM/view?usp=drive_link', target: true, label: 'My CV' },
   ]
   return (

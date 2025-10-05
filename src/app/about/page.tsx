@@ -1,7 +1,8 @@
+"use client";
 import { dataDomains, dataStacks } from "@/resources/constants/dataDefine";
 import Avatar from "@/assets/image/image-avatar.png";
-import { FC } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
 
@@ -26,19 +27,29 @@ export default function About() {
       Role: `Product Designer`,
       Dates: `Mar 2023 - Present`,
       Descriptions: [
-        `Product Designer at <b>IPFS Services</b>`,
-        `Design DRI for all PWA Projects and Solution Resolving for <b>Mobile Application</b>`,
-        `Successful upgrade and take care User Experience and Accessibility for thousands Clients with <b>Retail Product</b>`
+        ` - Drove user growth to over <b class="text-white">2M users</b> within the first 3 months after refining and relaunching the product experience.`,
+        ` - Analyzed user behavior and improved UX, achieving an average of <b class="text-white">~49K MAU</b> with a steady monthly growth rate of ~5-10%.`,
+        ` - Collaborated cross-functionally with stakeholders to conduct user and client experience research, adapting product designs`
+      ],
+    },
+    {
+      CompanyName: `K300 Ventures`,
+      Role: `Product Manager`,
+      Dates: `Jan 2024 - Jan 2025`,
+      Descriptions: [
+        ` - Lead product strategy and growth for flip.meme, a Solana-based NFT launchpad that integrates <b class="text-white">AI-generated meme creation</b> to simplify bonding-curve NFT minting and trading.`,
+        ` - Owned on-chain and growth KPIs, tracking mint transactions, unique wallets.`,
       ],
     },
     {
       CompanyName: `Metahaki Inc - Crabada`,
-      Role: `UI/UX Designer && Front End Developer`,
+      Role: `UI/UX Designer & Front End Developer`,
       Dates: `Nov 2021 - Ferb 2023`,
       Descriptions: [
-        `Product designer and responsibility about UI Front-End coding for <b>Crabada</b> and Related Products`,
-        `Research, improvement User Experience then create and implement UI as <b>UI/UX Designer</b> and <b>FE Developer</b>`,
-        `Proud we are the team that created Game-Fi as a Flagship on the Avalanche chain with <b>millions of user</b>`
+        ` - Led the UX and visual redesign of core GameFi interfaces, contributing to a title that processed over <b class="text-white">20M on-chain transactions</b> and reached <b class="text-white">~26.9K active wallets</b> at its peak`,
+        ` - Contributed to token economy usability and UI consistency for CRA (1B supply) and TUS tokens during the GameFi growth phase.`,
+        ` - Optimized player flows and dashboards for NFT marketplace and battle system, improving engagement and retention across <b class="text-white">49K+ MAU.</b>`,
+        ` - Translating player behavior data into iterative UI improvements aligned with growth and retention metrics.`
       ],
     },
     {
@@ -46,8 +57,8 @@ export default function About() {
       Role: `Front End Developer`,
       Dates: `Nov 2020 - Dec 2022`,
       Descriptions: [
-        `Responsibility as Front-End Developer`,
-        `Create UI with Product Designer and discuss how to visual on development for PWA Products`,
+        ` - Designed secure data and verification flows for storing COVID test & vaccination records with QR-based validation, integrating consent management and admin dashboards for authorized verifiers.`,
+        ` - App recorded <b class="text-white">100-5,000 installs</b> on Google Play.`,
       ],
     },
     {
@@ -55,8 +66,8 @@ export default function About() {
       Role: `Front End Developer`,
       Dates: `Sep 2019 - Dec 2020`,
       Descriptions: [
-        `Responsibility as UI Developer`,
-        `Implement UI and discuss with the Designer about development for PWA Products`,
+        ` - Developed blockchain-based applications, including a decentralized Lottery 6/42 platform, focusing on data visualization.`,
+        ` - Implemented interactive FE using JavaScript, HTML/CSS, collaborating with backend teams to integrate blockchain features into web products.`,
       ],
     },
     {
@@ -64,14 +75,14 @@ export default function About() {
       Role: `Software Engineer - Website Designer`,
       Dates: `Apr 2017 - Sep 2019`,
       Descriptions: [
-        `Software team leader with <b>Toray’s Inc</b> and <b>BBMedia Vietnam</b>`,
-        `Responsibility for all projects team handles and <b>Product Quality</b>`,
-        `Honored by working and creating products with the CEOs of Canon, Toshiba, Shiseido, and Dole Asia`,
+        ` - Designed and developed corporate websites for major clients including Toray Group <b class="text-white">(~1.5M MAU)</b> global domains.`,
+        ` - Collaborated with cross-functional teams within the agency to deliver responsive front-end interfaces, interactive content, and optimized performance for enterprise clients.`,
       ],
     },
   ]
 
-  const Experience = ({ classNames,
+  const Experience = ({
+    classNames,
     index,
     CompanyName,
     Role,
@@ -85,21 +96,28 @@ export default function About() {
       Descriptions?: string[],
     }) => {
     return (
-      <div className={`flex flex-col gap-3 ${classNames}`} data-aos="fade-up">
-        <div className="flex flex-col gap-0">
-          <p className="flex flex-col gap-0.5">
-            <span className="text-xs opacity-75">{Dates}</span>
-            <span className="text-orange-400 text-base font-semibold">{CompanyName}</span>
-          </p>
-          <p>
-            <span className="text-base font-bold">{Role}</span>
-          </p>
-        </div>
-        <ul className="text-sm">
-          {Descriptions?.map((i, j) => (
-            <li key={j} dangerouslySetInnerHTML={{ __html: i }} className={`mt-2 ${j === 0 && `!mt-0`}`} />
-          ))}
-        </ul>
+      <div className={`${classNames}`}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "linear", delay: .1 + index * .05 }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-3"
+        >
+          <div className="flex flex-col gap-0">
+            <p>
+              <span className="text-[#4ca7ff] text-xl font-bold">{Role}</span>
+            </p>
+            <p className="flex flex-col lg:flex-row lg:items-center gap-0.5 lg:gap-2">
+              <span className="text-lg font-semibold">{CompanyName}</span> <span className="text-sm opacity-50"><i>({Dates})</i></span>
+            </p>
+          </div>
+          <ul className="text-sm text-white/75">
+            {Descriptions?.map((i, j) => (
+              <li key={j} dangerouslySetInnerHTML={{ __html: i }} className={`mt-2 ${j === 0 && `!mt-0`}`} />
+            ))}
+          </ul>
+        </motion.div>
       </div>
     )
   }
@@ -107,24 +125,23 @@ export default function About() {
   return (
     <section className="container mt-20 mx-auto pt-10">
       <div className="group" data-aos="fade-up">
-        <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6">
+        <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
           <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)]">
             <Image src={Avatar} alt='' className="w-full h-full object-cover" />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <div className="text-[28px] font-bold">Huy Nguyen</div>
-            <div className="text-base font-thin mt-4">
+            <div className="text-base font-thin">
               As a <b>Product Designer</b>, <b>UI-UX Designer</b> and<br className="flex md:hidden" /> a <b>FE Developer</b> with <i>7+ years of experience</i>.
               <br />
-              I am so lucky to work with specialized working with domains about <br />Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS.
+              I am so lucky to work with specialized working with domains about <br /><i>Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS</i>.
             </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-20">
-        <div>
-          <Parts classNames="mt-10" title="My Experience"
-          >
+      <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-28">
+        <div className="">
+          <Parts classNames="mt-10" title="My Experience">
             <div className="flex flex-col gap-10 lg:gap-14">
               {
                 dataExp.map((item, index) => (
@@ -135,32 +152,36 @@ export default function About() {
           </Parts>
         </div>
 
-        <div>
-          <Parts classNames="mt-10" title="My Stack">
+        <div className="lg:w-1/4">
+          <Parts classNames="mt-10" title="Excellent">
             <div className="inline-flex items-center flex-wrap gap-4">
               {
-                dataStacks.map((item, index) => (
-                  <div
+                dataDomains.map((item, index) => (
+                  <motion.div
                     key={index}
                     className="bg-white/10 text-white/75 backdrop-blur-sm text-sm px-3 py-0.5 filter-blur rounded-full cursor-pointer"
-                    data-aos="fade-left"
-                    data-aos-delay={100 + index * 100}
-                    dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ ease: "linear", delay: .1 + index * .05 }}
+                    dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
                 ))
               }
             </div>
           </Parts>
 
-          <Parts classNames="mt-10" title="Specialized Domains Experience">
+          <Parts classNames="mt-10" title="Proficiency">
             <div className="inline-flex items-center flex-wrap gap-4">
               {
-                dataDomains.map((item, index) => (
-                  <div
+                dataStacks.map((item, index) => (
+                  <motion.div
                     key={index}
                     className="bg-white/10 text-white/75 backdrop-blur-sm text-sm px-3 py-0.5 filter-blur rounded-full cursor-pointer"
-                    data-aos="fade-left"
-                    data-aos-delay={100 + index * 100}
-                    dangerouslySetInnerHTML={{ __html: `${item.domain}` }} />
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ ease: "linear", delay: .1 + index * .05 }}
+                    dangerouslySetInnerHTML={{ __html: `${item.stack}` }} />
                 ))
               }
             </div>

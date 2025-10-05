@@ -5,12 +5,10 @@ import { ShowCases } from '@/components/ShowCases';
 import { Backers } from '@/components/Backets';
 import About from '@/components/About';
 import { Loading } from '@/components/common/Loading';
-import SplineWrapper from '@/components/SplineWrapper';
-import PlayVideo from '@/utils/Video';
-import LightRays from '@/components/ui/LightRays';
-import DarkVeil from '@/components/ui/DarkVeil';
-import Prism from '@/components/ui/Prism';
 import { motion } from 'framer-motion';
+import Orb from '@/components/ui/Orb';
+import RippleGrid from '@/components/ui/RippleGrid';
+
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -27,25 +25,24 @@ export default function Home() {
         !loading ?
           <div className="md:min-h-svh">
             <div className="h-svh lg:h-svh relative w-full bg-black flex flex-col items-center justify-center rounded-lg lg:py-0">
-              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: "linear" }} className='absolute inset-0 transition-all overflow-hidden'>
-                {/* <DarkVeil
-                  hueShift={219}
+              <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.4, ease: "linear" }} className='absolute inset-0 transition-all overflow-hidden'>
+                {/* <Orb
+                  hoverIntensity={0.05}
+                  rotateOnHover={true}
+                  hue={360}
+                  forceHoverState={false}
                 /> */}
-                <Prism
-                  animationType="rotate"
-                  timeScale={0.5}
-                  height={3.5}
-                  baseWidth={5.5}
-                  scale={3.6}
-                  hueShift={-0.34}
-                  colorFrequency={0.8}
-                  noise={0.5}
-                  glow={1}
+                <RippleGrid
+                  enableRainbow={false}
+                  gridColor="#2970ff"
+                  rippleIntensity={0.05}
+                  gridSize={10}
+                  gridThickness={15}
+                  mouseInteraction={true}
+                  mouseInteractionRadius={1.2}
+                  opacity={0.8}
                 />
 
-                <div className="">
-                  <div className='absolute h-1/4 bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent backdrop-blur-sm' />
-                </div>
               </motion.div>
               <About />
             </div>
