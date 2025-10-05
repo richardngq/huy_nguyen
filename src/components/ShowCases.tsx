@@ -86,19 +86,22 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ ease: "linear", delay: i * 0.2 }}
               viewport={{ once: true }}
-              className={`relative card group bg-[linear-gradient(180deg,#161515_0%,#0e0e0e_100%)] overflow-hidden rounded-2xl ring-1 ring-[rgba(255,255,255,.15)] ${o.key}`}>
-              <div className="img w-full h-full relative">
+              className={`relative card group bg-[linear-gradient(180deg,#161515_0%,#0e0e0e_100%)] overflow-hidden rounded-2xl ring-1 ring-[rgba(255,255,255,.15)] group ${o.key}`}>
+
+              <div className="img w-full h-full relative group-hover:transform group-hover:scale-150 group-hover:-translate-y-[10%] group-hover:-translate-x-[10%] transition-all">
                 <Image src={o.image} alt='' className="w-full h-full object-cover" />
               </div>
-              <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0">
+
+              <div className="absolute top-0 left-0 text-white flex flex-col justify-between p-4 z-20 mt-0 ml-0 group-hover:-translate-y-[200%]">
                 <div className="font-bold text-2xl">{o.title}</div>
                 <div className="text-base mt-1.5">{o.description}</div>
               </div>
-              <div className="w-8 h-8 p-0.5 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-full z-20 ring-1 ring-[rgba(255,255,255,.25)] group-hover:ring-white">
+
+              <div className="w-8 h-8 p-0.5 bg-[rgba(0,0,0,0.25)] text-white backdrop-blur-sm absolute right-2 top-2 lg:right-4 lg:top-4 flex flex-col justify-center items-center rounded-full z-20 ring-1 ring-[rgba(255,255,255,.25)] group-hover:ring-white -translate-y-[200%] group-hover:translate-y-0 transition-all">
                 <Icon icon={'mingcute:arrow-right-fill'} className="-rotate-45" />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-20">
+              <div className="absolute bottom-0 left-0 right-0 p-4 inline-flex flex-wrap gap-2 z-20 group-hover:translate-y-[200%]">
                 {
                   o?.tags.map((o, i) =>
                     <div

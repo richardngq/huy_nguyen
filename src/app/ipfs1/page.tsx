@@ -18,8 +18,8 @@ export default function IPFS() {
 
   return (
     <section>
-      <div className="hero h-[400px] card IPFS overflow-hidden" data-aos='fade'>
-        <Image src={imageURL0} alt='' />
+      <div className="hero min-h-20 lg:min-h-80 card IPFS overflow-hidden" data-aos='fade'>
+        <Image className='relative' src={imageURL0} alt='' />
       </div>
 
       <TracingBeam className="px-6">

@@ -18,8 +18,8 @@ export default function Gestreon() {
 
   return (
     <section>
-      <div className="hero h-[400px] card GS overflow-hidden" data-aos='fade'>
-        <Image src={imageURL0} alt='' />
+      <div className="hero min-h-20 lg:min-h-80 card GS overflow-hidden" data-aos='fade'>
+        <Image className="relative" src={imageURL0} alt='' />
       </div>
 
       <TracingBeam className="px-6">
