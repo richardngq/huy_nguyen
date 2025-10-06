@@ -18,11 +18,11 @@ export default function Gestreon() {
 
   return (
     <section>
-      <div className="hero min-h-20 lg:min-h-80 card GS overflow-hidden" data-aos='fade'>
+      <div className="hero w-full h-20 lg:w-auto lg:h-80 card GS overflow-hidden" data-aos='fade'>
         <Image className="relative" src={imageURL0} alt='' />
       </div>
 
-      <TracingBeam className="px-6">
+      <TracingBeam>
         <div>
           <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
@@ -31,7 +31,7 @@ export default function Gestreon() {
               <p className='text-base opacity-75 mt-4'>
                 As an e-commerce website, it serves as a third-party platform for collectors of luxury items. Here, they are provided with buying and selling services for the items they own without concerns about authenticity, damage, or credibility issues. The transactions take place entirely visually between both the buyer and seller on the website
               </p>
-              <Button title="Explore More" link={`https://thegestreon.com/`} />
+              <Button title="Explore Now" link={`https://thegestreon.com/`} />
             </div>
           </div>
 

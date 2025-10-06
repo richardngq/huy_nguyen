@@ -1,12 +1,13 @@
 import { FC } from "react";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
 import ImageGridGS from '@/assets/image/image-thumbnail--gs.png';
 import ImageGridIPFS from '@/assets/image/image-thumbnail--ipfs.png';
 import ImageGridSM from '@/assets/image/image-thumbnail--sm.png';
 import ImageGridCRAB from '@/assets/image/image-thumbnail--crab.png';
-import { Icon } from "@iconify/react/dist/iconify.js";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import PlayVideo from "@/utils/Video";
 
 interface IShowCases {
   classNames?: string
@@ -66,7 +67,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
 
 
   return (
-    <div className={`container mx-auto relative z-20 pb-10 lg:pb-20 mt-0 ${classNames}`}>
+    <section className={`container mx-auto relative z-20 pb-10 lg:pb-20 mt-0 ${classNames}`}>
       <div
         className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
       >
@@ -114,12 +115,20 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
                 }
               </div>
               <div className="bg" />
+
+              {
+                o.key === "SM" &&
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all">
+                  <PlayVideo video={`./assets/video/sm.mp4`} classNames='w-full' />
+                </div>
+              }
+
               <Link href={o.url} className="absolute inset-0 z-20" />
             </motion.div>
           ))
         }
       </div>
 
-    </div>
+    </section>
   )
 }

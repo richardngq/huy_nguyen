@@ -17,10 +17,10 @@ export default function IPFS() {
 
   return (
     <section>
-      <div className="hero min-h-20 lg:min-h-80 card CRAB overflow-hidden" data-aos='fade'>
+      <div className="hero w-full h-20 lg:w-auto lg:h-80 card CRAB overflow-hidden" data-aos='fade'>
         <Image className='relative' src={imageURL0} alt='' />
       </div>
-      <TracingBeam className="px-6">
+      <TracingBeam>
         <div>
           <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">

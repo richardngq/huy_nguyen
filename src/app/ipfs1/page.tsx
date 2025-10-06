@@ -18,11 +18,11 @@ export default function IPFS() {
 
   return (
     <section>
-      <div className="hero min-h-20 lg:min-h-80 card IPFS overflow-hidden" data-aos='fade'>
+      <div className="hero w-full h-20 lg:w-auto lg:h-80 card IPFS overflow-hidden" data-aos='fade'>
         <Image className='relative' src={imageURL0} alt='' />
       </div>
 
-      <TracingBeam className="px-6">
+      <TracingBeam>
         <div>
           <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
@@ -31,7 +31,7 @@ export default function IPFS() {
               <p className='text-base opacity-75 mt-4'>
                 An FX Social Trading Platform is considered to have the most optimized technology features related to FX. Here, users are known as Traders will have the opportunity to use and optimize the tools in FX. In addition, this is also an FX community sharing trading strategies and profiting from user&rsquo;s own FX strategies.
               </p>
-              <Button title="Explore More" link={`https://fxce.com/`} />
+              <Button title="Explore Now" link={`https://fxce.com/`} />
             </div>
           </div>
 

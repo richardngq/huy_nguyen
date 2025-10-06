@@ -17,7 +17,7 @@ export const Footer: FC<IFooter> = ({ classNames = '' }) => {
   return (
     <div className={`footer relative z-20 w-full p-3 pb-6 lg:p-6 mt-20 ${classNames}`}>
       <div className="w-full flex flex-col md:flex-row items-center justify-center md:justify-between gap-4">
-        <p className="text-center">&copy;2024 Designed & Developed by Huy Nguyen</p>
+        <p className="text-center text-sm font-thin">&copy;2024 Designed & Developed by Huy Nguyen</p>
         <div className="inline-flex gap-4">
           {Contacts.map((item, index) => {
             return (

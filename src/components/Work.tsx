@@ -96,7 +96,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
 
   return (
     <>
-      <div className="container py-10 lg:py-20 overflow-x-auto md:overflow-x-visible relative z-10 overflow-y-hidden">
+      <section className="container py-10 lg:py-20 overflow-x-auto md:overflow-x-visible relative z-10 overflow-y-hidden">
         <div
           className="font-semibold text-[28px] uppercase rounded-3xl card-box-anim"
         >
@@ -120,7 +120,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: [1, 1.2, 1] }}
                   viewport={{ once: true }}
-                  transition={{ delay: .1 + i * .05 }}
+                  transition={{ delay: .01 + i * .01 }}
                   className={`card-works--item relative overflow-hidden group ${o.title}`}
                 >
                   <Image src={o.image} alt='' fill className="!relative object-cover" />
@@ -140,7 +140,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
             }
           </Marquee>
         </motion.div>
-      </div>
+      </section>
     </>
   )
 }

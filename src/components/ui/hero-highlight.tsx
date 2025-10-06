@@ -68,12 +68,12 @@ export const Highlight = ({
   className?: string;
 }) => {
   return (
-    <motion.span
+    <motion.p
       initial={{
-        backgroundSize: "0% 100%",
+        // backgroundSize: "0% 100%",
       }}
       animate={{
-        backgroundSize: "100% 100%",
+        // backgroundSize: "100% 100%",
       }}
       transition={{
         ease: "linear",
@@ -84,11 +84,11 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        `relative !inline-table pb-1 px-1 rounded-lg bg-gradient-to-r from-white to-white -rotate-1`,
+        `relative max-h-6 overflow-hidden leading-tight lg:leading-snug !inline-table pb-0 px-0.5 lg:pb-1 lg:px-1.5 rounded-lg bg-gradient-to-r from-white to-white -rotate-2 hover:rotate-0 transition-all`,
         className
       )}
     >
       {children}
-    </motion.span>
+    </motion.p>
   );
 };

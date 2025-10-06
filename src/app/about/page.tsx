@@ -8,7 +8,7 @@ export default function About() {
 
   const Parts = ({ title,
     children,
-    classNames }: {
+    classNames = "" }: {
       title?: string,
       children?: any,
       classNames?: string
@@ -123,36 +123,33 @@ export default function About() {
   }
 
   return (
-    <section className="container mt-20 mx-auto pt-10">
-      <div className="group" data-aos="fade-up">
-        <div className="avatar flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
-          <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 overflow-hidden shadow-[0px_4px_8px_rgba(0,0,0,0.01)]">
-            <Image src={Avatar} alt='' className="w-full h-full object-cover" />
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="text-[28px] font-bold">Huy Nguyen</div>
-            <div className="text-base font-thin">
-              As a <b>Product Designer</b>, <b>UI-UX Designer</b> and<br className="flex md:hidden" /> a <b>FE Developer</b> with <i>7+ years of experience</i>.
-              <br />
-              I am so lucky to work with specialized working with domains about <br /><i>Web3, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, and SaaS</i>.
-            </div>
+    <section className="container mt-20 mx-auto lg:pt-10">
+      <div className="profile lg:sticky lg:top-24 lg:self-start lg:z-20 flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
+        <div id="avatar-img" className="aspect-square w-2/3 md:w-32 lg:w-64 lg:relative overflow-hidden">
+          <Image src={Avatar} alt='' className="w-full h-full object-cover" />
+        </div>
+        <div className="flex flex-col gap-4">
+          <div className="text-3xl font-bold">Huy Nguyen</div>
+          <div className="text-base font-thin">
+            As a <b>Product Designer</b>, <b>UI-UX Designer</b> and<br className="flex md:hidden" /> a <b>FE Developer</b> with <i>7+ years of experience</i>.
+            <br />
+            I am so lucky to work with specialized working with domains about <br /><i>Web3, GameFi, Fintech, Blockchain, Crypto, Healthcare, E-Commerce, SaaS, and A.I</i>.
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-28">
-        <div className="">
-          <Parts classNames="mt-10" title="My Experience">
-            <div className="flex flex-col gap-10 lg:gap-14">
-              {
-                dataExp.map((item, index) => (
-                  <Experience key={index} CompanyName={item.CompanyName} Role={item.Role} Dates={item.Dates} Descriptions={item.Descriptions} />
-                ))
-              }
-            </div>
-          </Parts>
-        </div>
 
-        <div className="lg:w-1/4">
+      <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-8">
+        <Parts classNames="relative mt-10 lg:bg-black lg:z-20" title="My Experience">
+          <div className="flex flex-col gap-10 lg:gap-14">
+            {
+              dataExp.map((item, index) => (
+                <Experience key={index} CompanyName={item.CompanyName} Role={item.Role} Dates={item.Dates} Descriptions={item.Descriptions} />
+              ))
+            }
+          </div>
+        </Parts>
+
+        <div className="lg:min-w-64 lg:max-w-64">
           <Parts classNames="mt-10" title="Excellent">
             <div className="inline-flex items-center flex-wrap gap-4">
               {

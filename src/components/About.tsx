@@ -16,20 +16,18 @@ export default function About<IAbout>({ classNames = '' }) {
 
   return (
     <>
-      <div className={`relative w-full h-full flex flex-col md:flex-row items-start md:items-center gap-6 z-10 ${classNames}`}>
+      <section className={`relative w-full h-full flex flex-col md:flex-row items-start md:items-center gap-6 z-10 ${classNames}`}>
 
         <div className="container w-full h-screen lg:h-auto mx-auto group flex flex-col md:flex-row justify-center items-center gap-16 relative z-10">
 
-          <div className="text-center" style={{ textShadow: '0px 0px 0px 2px red' }}>
+          <div className="lg:text-center" style={{ textShadow: '0px 0px 0px 2px red' }}>
             <div className="text-[28px] md:text-4xl" data-aos="fade-up">
               Hi! I am <span className="font-black">Huy Nguyen</span>
             </div>
             <div className="text-xl space-x-1 leading-[200%] mt-8 max-w-full" data-aos="fade-up" data-aos-delay={200}>
-              <p>
-                A <Highlight><span className="font-black invert">Product Designer</span></Highlight>,
-                <Highlight><span className="font-black invert"> UI-UX Designer</span></Highlight> and <br className="flex md:hidden" />
-                a <Highlight><span className="font-black invert">FE Developer</span></Highlight> from Vietnam. Over 7 Years of Experience.
-              </p>
+              A <Highlight><span className="font-black invert">Product Designer</span></Highlight>, <br className="flex md:hidden" />
+              a <Highlight><span className="font-black invert">UI-UX Designer</span></Highlight> and <br className="flex md:hidden" />
+              a <Highlight><span className="font-black invert">FE Developer</span></Highlight> from Vietnam. Over 7 Years of Experience.
             </div>
           </div>
         </div>
@@ -40,7 +38,7 @@ export default function About<IAbout>({ classNames = '' }) {
           >
             {Contacts.map((item, index) => {
               return (
-                <Link key={index} href={item.href} target="_blank" className="hover:scale-125 transition-all">
+                <Link key={index} href={item.href} target="_blank" className="hover:transform hover:-translate-y-2 hover:scale-125 transition-all">
                   <Icon icon={item?.Icon} fontSize={28} />
                 </Link>
               )
@@ -48,7 +46,7 @@ export default function About<IAbout>({ classNames = '' }) {
           </motion.div>
         </div>
 
-      </div>
+      </section>
     </>
   )
 }

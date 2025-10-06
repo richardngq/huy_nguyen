@@ -49,7 +49,7 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative ms-20 me-auto h-full", className)}
+      className={cn("relative lg:ms-20 me-auto h-full ps-4 lg:px-6", className)}
     >
       <div className="absolute -left-4 md:-left-20 top-3">
         <motion.div
