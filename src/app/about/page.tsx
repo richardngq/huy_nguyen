@@ -148,7 +148,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-8">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
         <Parts classNames="relative mt-10 lg:bg-black lg:z-20" title="My Experience">
           <div className="flex flex-col gap-10 lg:gap-14">
             {
