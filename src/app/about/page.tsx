@@ -23,9 +23,19 @@ export default function About() {
 
   const dataExp = [
     {
+      CompanyName: `WTech`,
+      Role: `Product Designer Lead`,
+      Dates: `Oct 2025 - Present`,
+      Descriptions: [
+        ` - Lead the product design team, setting the vision, srategy, and execution for all product design initiatives.`,
+        ` - Mentor and guide a team of designers, fostering a culture of collaboration, innovation, and excellence.`,
+        ` - Collaborate with cross-functional teams to deliver high-quality products that meet user needs and business goals.`
+      ],
+    },
+    {
       CompanyName: `IPFS Inc`,
       Role: `Product Designer`,
-      Dates: `Mar 2023 - Present`,
+      Dates: `Mar 2023 - Sep 2025`,
       Descriptions: [
         ` - Drove user growth to over <b class="text-white">2M users</b> within the first 3 months after refining and relaunching the product experience.`,
         ` - Analyzed user behavior and improved UX, achieving an average of <b class="text-white">~49K MAU</b> with a steady monthly growth rate of ~5-10%.`,
