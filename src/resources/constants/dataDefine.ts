@@ -4,12 +4,13 @@ export interface IStack {
 }
 
 export const dataStacks: IStack[] = [
+  { stack: EStackType.ANTIGRAVITY },
+  { stack: EStackType.CLAUDE },
+  { stack: EStackType.CODEX },
   { stack: EStackType.FIGMA },
   { stack: EStackType.FIGJAM },
   { stack: EStackType.ADOBESUITE },
   { stack: EStackType.ADOBEXD },
-  { stack: EStackType.ADOBEILLUSTRATOR },
-  { stack: EStackType.ADOBEPHOTOSHOP },
   { stack: EStackType.ZEPLIN },
   { stack: EStackType.INVISION },
   { stack: EStackType.FRAMER },
@@ -23,6 +24,7 @@ export interface IDomain {
 }
 
 export const dataDomains: IDomain[] = [
+  { domain: EDomain.AI },
   { domain: EDomain.FINTECH },
   { domain: EDomain.WEB3 },
   { domain: EDomain.GAMEFI },

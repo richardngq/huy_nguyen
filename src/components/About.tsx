@@ -25,9 +25,13 @@ export default function About<IAbout>({ classNames = '' }) {
               Hi! I am <span className="font-black">Huy Nguyen</span>
             </div>
             <div className="text-xl space-x-1 leading-[200%] mt-8 max-w-full" data-aos="fade-up" data-aos-delay={200}>
-              A <Highlight><span className="font-black invert">Product Designer</span></Highlight>, <br className="flex md:hidden" />
-              a <Highlight><span className="font-black invert">UI-UX Designer</span></Highlight> and <br className="flex md:hidden" />
-              a <Highlight><span className="font-black invert">FE Developer</span></Highlight> from Vietnam. Over 7 Years of Experience.
+              A <Highlight><span className="font-black invert">Product Designer</span></Highlight>
+              {/* , <br className="flex md:hidden" /> */}
+              and <br className="flex md:hidden" />
+              a <Highlight><span className="font-black invert">Product Owner</span></Highlight>
+              {/* and <br className="flex md:hidden" /> */}
+              {/* a <Highlight><span className="font-black invert">FE Developer</span></Highlight>  */}
+              from Vietnam. Over 7 Years of Experience.
             </div>
           </div>
         </div>

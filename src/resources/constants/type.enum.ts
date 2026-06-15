@@ -1,10 +1,11 @@
 export enum EStackType {
+  ANTIGRAVITY = 'Antigravity',
+  CLAUDE = 'Claude',
+  CODEX = 'Codex',
   FIGMA = 'Figma',
   FIGJAM = 'FigJam',
   ADOBESUITE = 'Adobe Suite',
   ADOBEXD = 'Adobe XD',
-  ADOBEPHOTOSHOP = 'Adobe Photoshop',
-  ADOBEILLUSTRATOR = 'Adobe Illustrator',
   FRAMER = 'Framer',
   SPLINE = 'Spline',
   SPINE = 'Spine',
@@ -14,6 +15,7 @@ export enum EStackType {
 }
 
 export enum EDomain {
+  AI = 'AI',
   FINTECH = 'Fintech',
   WEB3 = 'Web3',
   GAMEFI = 'Game-Fi',
