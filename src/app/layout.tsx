@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Source_Sans_3 as TheFont } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AOSInit } from "@/utils/AnimateOnScroll";
@@ -57,6 +58,18 @@ export default function RootLayout({
           </Transition>
 
         </main>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QH12M3TSS8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QH12M3TSS8');
+          `}
+        </Script>
         <SpeedInsights />
       </body>
       <AOSInit />
