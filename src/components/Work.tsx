@@ -107,9 +107,6 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
           </div>
         </div>
         <motion.div
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // viewport={{ once: true }}
           className="mt-10 lg:-mx-10"
         >
           <Marquee className="card-works flex flex-col lg:flex-row !gap-0" autoFill pauseOnHover>

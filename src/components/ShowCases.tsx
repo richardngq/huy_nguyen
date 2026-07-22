@@ -119,7 +119,14 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               {
                 o.key === "SM" &&
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all">
-                  <PlayVideo video={`./assets/video/sm.mp4`} classNames='w-full' />
+                  <PlayVideo video={`./assets/video/SkyMavis.mp4`} classNames='w-full' />
+                </div>
+              }
+
+              {
+                o.key === "IPFS" &&
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all">
+                  <PlayVideo video={`./assets/video/Neotech.mp4`} classNames='w-full' />
                 </div>
               }
 
