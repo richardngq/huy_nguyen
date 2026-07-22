@@ -6,22 +6,20 @@ import imageURL3 from '@/assets/image/image-detail-crab1-3.png'
 import imageURL4 from '@/assets/image/image-detail-crab1-4.png'
 import imageURL5 from '@/assets/image/image-detail-crab1-5.png'
 import imageURL6 from '@/assets/image/image-detail-crab1-6.png'
+import imageURL7 from '@/assets/image/image-detail-crab1-7.png'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import PlayVideo from '@/utils/Video';
 import { Button } from '@/components/common/Button';
 import { TracingBeam } from '@/components/ui/tracing-beam';
 
-export default function IPFS() {
+export default function CrabContent() {
 
   return (
     <section>
-      <div className="hero w-full h-20 lg:w-auto lg:h-80 card CRAB overflow-hidden" data-aos='fade'>
-        <Image className='relative' src={imageURL0} alt='' />
-      </div>
       <TracingBeam>
         <div>
+          <Image className='relative aspect-video object-cover w-full' src={imageURL0} alt='' data-aos='fade' />
           <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
               <h1 className='text-5xl font-bold'>Crabada</h1>
@@ -53,7 +51,7 @@ export default function IPFS() {
               <p className='text-base opacity-75 mt-4'>
                 We need to help users bring their NFTs (Crabs, Items, Tokens, Assets) into the Game Application. This allows players to use their purchased NFTs to explore the game and its experiences. At the same time, while playing, players will earn valuable rewards and tokens that they can withdraw to their Web3 wallets for real-world profit.
               </p>
-              <PlayVideo video={`./assets/video/crabadaM0.webm`} loop={false} classNames='w-full lg:w-2/3 mt-4' />
+              <PlayVideo video="/assets/video/crabadaM0.webm" loop={false} classNames='w-full lg:w-2/3 mt-4' />
             </div>
           </div>
 
@@ -92,7 +90,7 @@ export default function IPFS() {
                 <li className='group'>Players can simply select multiple Crabs and perform actions on them in bulk, such as depositing, withdrawing, or transferring.</li>
                 <li className='group'>This feature saves time and enhances the overall user experience.</li>
               </ul>
-              <PlayVideo video={`./assets/video/crabada.webm`} loop={false} classNames='w-full lg:w-2/3 mt-4 px-3 py-4 bg-[#555562] rounded-xl' />
+              <PlayVideo video="/assets/video/crabada.webm" loop={false} classNames='w-full lg:w-2/3 mt-4 px-3 py-4 bg-[#555562] rounded-xl' />
 
               <p className='text-base opacity-75 mt-4'>
                 In essence, our NFT management system is designed to provide players with a clear, efficient, and user-friendly experience, allowing them to seamlessly manage their NFTs and fully immerse themselves in the game.
@@ -150,6 +148,23 @@ export default function IPFS() {
               </p>
             </div>
           </div>
+
+          <div className="result py-14" data-aos="fade-up">
+            <div className="container mx-auto">
+              <div className='uppercase opacity-100 font-semibold mx-auto'>Results</div>
+              <div className='mt-4'>
+                <p className='text-base opacity-75 mt-4'>
+                  The design direction centered on a transparent NFT and asset management system. I structured the flow around deposit, withdrawal, search, filtering, and multi-select so players could quickly locate and manage the assets they needed for gameplay across platforms.
+                  <br /><br />
+                  The transfer model was separated by asset behavior. Crabs and Equipment worked as identifiable NFT items, while Materials and Chests required quantity-based or category-aware transfer patterns. This helped the product support both Web3 ownership logic and familiar game inventory behavior.
+                  <br /><br />
+                  The result was a clearer bridge between blockchain assets and a traditional game application experience. Players could move from marketplace ownership to in-game utility, then back to Web3 wallets, with less friction and stronger confidence across desktop and mobile game surfaces.
+                </p>
+                <Image src={imageURL7} alt='' className='mt-4 w-full' />
+              </div>
+            </div>
+          </div>
+
         </div>
       </TracingBeam>
     </section>

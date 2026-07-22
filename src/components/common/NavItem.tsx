@@ -21,19 +21,19 @@ export const NavItem: FC<INav> = ({ text, link, target, classNames = '' }) => {
   const linkWorks = [
     {
       title: `IPFS`,
-      url: '/ipfs1',
+      url: '/product/ipfs',
     },
     {
       title: `Gesteron`,
-      url: '/gs',
+      url: '/product/gs',
     },
     {
       title: `Crabada`,
-      url: '/crab',
+      url: '/product/crab',
     },
     {
       title: `Sky Mavis`,
-      url: '/sm',
+      url: '/product/sm',
     }
   ]
 

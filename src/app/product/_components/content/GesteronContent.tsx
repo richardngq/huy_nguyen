@@ -14,16 +14,13 @@ import { Icon } from "@iconify/react/dist/iconify.js"
 import { Button } from "@/components/common/Button";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 
-export default function Gestreon() {
+export default function GesteronContent() {
 
   return (
     <section>
-      <div className="hero w-full h-20 lg:w-auto lg:h-80 card GS overflow-hidden" data-aos='fade'>
-        <Image className="relative" src={imageURL0} alt='' />
-      </div>
-
       <TracingBeam>
         <div>
+          <Image className='relative aspect-video object-cover w-full' src={imageURL0} alt='' data-aos='fade' />
           <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
               <h1 className='text-5xl font-bold'>The Gesteron</h1>

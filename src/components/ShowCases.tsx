@@ -20,7 +20,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       image: ImageGridSM,
       title: `Sky Mavis`,
       description: `Design Mobile App for sending multiple assets`,
-      url: '/sm',
+      url: '/product/sm',
       href: 'https://scatter.roninchain.com/',
       tags: [
         'Mobile App', 'Crypto', 'Blockchain', 'Fintech'
@@ -31,7 +31,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       image: ImageGridCRAB,
       title: `Crabada`,
       description: `Design feature miragation on Web3 to Application Game`,
-      url: '/crab',
+      url: '/product/crab',
       href: 'https://crabada.com/',
       tags: [
         'Web3', 'Crypto', 'GameFi'
@@ -42,7 +42,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       image: ImageGridIPFS,
       title: `IPFS - FXCE`,
       description: `Main responsibility and designing to enhance UI/UX Product`,
-      url: '/ipfs1',
+      url: '/product/ipfs',
       href: 'https://www.fxce.com/',
       tags: [
         'Fintech', 'Blockchain'
@@ -53,7 +53,7 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
       image: ImageGridGS,
       title: `Gesteron`,
       description: `Re-Design UX for payment system`,
-      url: '/gs',
+      url: '/product/gs',
       href: 'https://thegestreon.com/',
       tags: [
         'E-Commerce'
@@ -119,14 +119,14 @@ export const ShowCases: FC<IShowCases> = ({ classNames = '' }) => {
               {
                 o.key === "SM" &&
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all">
-                  <PlayVideo video={`./assets/video/SkyMavis.mp4`} classNames='w-full' />
+                  <PlayVideo video="/assets/video/SkyMavis.mp4" classNames='w-full' />
                 </div>
               }
 
               {
                 o.key === "IPFS" &&
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all">
-                  <PlayVideo video={`./assets/video/Neotech.mp4`} classNames='w-full' />
+                  <PlayVideo video="/assets/video/Neotech.mp4" classNames='w-full' />
                 </div>
               }
 

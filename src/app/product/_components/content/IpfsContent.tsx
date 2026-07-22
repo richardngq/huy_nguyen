@@ -8,22 +8,19 @@ import imageURL2b from '@/assets/image/image-detail-ipfs-2b.png'
 import imageURL2c from '@/assets/image/image-detail-ipfs-2c.png'
 import imageURL3 from '@/assets/image/image-detail-ipfs-3.png'
 import imageURL4 from '@/assets/image/image-detail-ipfs-4.png'
-import imageURL4b from '@/assets/image/image-detail-ipfs-4b.png'
+import imageURL5 from '@/assets/image/image-detail-ipfs-5.png'
 import { Button } from '@/components/common/Button';
 import { TracingBeam } from '@/components/ui/tracing-beam';
 
 import Image from 'next/image'
 
-export default function IPFS() {
+export default function IpfsContent() {
 
   return (
     <section>
-      <div className="hero w-full h-20 lg:w-auto lg:h-80 card IPFS overflow-hidden" data-aos='fade'>
-        <Image className='relative' src={imageURL0} alt='' />
-      </div>
-
       <TracingBeam>
         <div>
+          <Image className='relative aspect-video object-cover w-full' src={imageURL0} alt='' data-aos='fade' />
           <div className="overview py-14" data-aos="fade-up">
             <div className="container mx-auto">
               <h1 className='text-5xl font-bold'>FXCE</h1>
@@ -175,6 +172,7 @@ export default function IPFS() {
                   <Image src={imageURL3} alt='' className='w-full' />
                 </div>
               </div>
+              <Image src={imageURL5} alt='' className='w-full mt-16' />
             </div>
           </div>
 
