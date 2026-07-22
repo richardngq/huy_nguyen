@@ -33,9 +33,9 @@ export default function About<IAbout>({ classNames = '' }) {
           </div>
         </div>
 
-        <div className="absolute w-fit bottom-0 -translate-y-full left-0 right-0 mx-auto">
+        <div className="absolute w-fit bottom-0 -translate-y-[50%] left-0 right-0 mx-auto">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ type: "spring", ease: "linear", duration: .8 }}
-            className="relative inline-flex gap-6 mt-4 py-3 px-8 rounded-full bg-white/5 backdrop-blur border border-white/10"
+            className="relative inline-flex gap-6 mt-4 py-3 px-8 backdrop-blur"
           >
             {Contacts.map((item, index) => {
               return (

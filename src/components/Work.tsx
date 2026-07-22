@@ -131,7 +131,7 @@ export const Work: FC<IWork> = ({ classNames = '' }) => {
                     </div>
                     <span className="text relative">{o.title}</span>
                   </div>
-                  <Link href={o.link} className="absolute inset-0" />
+                  <Link href={o.link} className="absolute inset-0" target="_blank" />
                 </motion.div>
               ))
             }

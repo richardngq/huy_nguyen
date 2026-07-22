@@ -32,10 +32,6 @@
   }
 
   &.SM {
-    .img {
-      transform: translateY(5%) scale(0.9);
-    }
-
     &::before {
       background: linear-gradient(45deg, #1a62c5 0%, #7fa4d7 75%);
     }
